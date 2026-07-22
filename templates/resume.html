@@ -15,9 +15,16 @@
         li { margin-bottom: 4px; }
         p { font-size: 10pt; margin: 5px 0; }
 
-        .print-btn { 
-            display: block; 
-            margin: 20px auto; 
+        /* Action bar for screen view */
+        .actions-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn { 
+            display: inline-block; 
             padding: 10px 20px; 
             font-weight: bold; 
             cursor: pointer; 
@@ -25,24 +32,33 @@
             color: #FFFFFF;
             border: none;
             border-radius: 4px;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
         }
 
-        .print-btn:hover {
+        .btn:hover {
             background-color: #C59B27;
             color: #0F172A;
         }
 
-        /* Hides the print button completely on the exported PDF / Print screen */
+        .btn-secondary {
+            background-color: #475569;
+        }
+
+        /* Hides both action buttons completely on the exported PDF / Print screen */
         @media print {
             body { padding: 0; }
-            .print-btn { display: none !important; }
+            .actions-bar { display: none !important; }
         }
     </style>
 </head>
 <body>
 
-    <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    <div class="actions-bar">
+        <a href="/" class="btn btn-secondary">← Return to Home</a>
+        <button class="btn" onclick="window.print()">Save as PDF</button>
+    </div>
 
     <h1>{{ data.name }}</h1>
     <div class="contact">
