@@ -1,110 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ data.name }} - Resume</title>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; }
-        h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
-        .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
-        h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
-        h3 { font-size: 11pt; margin: 0; display: inline; }
-        .meta { float: right; font-size: 10pt; }
-        .subtitle { font-size: 10pt; font-style: italic; margin-bottom: 5px; }
-        ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; }
-        li { margin-bottom: 4px; }
-        p { font-size: 10pt; margin: 5px 0; }
+        body { font-family: Arial, sans-serif; background: #F8FAFC; padding: 40px; }
+        .resume-paper { background: white; max-width: 800px; margin: 0 auto; padding: 0.5in; border: 1px solid #CBD5E1; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        
+        .actions-bar { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        .btn { padding: 10px 20px; font-weight: bold; cursor: pointer; text-decoration: none; border-radius: 4px; border: none; }
+        .btn-pdf { background: #C59B27; color: black; }
+        .btn-home { background: #1E293B; color: white; }
 
-        /* Action bar for screen view */
-        .actions-bar {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .btn { 
-            display: inline-block; 
-            padding: 10px 20px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            background-color: #0F172A;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: #C59B27;
-            color: #0F172A;
-        }
-
-        .btn-secondary {
-            background-color: #475569;
-        }
-
-        /* Hides both action buttons completely on the exported PDF / Print screen */
+        h1 { text-align: center; border-bottom: 3px solid #C59B27; padding-bottom: 10px; margin-bottom: 5px; }
+        h2 { font-size: 12pt; border-bottom: 1px solid #000; text-transform: uppercase; margin-top: 20px; }
+        
         @media print {
-            body { padding: 0; }
+            body { background: white; padding: 0; }
+            .resume-paper { border: none; box-shadow: none; }
             .actions-bar { display: none !important; }
         }
     </style>
 </head>
 <body>
-
     <div class="actions-bar">
-        <a href="/" class="btn btn-secondary">← Return to Home</a>
-        <button class="btn" onclick="window.print()">Save as PDF</button>
+        <a href="/" class="btn btn-home">← Home</a>
+        <button class="btn btn-pdf" onclick="window.print()">Save as PDF</button>
     </div>
+    <div class="resume-paper">
+        <h1>{{ data.name }}</h1>
+        <p style="text-align:center; font-size: 10pt;">{{ data.location }} | {{ data.email }} | {{ data.phone }}</p>
+        
+        <h2>Education</h2>
+        <p><strong>{{ data.education.school }}</strong> <span style="float:right">{{ data.education.graduation }}</span></p>
+        <p>{{ data.education.degree }} | GPA: {{ data.education.gpa }}</p>
 
-    <h1>{{ data.name }}</h1>
-    <div class="contact">
-        {{ data.location }} | {{ data.phone }} | {{ data.email }}<br>
-        LinkedIn: {{ data.linkedin }} | GitHub: {{ data.github }}
+        <h2>Skills</h2>
+        <p><strong>Design:</strong> {{ data.skills.design }}</p>
+        <p><strong>Programming:</strong> {{ data.skills.programming }}</p>
     </div>
-
-    <h2>Education</h2>
-    <div>
-        <h3>{{ data.education.school }}</h3>
-        <span class="meta">{{ data.education.graduation }}</span>
-    </div>
-    <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
-    <p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
-    <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
-
-    <h2>Engineering Experience</h2>
-    {% for exp in data.engineering_experience %}
-    <div style="margin-top: 10px;">
-        <h3>{{ exp.title }}</h3>
-        <span class="meta">{{ exp.meta }}</span>
-        <ul>
-            {% for pt in exp.points %}
-            <li>{{ pt }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endfor %}
-
-    <h2>Employment History</h2>
-    {% for emp in data.employment %}
-    <div style="margin-top: 10px;">
-        <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
-        <span class="meta">{{ emp.meta }}</span>
-        <ul>
-            {% for pt in emp.points %}
-            <li>{{ pt }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endfor %}
-
-    <h2>Technical Skills</h2>
-    <p><strong>Design & Simulation:</strong> {{ data.skills.design }}</p>
-    <p><strong>Programming & Data:</strong> {{ data.skills.programming }}</p>
-    <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
-    <p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>
-
 </body>
 </html>
