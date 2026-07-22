@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | {{ data.name }}</title>
+    <title>Projects | {{ data.name if data and data.name else "Andrew Voelkerding" }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,6 +12,8 @@
             --text-dark: #0F172A;
             --text-muted: #475569;
             --border: #E2E8F0;
+            --accent-grey: #334155;
+            --accent-light: #F1F5F9;
             --purdue-gold: #C59B27;
         }
 
@@ -31,58 +34,87 @@
         nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
         nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
 
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        h1.page-title { font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        .container { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        
+        h1.page-title {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
 
-        /* Project Tabs Layout */
-        .projects-wrapper { display: flex; gap: 2rem; flex-wrap: wrap; }
-        .project-tabs { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem; }
+        p.page-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1rem;
+        }
 
-        .tab-btn {
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 1rem;
             border-radius: 8px;
-            cursor: pointer;
-            text-align: left;
-            transition: all 0.2s;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
         }
 
-        .tab-btn:hover { border-color: var(--purdue-gold); }
-        .tab-btn.active { border-left: 4px solid var(--purdue-gold); background: #F1F5F9; font-weight: 600; }
-        .tab-btn h3 { font-size: 1rem; color: var(--text-dark); }
-        .tab-btn p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+        .project-card h2 {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+        }
 
-        .project-display { flex: 2; min-width: 320px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-
-        .project-content { display: none; }
-        .project-content.active { display: block; }
-
-        .project-img {
-            width: 100%;
-            max-height: 320px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 1.25rem;
-            background: #E2E8F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748B;
+        .project-card h3 {
             font-size: 0.9rem;
+            color: var(--purdue-gold);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
         }
 
-        .tag { display: inline-block; background: #F1F5F9; color: #334155; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; margin-bottom: 0.5rem; }
-        .project-content h2 { font-size: 1.4rem; margin-bottom: 0.25rem; }
-        .project-content .subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
-        .project-content ul { padding-left: 1.2rem; margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
-        .project-content ul li { margin-bottom: 0.5rem; }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--accent-light);
+            color: var(--accent-grey);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .project-card p.summary {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-card ul {
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .project-card ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.85rem; border-top: 1px solid #1E293B; margin-top: 3rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="/" class="logo">{{ data.name }}</a>
+        <a href="/" class="logo">{{ data.name if data and data.name else "Andrew Voelkerding" }}</a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/projects" class="active">Projects</a>
@@ -91,63 +123,42 @@
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Engineering Projects</h1>
+        <h1 class="page-title">Featured Engineering Projects</h1>
+        <p class="page-subtitle">A collection of design, manufacturing, and technical engineering work.</p>
 
-        <div class="projects-wrapper">
-            <div class="project-tabs">
-                {% for proj in data.projects %}
-                <button class="tab-btn {% if loop.first %}active{% endif %}" onclick="openProject('proj-{{ loop.index }}', this)">
-                    <h3>{{ proj.title }}</h3>
-                    <p>{{ proj.subtitle }}</p>
-                </button>
-                {% endfor %}
-            </div>
-
-            <div class="project-display">
-                {% for proj in data.projects %}
-                <div id="proj-{{ loop.index }}" class="project-content {% if loop.first %}active{% endif %}">
-                    {% if proj.image %}
-                        <img src="{{ url_for('static', filename='images/' + proj.image) }}" alt="{{ proj.title }}" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
-                    {% endif %}
-
-                    <h2>{{ proj.title }}</h2>
-                    <p class="subtitle">{{ proj.subtitle }}</p>
-
-                    <div>
-                        {% for tag in proj.tags %}
-                            <span class="tag">{{ tag }}</span>
-                        {% endfor %}
-                    </div>
-
-                    <p style="margin-top: 0.75rem; color: var(--text-dark);">{{ proj.summary }}</p>
-
-                    <ul>
-                        {% for detail in proj.details %}
-                            <li>{{ detail }}</li>
-                        {% endfor %}
-                    </ul>
+        {% if data and data.projects %}
+        <div class="projects-grid">
+            {% for proj in data.projects %}
+            <div class="project-card">
+                <h2>{{ proj.title }}</h2>
+                {% if proj.subtitle %}<h3>{{ proj.subtitle }}</h3>{% endif %}
+                
+                {% if proj.tags %}
+                <div class="tags">
+                    {% for tag in proj.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                {% endif %}
+
+                {% if proj.summary %}<p class="summary">{{ proj.summary }}</p>{% endif %}
+
+                {% if proj.details %}
+                <ul>
+                    {% for detail in proj.details %}
+                    <li>{{ detail }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
+            {% endfor %}
         </div>
+        {% endif %}
     </div>
 
-    <script>
-        function openProject(projId, btnElement) {
-            // Hide all project content blocks
-            document.querySelectorAll('.project-content').forEach(content => {
-                content.classList.remove('active');
-            });
+    <footer>
+        <p>&copy; 2026 {{ data.name if data and data.name else "Andrew Voelkerding" }}</p>
+    </footer>
 
-            // Deactivate all tab buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected project and activate tab button
-            document.getElementById(projId).classList.add('active');
-            btnElement.classList.add('active');
-        }
-    </script>
 </body>
 </html>
