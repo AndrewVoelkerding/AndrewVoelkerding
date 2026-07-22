@@ -7,202 +7,119 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #F8FAFC;
+            --bg-main: #E2E8F0; /* Cool Grey Background */
             --bg-card: #FFFFFF;
-            --text-dark: #0F172A;
-            --text-muted: #475569;
-            --border: #E2E8F0;
-            --accent-grey: #334155;
-            --accent-light: #F1F5F9;
-            --purdue-gold: #C59B27;
+            --text-dark: #0F172A; /* Deep Charcoal */
+            --text-muted: #475569; /* Slate Grey */
+            --border: #CBD5E1;
+            --purdue-gold: #C59B27; /* Purdue Gold */
+            --purdue-black: #000000;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
 
         nav {
-            background-color: #0F172A;
+            background-color: var(--purdue-black);
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 3px solid var(--purdue-gold);
+            border-bottom: 4px solid var(--purdue-gold);
         }
 
-        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
-        nav .nav-links { display: flex; gap: 1rem; }
-        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
-        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; transition: 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--purdue-gold); }
 
         header {
-            background-color: #0F172A;
+            background-color: #1E293B; /* Slate Header */
             color: white;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
+            border-bottom: 1px solid var(--border);
         }
 
-        header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; }
-        header p.subtitle { font-size: 1.1rem; color: #94A3B8; margin-top: 0.5rem; }
-
-        .contact-links {
-            margin-top: 1.25rem;
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
+        header h1 { font-size: 2.5rem; font-weight: 800; color: white; }
+        header p.subtitle { font-size: 1.1rem; color: #CBD5E1; margin-top: 0.5rem; }
 
         .btn {
             display: inline-block;
-            padding: 0.4rem 1rem;
-            background: #1E293B;
-            color: #E2E8F0;
+            padding: 0.5rem 1.2rem;
+            background: transparent;
+            color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 4px;
             font-size: 0.85rem;
             font-weight: 600;
-            border: 1px solid #334155;
-            transition: all 0.2s ease;
+            border: 1px solid var(--purdue-gold);
+            transition: 0.2s;
+            margin: 0.5rem 0.25rem;
         }
 
-        .btn:hover { background: var(--purdue-gold); color: #0F172A; border-color: var(--purdue-gold); }
+        .btn:hover { background: var(--purdue-gold); color: black; }
 
-        .container { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; }
-        section { margin-bottom: 3rem; }
-
+        .container { max-width: 950px; margin: 0 auto; padding: 3rem 1.5rem; }
+        
         h2.section-title {
-            font-size: 1.35rem;
-            color: var(--accent-grey);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            border-left: 5px solid var(--purdue-gold);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
         }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
-        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.35rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
-        .card h3 { font-size: 1.15rem; color: var(--text-dark); }
-        .card .meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
-        .card ul { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; }
-        .card ul li { margin-bottom: 0.4rem; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .card .meta { color: var(--purdue-gold); font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; text-transform: uppercase; }
+        
+        .badge { background: #F1F5F9; color: #334155; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border); margin-right: 0.5rem; }
 
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-        .skill-box { background: var(--bg-card); border: 1px solid var(--border); padding: 1rem; border-radius: 6px; }
-        .skill-box h4 { font-size: 0.9rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
-        .skill-box p { font-size: 0.85rem; color: var(--text-muted); }
-
-        .badge { display: inline-block; background: var(--accent-light); color: var(--accent-grey); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; margin-top: 0.5rem; margin-right: 0.25rem; }
-
-        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.85rem; border-top: 1px solid #1E293B; }
+        footer { text-align: center; padding: 2rem; background: var(--purdue-black); color: #94A3B8; border-top: 4px solid var(--purdue-gold); }
     </style>
 </head>
 <body>
-
     <nav>
-        <a href="/" class="logo">{{ data.name if data and data.name else "Andrew Voelkerding" }}</a>
+        <a href="/" class="logo">{{ data.name }}</a>
         <div class="nav-links">
             <a href="/" class="active">Home</a>
             <a href="/projects">Projects</a>
             <a href="/resume">ATS Resume</a>
         </div>
     </nav>
-
     <header>
-        <h1>{{ data.name if data and data.name else "Andrew Voelkerding" }}</h1>
-        <p class="subtitle">{{ data.tagline if data and data.tagline }}</p>
+        <h1>{{ data.name }}</h1>
+        <p class="subtitle">{{ data.tagline }}</p>
         <div class="contact-links">
-            {% if data and data.email %}<a class="btn" href="mailto:{{ data.email }}">Email</a>{% endif %}
-            {% if data and data.linkedin %}<a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>{% endif %}
-            {% if data and data.github %}<a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>{% endif %}
-            {% if data and data.phone %}<a class="btn" href="tel:{{ data.phone }}">{{ data.phone }}</a>{% endif %}
+            <a class="btn" href="mailto:{{ data.email }}">Email</a>
+            <a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>
+            <a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>
         </div>
     </header>
-
     <div class="container">
-        {% if data and data.education %}
         <section>
             <h2 class="section-title">Education</h2>
             <div class="card">
                 <h3>{{ data.education.school }}</h3>
-                <p class="meta">{{ data.education.degree }} | {{ data.education.graduation }}</p>
-                <p><strong>GPA:</strong> {{ data.education.gpa }}</p>
-                <p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
-                <div style="margin-top: 0.6rem;">
-                    {% for badge in data.education.badges %}
-                        <span class="badge">{{ badge }}</span>
-                    {% endfor %}
-                </div>
+                <p class="meta">{{ data.education.degree }}</p>
+                <p><strong>GPA:</strong> {{ data.education.gpa }} | <strong>Graduation:</strong> {{ data.education.graduation }}</p>
             </div>
         </section>
-        {% endif %}
-
-        {% if data and data.engineering_experience %}
         <section>
-            <h2 class="section-title">Engineering Experience</h2>
-            <div class="grid">
-                {% for exp in data.engineering_experience %}
-                <div class="card">
-                    <h3>{{ exp.title }}</h3>
-                    <p class="meta">{{ exp.meta }}</p>
-                    <ul>
-                        {% for pt in exp.points %}
-                        <li>{{ pt }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
+            <h2 class="section-title">Experience</h2>
+            {% for exp in data.engineering_experience %}
+            <div class="card">
+                <h3>{{ exp.title }}</h3>
+                <p class="meta">{{ exp.meta }}</p>
+                <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--text-muted);">
+                    {% for pt in exp.points %}<li>{{ pt }}</li>{% endfor %}
+                </ul>
             </div>
+            {% endfor %}
         </section>
-        {% endif %}
-
-        {% if data and data.employment %}
-        <section>
-            <h2 class="section-title">Industry Employment</h2>
-            <div class="grid">
-                {% for emp in data.employment %}
-                <div class="card">
-                    <h3>{{ emp.title }}{% if emp.company %} — {{ emp.company }}{% endif %}</h3>
-                    <p class="meta">{{ emp.meta }}</p>
-                    <ul>
-                        {% for pt in emp.points %}
-                        <li>{{ pt }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-        {% endif %}
-
-        {% if data and data.skills %}
-        <section>
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <h4>Design & Simulation</h4>
-                    <p>{{ data.skills.design }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Programming & Data</h4>
-                    <p>{{ data.skills.programming }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Manufacturing</h4>
-                    <p>{{ data.skills.manufacturing }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Electrical</h4>
-                    <p>{{ data.skills.electrical }}</p>
-                </div>
-            </div>
-        </section>
-        {% endif %}
     </div>
-
-    <footer>
-        <p>&copy; 2026 {{ data.name if data and data.name else "Andrew Voelkerding" }}</p>
-    </footer>
-
+    <footer>&copy; 2026 {{ data.name }}</footer>
 </body>
 </html>
