@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | {{ data.name if data and data.name else "Andrew Voelkerding" }}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Projects | {{ data.name }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #0F172A;
-            --bg-card: #1E293B;
-            --bg-hover: #334155;
-            --text-dark: #F8FAFC;
-            --text-muted: #94A3B8;
-            --border: #334155;
+            --bg-main: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
             --purdue-gold: #C59B27;
         }
 
@@ -20,7 +19,7 @@
         body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
 
         nav {
-            background-color: #020617;
+            background-color: #0F172A;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -28,234 +27,129 @@
             border-bottom: 3px solid var(--purdue-gold);
         }
 
-        nav .logo { color: white; font-weight: 800; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
         nav .nav-links { display: flex; gap: 1rem; }
-        nav .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.8rem; border-radius: 4px; transition: 0.2s; }
-        nav .nav-links a:hover, nav .nav-links a.active { color: var(--purdue-gold); background: var(--bg-card); }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
 
-        .container { max-width: 950px; margin: 0 auto; padding: 3rem 1.5rem; }
-        
-        h1.page-title {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            border-left: 4px solid var(--purdue-gold);
-            padding-left: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        h1.page-title { font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
 
-        p.page-subtitle {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Category Tabs */
-        .tabs-container {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
+        /* Project Tabs Layout */
+        .projects-wrapper { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .project-tabs { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem; }
 
         .tab-btn {
             background: var(--bg-card);
-            color: var(--text-muted);
             border: 1px solid var(--border);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 1rem;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            text-align: left;
+            transition: all 0.2s;
         }
 
-        .tab-btn:hover {
-            color: var(--text-dark);
-            background: var(--bg-hover);
-        }
+        .tab-btn:hover { border-color: var(--purdue-gold); }
+        .tab-btn.active { border-left: 4px solid var(--purdue-gold); background: #F1F5F9; font-weight: 600; }
+        .tab-btn h3 { font-size: 1rem; color: var(--text-dark); }
+        .tab-btn p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
 
-        .tab-btn.active {
-            background: var(--purdue-gold);
-            color: #020617;
-            border-color: var(--purdue-gold);
-        }
+        .project-display { flex: 2; min-width: 320px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
-        .projects-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+        .project-content { display: none; }
+        .project-content.active { display: block; }
 
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
-            display: grid;
-            grid-template-columns: 1fr;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        .project-card.hidden {
-            display: none !important;
-        }
-
-        @media (min-width: 768px) {
-            .project-card.has-image {
-                grid-template-columns: 280px 1fr;
-            }
-        }
-
-        .project-image {
+        .project-img {
             width: 100%;
-            height: 100%;
-            min-height: 220px;
+            max-height: 320px;
             object-fit: cover;
-            background-color: #334155;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-card h2 {
-            font-size: 1.25rem;
-            color: var(--text-dark);
-            margin-bottom: 0.2rem;
-        }
-
-        .project-card h3 {
-            font-size: 0.85rem;
-            color: var(--purdue-gold);
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .tags {
+            border-radius: 6px;
+            margin-bottom: 1.25rem;
+            background: #E2E8F0;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-bottom: 1rem;
+            align-items: center;
+            justify-content: center;
+            color: #64748B;
+            font-size: 0.9rem;
         }
 
-        .tag {
-            background: var(--bg-hover);
-            color: var(--text-dark);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border: 1px solid var(--border);
-        }
-
-        .project-card p.summary {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .project-card ul {
-            padding-left: 1.2rem;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        .project-card ul li {
-            margin-bottom: 0.4rem;
-        }
-
-        footer { text-align: center; padding: 2rem; background: #020617; color: var(--text-muted); font-size: 0.85rem; border-top: 3px solid var(--purdue-gold); margin-top: 3rem; }
+        .tag { display: inline-block; background: #F1F5F9; color: #334155; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; margin-bottom: 0.5rem; }
+        .project-content h2 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+        .project-content .subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
+        .project-content ul { padding-left: 1.2rem; margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
+        .project-content ul li { margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="/" class="logo">{{ data.name if data and data.name else "Andrew Voelkerding" }}</a>
+        <a href="/" class="logo">{{ data.name }}</a>
         <div class="nav-links">
             <a href="/">Home</a>
             <a href="/projects" class="active">Projects</a>
             <a href="/resume">ATS Resume</a>
+            <a href="/admin">Admin</a>
         </div>
     </nav>
 
     <div class="container">
-        <h1 class="page-title">Featured Engineering Projects</h1>
-        <p class="page-subtitle">Filter by discipline or view all engineering work below.</p>
+        <h1 class="page-title">Engineering Projects</h1>
 
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="filterProjects('all', this)">All Projects</button>
-            <button class="tab-btn" onclick="filterProjects('CAD', this)">CAD / FEA</button>
-            <button class="tab-btn" onclick="filterProjects('Automotive', this)">Automotive</button>
-            <button class="tab-btn" onclick="filterProjects('3D Printing', this)">Additive / GD&T</button>
-        </div>
+        <div class="projects-wrapper">
+            <div class="project-tabs">
+                {% for proj in data.projects %}
+                <button class="tab-btn {% if loop.first %}active{% endif %}" onclick="openProject('proj-{{ loop.index }}', this)">
+                    <h3>{{ proj.title }}</h3>
+                    <p>{{ proj.subtitle }}</p>
+                </button>
+                {% endfor %}
+            </div>
 
-        {% if data and data.projects %}
-        <div class="projects-list">
-            {% for proj in data.projects %}
-            <div class="project-card {% if proj.image %}has-image{% endif %}" data-tags="{{ proj.tags | join(' ') }}">
-                {% if proj.image %}
-                <img src="{{ url_for('static', filename='images/' + proj.image) if 'static/' not in proj.image else proj.image }}" 
-                     alt="{{ proj.title }}" 
-                     class="project-image"
-                     onerror="this.style.display='none';">
-                {% endif %}
-                
-                <div class="project-content">
+            <div class="project-display">
+                {% for proj in data.projects %}
+                <div id="proj-{{ loop.index }}" class="project-content {% if loop.first %}active{% endif %}">
+                    {% if proj.image %}
+                        <img src="{{ url_for('static', filename='images/' + proj.image) }}" alt="{{ proj.title }}" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                    {% endif %}
+
                     <h2>{{ proj.title }}</h2>
-                    {% if proj.subtitle %}<h3>{{ proj.subtitle }}</h3>{% endif %}
-                    
-                    {% if proj.tags %}
-                    <div class="tags">
+                    <p class="subtitle">{{ proj.subtitle }}</p>
+
+                    <div>
                         {% for tag in proj.tags %}
-                        <span class="tag">{{ tag }}</span>
+                            <span class="tag">{{ tag }}</span>
                         {% endfor %}
                     </div>
-                    {% endif %}
 
-                    {% if proj.summary %}<p class="summary">{{ proj.summary }}</p>{% endif %}
+                    <p style="margin-top: 0.75rem; color: var(--text-dark);">{{ proj.summary }}</p>
 
-                    {% if proj.details %}
                     <ul>
                         {% for detail in proj.details %}
-                        <li>{{ detail }}</li>
+                            <li>{{ detail }}</li>
                         {% endfor %}
                     </ul>
-                    {% endif %}
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-        {% endif %}
     </div>
 
-    <footer>
-        <p>&copy; 2026 {{ data.name if data and data.name else "Andrew Voelkerding" }}</p>
-    </footer>
-
     <script>
-        function filterProjects(category, btn) {
-            // Update active state on tab buttons
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Show/Hide project cards based on tags
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                const tags = card.getAttribute('data-tags') || '';
-                if (category === 'all' || tags.toLowerCase().includes(category.toLowerCase())) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
+        function openProject(projId, btnElement) {
+            // Hide all project content blocks
+            document.querySelectorAll('.project-content').forEach(content => {
+                content.classList.remove('active');
             });
+
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected project and activate tab button
+            document.getElementById(projId).classList.add('active');
+            btnElement.classList.add('active');
         }
     </script>
-
 </body>
 </html>
