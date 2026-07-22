@@ -1,36 +1,78 @@
 {
     "name": "ANDREW VOELKERDING",
+    "location": "Cincinnati, Ohio",
     "tagline": "Mechanical Engineering | Purdue University '28",
     "email": "voelkerd@purdue.edu",
     "phone": "513-910-4107",
     "linkedin": "https://linkedin.com/in/andrew-voe",
     "github": "https://github.com/AndrewVoelkerding",
     "education": {
-        "school": "Purdue University — West Lafayette, IN",
-        "degree": "Bachelor of Science in Mechanical Engineering",
+        "school": "Purdue University (West Lafayette)",
+        "degree": "In Progress - Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
-        "gpa": "3.90 / 4.00",
+        "gpa": "3.90/4.00",
         "courses": "Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science",
         "badges": ["ASME Member", "Purdue Formula SAE", "GD&T Milestones Certification", "Undue Ultimate"]
     },
-    "engineering_experience": [
+    "projects": [
         {
-            "title": "Formula SAE Suspension Team",
-            "meta": "Purdue University | Aug 2025 – Present",
-            "points": [
-                "Modeled components in Siemens NX and performed FEA simulations in ANSYS Mechanical to evaluate stress concentrations and safety factors.",
-                "Designed welded front rockers, achieving an ~18.8% weight reduction while maintaining a 1.6 FoS.",
-                "Generated CAM toolpaths and GD&T technical drawings to streamline CNC manufacturing.",
-                "Supported multi-operation wheel hub production via 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
+            "id": "fsae-rockers",
+            "title": "Formula SAE Welded Front Rockers",
+            "subtitle": "Purdue Formula SAE Suspension Component",
+            "tags": ["Siemens NX", "ANSYS FEA", "GD&T", "CNC Machining"],
+            "image": "rockers.jpg",
+            "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
+            "details": [
+                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.",
+                "Generated CAM toolpaths and technical drawings with strict GD&T tolerances to streamline CNC manufacturing.",
+                "Manufactured multi-operation wheel hubs and custom soft-jaw fixtures using 3-axis CNC milling and hand-tapping."
             ]
         },
         {
-            "title": "Car Radios & Backup Camera Installation",
-            "meta": "Cincinnati, OH | Jun 2023 – Present",
+            "title": "Automotive Electronics & Speedometer Retrofit",
+            "subtitle": "Custom Harnessing & Dashboard Integration",
+            "id": "car-audio",
+            "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
+            "image": "radio_install.jpg",
+            "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
+            "details": [
+                "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
+                "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
+                "Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement."
+            ]
+        },
+        {
+            "title": "GD&T 3D-Printed Instructional Models",
+            "subtitle": "General Tool Company Onboarding Project",
+            "id": "gdt-models",
+            "tags": ["3D Printing", "GD&T", "Additive Manufacturing"],
+            "image": "gdt_model.jpg",
+            "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
+            "details": [
+                "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
+                "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
+                "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
+            ]
+        }
+    ],
+    "engineering_experience": [
+        {
+            "title": "Formula SAE Suspension Team Member",
+            "meta": "West Lafayette | Aug 2025 – Present",
             "points": [
-                "Soldered custom wiring harnesses for upgraded automotive head units.",
-                "Wired radios to interfaces including backup cameras and steering wheel control retention modules.",
-                "Retrofitted modern speedometers to relocate driver information functionality post-radio replacement."
+                "Modeled parts in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor.",
+                "Designed welded front rockers, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
+                "Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
+                "Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
+            ]
+        },
+        {
+            "title": "Installing Car Radios and Backup Cameras",
+            "meta": "Cincinnati | Jun 2023 – Present",
+            "points": [
+                "Soldered new custom wiring harnesses to cleanly install new upgraded radios.",
+                "Wired new radios to interfaces such as backup cameras and steering wheel control retention systems.",
+                "Retrofit a modern speedometer to relocate driver information functionality from radio after radio replacement."
             ]
         }
     ],
@@ -38,28 +80,27 @@
         {
             "title": "Manufacturing Engineering Intern",
             "company": "General Tool Company",
-            "meta": "Cincinnati, OH | May 2026 – Present",
+            "meta": "Cincinnati | May 2026 – Present",
             "points": [
-                "Completed cross-functional rotation across machining and fabrication departments for high-precision defense components.",
-                "Analyzed technical drawings and sales orders to generate competitive assembly quotes and ensure profitability.",
-                "Engineered custom 3D-printed instructional models demonstrating GD&T principles (True Position & MMC) for intern onboarding."
+                "Completed a cross-functional rotation across machining and fabrication departments for high-precision defense components.",
+                "Analyzed technical drawings and sales orders to generate quotes for complex assemblies.",
+                "Engineered custom 3D-printed instructional models to demonstrate GD&T principles."
             ]
         },
         {
             "title": "Intern / Assistant",
             "company": "Urban Sites",
-            "meta": "Cincinnati, OH | Nov 2023 – Dec 2023",
+            "meta": "Cincinnati | Nov 2023 – Dec 2023",
             "points": [
-                "Engineered a functional Python prototype to assist in package tracking for ~50 tenant packages at a time.",
-                "Iterated on user feedback applying user-centered design and stakeholder communication principles."
+                "Engineered a functional Python prototype to assist in package tracking for ~50 tenant packages at a time."
             ]
         },
         {
             "title": "Head Auto Detailer / Owner",
             "company": "Cincy Auto Detailing",
-            "meta": "Cincinnati, OH | Jun 2021 – Present",
+            "meta": "Cincinnati | Jun 2021 – Present",
             "points": [
-                "Managed business operations, equipment investment, and finances for ~25 loyal customers and ~50 detailed vehicles."
+                "Managed business operations, finances, and equipment investment for ~25 loyal customers and ~50 detailed vehicles."
             ]
         }
     ],
