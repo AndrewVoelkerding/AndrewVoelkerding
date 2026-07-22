@@ -8,8 +8,8 @@ DATA_FILE = 'data.json'
 
 # --- SECURITY / AUTHENTICATION ---
 # Set your desired admin username and password here
-ADMIN_USERNAME = 'andrew'
-ADMIN_PASSWORD = 'ChangeThisToASecurePassword123!'
+ADMIN_USERNAME = os.environ.get('ADMIN_USERNAME', 'andrew')
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'local-dev-password-123')
 
 def check_auth(username, password):
     """Check if a username and password match."""
