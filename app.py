@@ -7,8 +7,11 @@ DATA_FILE = 'data.json'
 
 def load_data():
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        try:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            return {}
     return {}
 
 @app.route('/')
