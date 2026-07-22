@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.name }} | Mechanical Engineering</title>
+    <title>{{ data.name if data and data.name else "Andrew Voelkerding" }} | Mechanical Engineering</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -99,7 +100,7 @@
 <body>
 
     <nav>
-        <a href="/" class="logo">{{ data.name }}</a>
+        <a href="/" class="logo">{{ data.name if data and data.name else "Andrew Voelkerding" }}</a>
         <div class="nav-links">
             <a href="/" class="active">Home</a>
             <a href="/projects">Projects</a>
@@ -108,17 +109,18 @@
     </nav>
 
     <header>
-        <h1>{{ data.name }}</h1>
-        <p class="subtitle">{{ data.tagline }}</p>
+        <h1>{{ data.name if data and data.name else "Andrew Voelkerding" }}</h1>
+        <p class="subtitle">{{ data.tagline if data and data.tagline }}</p>
         <div class="contact-links">
-            <a class="btn" href="mailto:{{ data.email }}">Email</a>
-            <a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>
-            <a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>
-            <a class="btn" href="tel:{{ data.phone }}">{{ data.phone }}</a>
+            {% if data and data.email %}<a class="btn" href="mailto:{{ data.email }}">Email</a>{% endif %}
+            {% if data and data.linkedin %}<a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>{% endif %}
+            {% if data and data.github %}<a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>{% endif %}
+            {% if data and data.phone %}<a class="btn" href="tel:{{ data.phone }}">{{ data.phone }}</a>{% endif %}
         </div>
     </header>
 
     <div class="container">
+        {% if data and data.education %}
         <section>
             <h2 class="section-title">Education</h2>
             <div class="card">
@@ -133,7 +135,9 @@
                 </div>
             </div>
         </section>
+        {% endif %}
 
+        {% if data and data.engineering_experience %}
         <section>
             <h2 class="section-title">Engineering Experience</h2>
             <div class="grid">
@@ -150,7 +154,9 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
+        {% if data and data.employment %}
         <section>
             <h2 class="section-title">Industry Employment</h2>
             <div class="grid">
@@ -167,7 +173,9 @@
                 {% endfor %}
             </div>
         </section>
+        {% endif %}
 
+        {% if data and data.skills %}
         <section>
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
@@ -189,10 +197,11 @@
                 </div>
             </div>
         </section>
+        {% endif %}
     </div>
 
     <footer>
-        <p>&copy; 2026 {{ data.name }} | andrew.voelkerding.xyz</p>
+        <p>&copy; 2026 {{ data.name if data and data.name else "Andrew Voelkerding" }}</p>
     </footer>
 
 </body>
