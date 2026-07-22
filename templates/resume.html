@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <title>{{ data.name }} - Resume</title>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; }
-        h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
-        .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
-        h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
-        h3 { font-size: 11pt; margin: 0; display: inline; }
-        .meta { float: right; font-size: 10pt; }
-        .subtitle { font-size: 10pt; font-style: italic; margin-bottom: 5px; }
-        ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; }
+        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; background: #0F172A; }
+        
+        .resume-container { background: #FFFFFF; padding: 0.5in; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+
+        h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; color: #000; }
+        .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; color: #334155; }
+        h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 2px solid #C59B27; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; color: #000; }
+        h3 { font-size: 11pt; margin: 0; display: inline; color: #000; }
+        .meta { float: right; font-size: 10pt; color: #475569; }
+        .subtitle { font-size: 10pt; font-style: italic; margin-bottom: 5px; color: #334155; }
+        ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; color: #1E293B; }
         li { margin-bottom: 4px; }
-        p { font-size: 10pt; margin: 5px 0; }
+        p { font-size: 10pt; margin: 5px 0; color: #1E293B; }
 
         .actions-bar {
             display: flex;
@@ -38,16 +41,17 @@
 
         .btn:hover {
             background-color: #C59B27;
-            color: #000000;
+            color: #020617;
         }
 
         .btn-secondary {
-            background-color: #475569;
-            border-color: #475569;
+            background-color: #334155;
+            border-color: #334155;
         }
 
         @media print {
-            body { padding: 0; }
+            body { padding: 0; background: white; }
+            .resume-container { box-shadow: none; padding: 0; }
             .actions-bar { display: none !important; }
         }
     </style>
@@ -59,52 +63,54 @@
         <button class="btn" onclick="window.print()">Save as PDF</button>
     </div>
 
-    <h1>{{ data.name }}</h1>
-    <div class="contact">
-        {{ data.location }} | {{ data.phone }} | {{ data.email }}<br>
-        LinkedIn: {{ data.linkedin }} | GitHub: {{ data.github }}
-    </div>
+    <div class="resume-container">
+        <h1>{{ data.name }}</h1>
+        <div class="contact">
+            {{ data.location }} | {{ data.phone }} | {{ data.email }}<br>
+            LinkedIn: {{ data.linkedin }} | GitHub: {{ data.github }}
+        </div>
 
-    <h2>Education</h2>
-    <div>
-        <h3>{{ data.education.school }}</h3>
-        <span class="meta">{{ data.education.graduation }}</span>
-    </div>
-    <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
-    <p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
-    <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
+        <h2>Education</h2>
+        <div>
+            <h3>{{ data.education.school }}</h3>
+            <span class="meta">{{ data.education.graduation }}</span>
+        </div>
+        <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
+        <p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+        <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
 
-    <h2>Engineering Experience</h2>
-    {% for exp in data.engineering_experience %}
-    <div style="margin-top: 10px;">
-        <h3>{{ exp.title }}</h3>
-        <span class="meta">{{ exp.meta }}</span>
-        <ul>
-            {% for pt in exp.points %}
-            <li>{{ pt }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endfor %}
+        <h2>Engineering Experience</h2>
+        {% for exp in data.engineering_experience %}
+        <div style="margin-top: 10px;">
+            <h3>{{ exp.title }}</h3>
+            <span class="meta">{{ exp.meta }}</span>
+            <ul>
+                {% for pt in exp.points %}
+                <li>{{ pt }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
 
-    <h2>Employment History</h2>
-    {% for emp in data.employment %}
-    <div style="margin-top: 10px;">
-        <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
-        <span class="meta">{{ emp.meta }}</span>
-        <ul>
-            {% for pt in emp.points %}
-            <li>{{ pt }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endfor %}
+        <h2>Employment History</h2>
+        {% for emp in data.employment %}
+        <div style="margin-top: 10px;">
+            <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
+            <span class="meta">{{ emp.meta }}</span>
+            <ul>
+                {% for pt in emp.points %}
+                <li>{{ pt }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
 
-    <h2>Technical Skills</h2>
-    <p><strong>Design & Simulation:</strong> {{ data.skills.design }}</p>
-    <p><strong>Programming & Data:</strong> {{ data.skills.programming }}</p>
-    <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
-    <p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>
+        <h2>Technical Skills</h2>
+        <p><strong>Design & Simulation:</strong> {{ data.skills.design }}</p>
+        <p><strong>Programming & Data:</strong> {{ data.skills.programming }}</p>
+        <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
+        <p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>
+    </div>
 
 </body>
 </html>
