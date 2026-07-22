@@ -1,0 +1,72 @@
+{
+    "name": "ANDREW VOELKERDING",
+    "tagline": "Mechanical Engineering | Purdue University '28",
+    "email": "voelkerd@purdue.edu",
+    "phone": "513-910-4107",
+    "linkedin": "https://linkedin.com/in/andrew-voe",
+    "github": "https://github.com/AndrewVoelkerding",
+    "education": {
+        "school": "Purdue University — West Lafayette, IN",
+        "degree": "Bachelor of Science in Mechanical Engineering",
+        "graduation": "Expected Graduation: May 2028",
+        "gpa": "3.90 / 4.00",
+        "courses": "Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science",
+        "badges": ["ASME Member", "Purdue Formula SAE", "GD&T Milestones Certification", "Undue Ultimate"]
+    },
+    "engineering_experience": [
+        {
+            "title": "Formula SAE Suspension Team",
+            "meta": "Purdue University | Aug 2025 – Present",
+            "points": [
+                "Modeled components in Siemens NX and performed FEA simulations in ANSYS Mechanical to evaluate stress concentrations and safety factors.",
+                "Designed welded front rockers, achieving an ~18.8% weight reduction while maintaining a 1.6 FoS.",
+                "Generated CAM toolpaths and GD&T technical drawings to streamline CNC manufacturing.",
+                "Supported multi-operation wheel hub production via 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
+            ]
+        },
+        {
+            "title": "Car Radios & Backup Camera Installation",
+            "meta": "Cincinnati, OH | Jun 2023 – Present",
+            "points": [
+                "Soldered custom wiring harnesses for upgraded automotive head units.",
+                "Wired radios to interfaces including backup cameras and steering wheel control retention modules.",
+                "Retrofitted modern speedometers to relocate driver information functionality post-radio replacement."
+            ]
+        }
+    ],
+    "employment": [
+        {
+            "title": "Manufacturing Engineering Intern",
+            "company": "General Tool Company",
+            "meta": "Cincinnati, OH | May 2026 – Present",
+            "points": [
+                "Completed cross-functional rotation across machining and fabrication departments for high-precision defense components.",
+                "Analyzed technical drawings and sales orders to generate competitive assembly quotes and ensure profitability.",
+                "Engineered custom 3D-printed instructional models demonstrating GD&T principles (True Position & MMC) for intern onboarding."
+            ]
+        },
+        {
+            "title": "Intern / Assistant",
+            "company": "Urban Sites",
+            "meta": "Cincinnati, OH | Nov 2023 – Dec 2023",
+            "points": [
+                "Engineered a functional Python prototype to assist in package tracking for ~50 tenant packages at a time.",
+                "Iterated on user feedback applying user-centered design and stakeholder communication principles."
+            ]
+        },
+        {
+            "title": "Head Auto Detailer / Owner",
+            "company": "Cincy Auto Detailing",
+            "meta": "Cincinnati, OH | Jun 2021 – Present",
+            "points": [
+                "Managed business operations, equipment investment, and finances for ~25 loyal customers and ~50 detailed vehicles."
+            ]
+        }
+    ],
+    "skills": {
+        "design": "Siemens NX, Fusion 360, ANSYS Mechanical, GD&T",
+        "programming": "Python, C, MATLAB, Excel, Data Science",
+        "manufacturing": "3D Printing, Laser Cutting, CNC, Basic Tooling",
+        "electrical": "Soldering, Arduino, Wiring Harnesses"
+    }
+}
