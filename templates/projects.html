@@ -7,38 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-main: #E2E8F0;
-            --bg-card: #FFFFFF;
-            --text-dark: #0F172A;
-            --text-muted: #475569;
-            --border: #CBD5E1;
+            --bg-main: #0F172A;
+            --bg-card: #1E293B;
+            --bg-hover: #334155;
+            --text-dark: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: #334155;
             --purdue-gold: #C59B27;
-            --purdue-black: #000000;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
 
         nav {
-            background-color: var(--purdue-black);
+            background-color: #020617;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid var(--purdue-gold);
+            border-bottom: 3px solid var(--purdue-gold);
         }
 
-        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav .logo { color: white; font-weight: 800; text-decoration: none; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
         nav .nav-links { display: flex; gap: 1rem; }
-        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: 0.2s; }
-        nav .nav-links a:hover, nav .nav-links a.active { color: var(--purdue-gold); background: #1E293B; }
+        nav .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.4rem 0.8rem; border-radius: 4px; transition: 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--purdue-gold); background: var(--bg-card); }
 
-        .container { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        .container { max-width: 950px; margin: 0 auto; padding: 3rem 1.5rem; }
         
         h1.page-title {
             font-size: 1.5rem;
             color: var(--text-dark);
-            border-left: 5px solid var(--purdue-gold);
+            border-left: 4px solid var(--purdue-gold);
             padding-left: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -47,9 +47,40 @@
 
         p.page-subtitle {
             color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Category Tabs */
+        .tabs-container {
+            display: flex;
+            gap: 0.5rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
             border-bottom: 1px solid var(--border);
             padding-bottom: 1rem;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-dark);
+            background: var(--bg-hover);
+        }
+
+        .tab-btn.active {
+            background: var(--purdue-gold);
+            color: #020617;
+            border-color: var(--purdue-gold);
         }
 
         .projects-list {
@@ -63,9 +94,14 @@
             border: 1px solid var(--border);
             border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
             display: grid;
             grid-template-columns: 1fr;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .project-card.hidden {
+            display: none !important;
         }
 
         @media (min-width: 768px) {
@@ -79,7 +115,7 @@
             height: 100%;
             min-height: 220px;
             object-fit: cover;
-            background-color: #CBD5E1;
+            background-color: #334155;
         }
 
         .project-content {
@@ -108,8 +144,8 @@
         }
 
         .tag {
-            background: #F1F5F9;
-            color: #334155;
+            background: var(--bg-hover);
+            color: var(--text-dark);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
             font-size: 0.75rem;
@@ -134,7 +170,7 @@
             margin-bottom: 0.4rem;
         }
 
-        footer { text-align: center; padding: 1.75rem; background: var(--purdue-black); color: #94A3B8; font-size: 0.85rem; border-top: 4px solid var(--purdue-gold); margin-top: 3rem; }
+        footer { text-align: center; padding: 2rem; background: #020617; color: var(--text-muted); font-size: 0.85rem; border-top: 3px solid var(--purdue-gold); margin-top: 3rem; }
     </style>
 </head>
 <body>
@@ -150,12 +186,19 @@
 
     <div class="container">
         <h1 class="page-title">Featured Engineering Projects</h1>
-        <p class="page-subtitle">A detailed breakdown of CAD, simulation, prototyping, and hands-on engineering work.</p>
+        <p class="page-subtitle">Filter by discipline or view all engineering work below.</p>
+
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="filterProjects('all', this)">All Projects</button>
+            <button class="tab-btn" onclick="filterProjects('CAD', this)">CAD / FEA</button>
+            <button class="tab-btn" onclick="filterProjects('Automotive', this)">Automotive</button>
+            <button class="tab-btn" onclick="filterProjects('3D Printing', this)">Additive / GD&T</button>
+        </div>
 
         {% if data and data.projects %}
         <div class="projects-list">
             {% for proj in data.projects %}
-            <div class="project-card {% if proj.image %}has-image{% endif %}">
+            <div class="project-card {% if proj.image %}has-image{% endif %}" data-tags="{{ proj.tags | join(' ') }}">
                 {% if proj.image %}
                 <img src="{{ url_for('static', filename='images/' + proj.image) if 'static/' not in proj.image else proj.image }}" 
                      alt="{{ proj.title }}" 
@@ -194,6 +237,25 @@
     <footer>
         <p>&copy; 2026 {{ data.name if data and data.name else "Andrew Voelkerding" }}</p>
     </footer>
+
+    <script>
+        function filterProjects(category, btn) {
+            // Update active state on tab buttons
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Show/Hide project cards based on tags
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                const tags = card.getAttribute('data-tags') || '';
+                if (category === 'all' || tags.toLowerCase().includes(category.toLowerCase())) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
