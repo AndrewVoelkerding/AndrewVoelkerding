@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.name }} | Mechanical Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --accent-grey: #334155;
+            --accent-light: #F1F5F9;
+            --purdue-gold: #C59B27;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+
+        header {
+            background-color: #0F172A;
+            color: white;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--purdue-gold);
+        }
+
+        header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; }
+        header p.subtitle { font-size: 1.1rem; color: #94A3B8; margin-top: 0.5rem; }
+
+        .contact-links {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: #1E293B;
+            color: #E2E8F0;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover { background: var(--purdue-gold); color: #0F172A; border-color: var(--purdue-gold); }
+
+        .container { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        section { margin-bottom: 3rem; }
+
+        h2.section-title {
+            font-size: 1.35rem;
+            color: var(--accent-grey);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.35rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .card h3 { font-size: 1.15rem; color: var(--text-dark); }
+        .card .meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
+        .card ul { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; }
+        .card ul li { margin-bottom: 0.4rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .skill-box { background: var(--bg-card); border: 1px solid var(--border); padding: 1rem; border-radius: 6px; }
+        .skill-box h4 { font-size: 0.9rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
+        .skill-box p { font-size: 0.85rem; color: var(--text-muted); }
+
+        .badge { display: inline-block; background: var(--accent-light); color: var(--accent-grey); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; margin-top: 0.5rem; margin-right: 0.25rem; }
+
+        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.85rem; border-top: 1px solid #1E293B; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>{{ data.name }}</h1>
+        <p class="subtitle">{{ data.tagline }}</p>
+        <div class="contact-links">
+            <a class="btn" href="mailto:{{ data.email }}">Email</a>
+            <a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>
+            <a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>
+            <a class="btn" href="tel:{{ data.phone }}">{{ data.phone }}</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <h3>{{ data.education.school }}</h3>
+                <p class="meta">{{ data.education.degree }} | {{ data.education.graduation }}</p>
+                <p><strong>GPA:</strong> {{ data.education.gpa }}</p>
+                <p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+                <div style="margin-top: 0.6rem;">
+                    {% for badge in data.education.badges %}
+                        <span class="badge">{{ badge }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Engineering Experience</h2>
+            <div class="grid">
+                {% for exp in data.engineering_experience %}
+                <div class="card">
+                    <h3>{{ exp.title }}</h3>
+                    <p class="meta">{{ exp.meta }}</p>
+                    <ul>
+                        {% for pt in exp.points %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Industry Employment</h2>
+            <div class="grid">
+                {% for emp in data.employment %}
+                <div class="card">
+                    <h3>{{ emp.title }}{% if emp.company %} — {{ emp.company }}{% endif %}</h3>
+                    <p class="meta">{{ emp.meta }}</p>
+                    <ul>
+                        {% for pt in emp.points %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Design & Simulation</h4>
+                    <p>{{ data.skills.design }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Programming & Data</h4>
+                    <p>{{ data.skills.programming }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Manufacturing</h4>
+                    <p>{{ data.skills.manufacturing }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Electrical</h4>
+                    <p>{{ data.skills.electrical }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 {{ data.name }} | andrew.voelkerding.xyz</p>
+    </footer>
+
+</body>
+</html>
