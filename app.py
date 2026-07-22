@@ -35,5 +35,10 @@ def admin():
     data_str = json.dumps(load_data(), indent=4)
     return render_template('admin.html', raw_data=data_str)
 
+@app.route('/resume')
+def ats_resume():
+    data = load_data()
+    return render_template('resume.html', data=data)
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
