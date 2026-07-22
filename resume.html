@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANDREW VOELKERDING - Resume</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; }
+        h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
+        .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
+        h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
+        h3 { font-size: 11pt; margin: 0; display: inline; }
+        .meta { float: right; font-size: 10pt; }
+        .subtitle { font-size: 10pt; font-style: italic; margin-bottom: 5px; }
+        ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; }
+        li { margin-bottom: 4px; }
+        p { font-size: 10pt; margin: 5px 0; }
+
+        /* Action bar for screen view */
+        .actions-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            background-color: #0F172A;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #C59B27;
+            color: #0F172A;
+        }
+
+        .btn-secondary {
+            background-color: #475569;
+        }
+
+        /* Hides both action buttons completely on the exported PDF / Print screen */
+        @media print {
+            body { padding: 0; }
+            .actions-bar { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="actions-bar">
+        <a href="/" class="btn btn-secondary">← Return to Home</a>
+        <button class="btn" onclick="window.print()">Save as PDF</button>
+    </div>
+
+    <h1>ANDREW VOELKERDING</h1>
+    <div class="contact">
+        Cincinnati, Ohio | 513-910-4107 | voelkerd@purdue.edu<br>
+        LinkedIn: https://linkedin.com/in/andrew-voe | GitHub: https://github.com/AndrewVoelkerding
+    </div>
+
+    <h2>Education</h2>
+    <div>
+        <h3>Purdue University (West Lafayette)</h3>
+        <span class="meta">Expected Graduation: May 2028</span>
+    </div>
+    <div class="subtitle">In Progress - Bachelor of Science in Mechanical Engineering | GPA: 3.90/4.00</div>
+    <p><strong>Relevant Coursework:</strong> Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science</p>
+    <p><strong>Honors & Activities:</strong> Baja SAE Suspension Member, ASME Member, GD&T Milestones Certification, Undue Ultimate</p>
+
+    <h2>Engineering Experience</h2>
+    
+    <div style="margin-top: 10px;">
+        <h3>Formula SAE Suspension Team Member</h3>
+        <span class="meta">West Lafayette | Aug 2025 – Present</span>
+        <ul>
+            
+            <li>Modeled parts in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor.</li>
+            
+            <li>Designed welded front rockers, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.</li>
+            
+            <li>Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.</li>
+            
+            <li>Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures.</li>
+            
+        </ul>
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <h3>Installing Car Radios and Backup Cameras</h3>
+        <span class="meta">Cincinnati | Jun 2023 – Present</span>
+        <ul>
+            
+            <li>Soldered new custom wiring harnesses to cleanly install new upgraded radios.</li>
+            
+            <li>Wired new radios to interfaces such as backup cameras and steering wheel control retention systems.</li>
+            
+            <li>Retrofit a modern speedometer to relocate driver information functionality from radio after radio replacement.</li>
+            
+        </ul>
+    </div>
+    
+
+    <h2>Employment History</h2>
+    
+    <div style="margin-top: 10px;">
+        <h3>Manufacturing Engineering Intern - General Tool Company</h3>
+        <span class="meta">Cincinnati | May 2026 – Present</span>
+        <ul>
+            
+            <li>Completed a cross-functional rotation across machining and fabrication departments for high-precision defense components.</li>
+            
+            <li>Analyzed technical drawings and sales orders to generate quotes for complex assemblies.</li>
+            
+            <li>Engineered custom 3D-printed instructional models to demonstrate GD&T principles.</li>
+            
+        </ul>
+    </div>
+    
+    <div style="margin-top: 10px;">
+        <h3>Intern / Assistant - Urban Sites</h3>
+        <span class="meta">Cincinnati | Nov 2023 – Dec 2023</span>
+        <ul>
+            
+            <li>Engineered a functional Python prototype to assist in tenant package tracking, aiming to modernize package management for ~50 packages at a time.</li>
+            
+            <li>Implemented feedback from users on usability and implementation.</li>
+            
+            <li>Gained insights into the importance of user-centered design and clear communication when working with stakeholders.</li>
+            
+        </ul>
+    </div>
+    
+
+    <h2>Technical Skills</h2>
+    <p><strong>Design & Simulation:</strong> Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T</p>
+    <p><strong>Programming & Data:</strong> Python, C, MATLAB, Excel, Data Science</p>
+    <p><strong>Manufacturing:</strong> 3D Printing, Laser Cutting, CNC, Basic Tooling</p>
+    <p><strong>Electrical:</strong> Soldering, Arduino, Wiring Harnesses</p>
+
+</body>
+</html>

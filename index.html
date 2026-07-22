@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDREW VOELKERDING | Mechanical Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --accent-grey: #334155;
+            --accent-light: #F1F5F9;
+            --purdue-gold: #C59B27;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+
+        nav {
+            background-color: #0F172A;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--purdue-gold);
+        }
+
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+        nav .nav-links { display: flex; gap: 1rem; }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
+
+        header {
+            background-color: #0F172A;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; }
+        header p.subtitle { font-size: 1.1rem; color: #94A3B8; margin-top: 0.5rem; }
+
+        .contact-links {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: #1E293B;
+            color: #E2E8F0;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover { background: var(--purdue-gold); color: #0F172A; border-color: var(--purdue-gold); }
+
+        .container { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+        section { margin-bottom: 3rem; }
+
+        h2.section-title {
+            font-size: 1.35rem;
+            color: var(--accent-grey);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.35rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .card h3 { font-size: 1.15rem; color: var(--text-dark); }
+        .card .meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
+        .card ul { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.9rem; }
+        .card ul li { margin-bottom: 0.4rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .skill-box { background: var(--bg-card); border: 1px solid var(--border); padding: 1rem; border-radius: 6px; }
+        .skill-box h4 { font-size: 0.9rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
+        .skill-box p { font-size: 0.85rem; color: var(--text-muted); }
+
+        .badge { display: inline-block; background: var(--accent-light); color: var(--accent-grey); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.78rem; font-weight: 600; margin-top: 0.5rem; margin-right: 0.25rem; }
+
+        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.85rem; border-top: 1px solid #1E293B; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">ANDREW VOELKERDING</a>
+        <div class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>ANDREW VOELKERDING</h1>
+        <p class="subtitle">Mechanical Engineering | Purdue University '28</p>
+        <div class="contact-links">
+            <a class="btn" href="mailto:voelkerd@purdue.edu">Email</a>
+            <a class="btn" href="https://linkedin.com/in/andrew-voe" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://github.com/AndrewVoelkerding" target="_blank">GitHub</a>
+            <a class="btn" href="tel:513-910-4107">513-910-4107</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <h3>Purdue University (West Lafayette)</h3>
+                <p class="meta">In Progress - Bachelor of Science in Mechanical Engineering | Expected Graduation: May 2028</p>
+                <p><strong>GPA:</strong> 3.90/4.00</p>
+                <p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science</p>
+                <div style="margin-top: 0.6rem;">
+                    
+                        <span class="badge">Baja SAE Suspension Member</span>
+                    
+                        <span class="badge">ASME Member</span>
+                    
+                        <span class="badge">GD&T Milestones Certification</span>
+                    
+                        <span class="badge">Undue Ultimate</span>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Engineering Experience</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Formula SAE Suspension Team Member</h3>
+                    <p class="meta">West Lafayette | Aug 2025 – Present</p>
+                    <ul>
+                        
+                        <li>Modeled parts in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor.</li>
+                        
+                        <li>Designed welded front rockers, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.</li>
+                        
+                        <li>Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.</li>
+                        
+                        <li>Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures.</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Installing Car Radios and Backup Cameras</h3>
+                    <p class="meta">Cincinnati | Jun 2023 – Present</p>
+                    <ul>
+                        
+                        <li>Soldered new custom wiring harnesses to cleanly install new upgraded radios.</li>
+                        
+                        <li>Wired new radios to interfaces such as backup cameras and steering wheel control retention systems.</li>
+                        
+                        <li>Retrofit a modern speedometer to relocate driver information functionality from radio after radio replacement.</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Industry Employment</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Manufacturing Engineering Intern — General Tool Company</h3>
+                    <p class="meta">Cincinnati | May 2026 – Present</p>
+                    <ul>
+                        
+                        <li>Completed a cross-functional rotation across machining and fabrication departments for high-precision defense components.</li>
+                        
+                        <li>Analyzed technical drawings and sales orders to generate quotes for complex assemblies.</li>
+                        
+                        <li>Engineered custom 3D-printed instructional models to demonstrate GD&T principles.</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Intern / Assistant — Urban Sites</h3>
+                    <p class="meta">Cincinnati | Nov 2023 – Dec 2023</p>
+                    <ul>
+                        
+                        <li>Engineered a functional Python prototype to assist in tenant package tracking, aiming to modernize package management for ~50 packages at a time.</li>
+                        
+                        <li>Implemented feedback from users on usability and implementation.</li>
+                        
+                        <li>Gained insights into the importance of user-centered design and clear communication when working with stakeholders.</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Design & Simulation</h4>
+                    <p>Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Programming & Data</h4>
+                    <p>Python, C, MATLAB, Excel, Data Science</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Manufacturing</h4>
+                    <p>3D Printing, Laser Cutting, CNC, Basic Tooling</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Electrical</h4>
+                    <p>Soldering, Arduino, Wiring Harnesses</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ANDREW VOELKERDING | andrew.voelkerding.xyz</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | ANDREW VOELKERDING</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --purdue-gold: #C59B27;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+
+        nav {
+            background-color: #0F172A;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--purdue-gold);
+        }
+
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+        nav .nav-links { display: flex; gap: 1rem; }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        h1.page-title { font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+
+        /* Project Tabs Layout */
+        .projects-wrapper { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .project-tabs { flex: 1; min-width: 250px; display: flex; flex-direction: column; gap: 0.5rem; }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover { border-color: var(--purdue-gold); }
+        .tab-btn.active { border-left: 4px solid var(--purdue-gold); background: #F1F5F9; font-weight: 600; }
+        .tab-btn h3 { font-size: 1rem; color: var(--text-dark); }
+        .tab-btn p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+        .project-display { flex: 2; min-width: 320px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+        .project-content { display: none; }
+        .project-content.active { display: block; }
+
+        .project-img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1.25rem;
+            background: #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748B;
+            font-size: 0.9rem;
+        }
+
+        .tag { display: inline-block; background: #F1F5F9; color: #334155; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; margin-bottom: 0.5rem; }
+        .project-content h2 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+        .project-content .subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
+        .project-content ul { padding-left: 1.2rem; margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
+        .project-content ul li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">ANDREW VOELKERDING</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/projects" class="active">Projects</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Engineering Projects</h1>
+
+        <div class="projects-wrapper">
+            <div class="project-tabs">
+                
+                <button class="tab-btn active" onclick="openProject('proj-1', this)">
+                    <h3>Formula SAE Welded Front Rockers</h3>
+                    <p>Purdue Formula SAE Suspension Component</p>
+                </button>
+                
+                <button class="tab-btn " onclick="openProject('proj-2', this)">
+                    <h3>Automotive Electronics & Speedometer Retrofit</h3>
+                    <p>Custom Harnessing & Dashboard Integration</p>
+                </button>
+                
+                <button class="tab-btn " onclick="openProject('proj-3', this)">
+                    <h3>GD&T 3D-Printed Instructional Models</h3>
+                    <p>General Tool Company Onboarding Project</p>
+                </button>
+                
+            </div>
+
+            <div class="project-display">
+                
+                <div id="proj-1" class="project-content active">
+                    
+                        <img src="static/images/rockers.jpg" alt="Formula SAE Welded Front Rockers" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                    
+
+                    <h2>Formula SAE Welded Front Rockers</h2>
+                    <p class="subtitle">Purdue Formula SAE Suspension Component</p>
+
+                    <div>
+                        
+                            <span class="tag">Siemens NX</span>
+                        
+                            <span class="tag">ANSYS FEA</span>
+                        
+                            <span class="tag">GD&T</span>
+                        
+                            <span class="tag">CNC Machining</span>
+                        
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--text-dark);">Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.</p>
+
+                    <ul>
+                        
+                            <li>Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.</li>
+                        
+                            <li>Generated CAM toolpaths and technical drawings with strict GD&T tolerances to streamline CNC manufacturing.</li>
+                        
+                            <li>Manufactured multi-operation wheel hubs and custom soft-jaw fixtures using 3-axis CNC milling and hand-tapping.</li>
+                        
+                    </ul>
+                </div>
+                
+                <div id="proj-2" class="project-content ">
+                    
+                        <img src="static/images/radio_install.jpg" alt="Automotive Electronics & Speedometer Retrofit" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                    
+
+                    <h2>Automotive Electronics & Speedometer Retrofit</h2>
+                    <p class="subtitle">Custom Harnessing & Dashboard Integration</p>
+
+                    <div>
+                        
+                            <span class="tag">Soldering</span>
+                        
+                            <span class="tag">Wiring Harnesses</span>
+                        
+                            <span class="tag">Automotive Systems</span>
+                        
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--text-dark);">Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.</p>
+
+                    <ul>
+                        
+                            <li>Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.</li>
+                        
+                            <li>Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.</li>
+                        
+                            <li>Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement.</li>
+                        
+                    </ul>
+                </div>
+                
+                <div id="proj-3" class="project-content ">
+                    
+                        <img src="static/images/gdt_model.jpg" alt="GD&T 3D-Printed Instructional Models" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                    
+
+                    <h2>GD&T 3D-Printed Instructional Models</h2>
+                    <p class="subtitle">General Tool Company Onboarding Project</p>
+
+                    <div>
+                        
+                            <span class="tag">3D Printing</span>
+                        
+                            <span class="tag">GD&T</span>
+                        
+                            <span class="tag">Additive Manufacturing</span>
+                        
+                    </div>
+
+                    <p style="margin-top: 0.75rem; color: var(--text-dark);">Engineered custom physical models demonstrating True Position and MMC principles for intern training.</p>
+
+                    <ul>
+                        
+                            <li>Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.</li>
+                        
+                            <li>3D printed interactive inspection fixtures used during onboarding for future engineering interns.</li>
+                        
+                            <li>Assisted interns and new hires in visualizing tolerance zones during drawing analysis.</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProject(projId, btnElement) {
+            // Hide all project content blocks
+            document.querySelectorAll('.project-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected project and activate tab button
+            document.getElementById(projId).classList.add('active');
+            btnElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>
