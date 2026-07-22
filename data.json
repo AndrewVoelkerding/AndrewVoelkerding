@@ -12,7 +12,7 @@
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.90/4.00",
         "courses": "Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science",
-        "badges": ["ASME Member", "Purdue Formula SAE", "GD&T Milestones Certification", "Undue Ultimate"]
+        "badges": ["Baja SAE Suspension Member", "ASME Member", "GD&T Milestones Certification", "Undue Ultimate"]
     },
     "projects": [
         {
@@ -92,20 +92,14 @@
             "company": "Urban Sites",
             "meta": "Cincinnati | Nov 2023 – Dec 2023",
             "points": [
-                "Engineered a functional Python prototype to assist in package tracking for ~50 tenant packages at a time."
+                "Engineered a functional Python prototype to assist in tenant package tracking, aiming to modernize package management for ~50 packages at a time.",
+                "Implemented feedback from users on usability and implementation.", 
+                "Gained insights into the importance of user-centered design and clear communication when working with stakeholders."
             ]
         },
-        {
-            "title": "Head Auto Detailer / Owner",
-            "company": "Cincy Auto Detailing",
-            "meta": "Cincinnati | Jun 2021 – Present",
-            "points": [
-                "Managed business operations, finances, and equipment investment for ~25 loyal customers and ~50 detailed vehicles."
-            ]
-        }
     ],
     "skills": {
-        "design": "Siemens NX, Fusion 360, ANSYS Mechanical, GD&T",
+        "design": "Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T",
         "programming": "Python, C, MATLAB, Excel, Data Science",
         "manufacturing": "3D Printing, Laser Cutting, CNC, Basic Tooling",
         "electrical": "Soldering, Arduino, Wiring Harnesses"
