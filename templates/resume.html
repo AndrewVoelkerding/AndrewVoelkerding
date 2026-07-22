@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ data.name }} - Resume</title>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 2in 0.5in; }
+        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; }
         h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
         .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
         h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
@@ -14,16 +13,51 @@
         ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; }
         li { margin-bottom: 4px; }
         p { font-size: 10pt; margin: 5px 0; }
+
+        /* Action bar for screen view */
+        .actions-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            background-color: #0F172A;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #C59B27;
+            color: #0F172A;
+        }
+
+        .btn-secondary {
+            background-color: #475569;
+        }
+
+        /* Hides both action buttons completely on the exported PDF / Print screen */
         @media print {
             body { padding: 0; }
-            button { display: none; }
+            .actions-bar { display: none !important; }
         }
-        .print-btn { display: block; margin: 20px auto; padding: 10px 20px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
 
-    <button class="print-btn" onclick="window.print()">🖨️ Save as ATS-Proof PDF</button>
+    <div class="actions-bar">
+        <a href="/" class="btn btn-secondary">← Return to Home</a>
+        <button class="btn" onclick="window.print()">Save as PDF</button>
+    </div>
 
     <h1>{{ data.name }}</h1>
     <div class="contact">
@@ -56,7 +90,7 @@
     <h2>Employment History</h2>
     {% for emp in data.employment %}
     <div style="margin-top: 10px;">
-        <h3>{{ emp.title }} - {{ emp.company }}</h3>
+        <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
         <span class="meta">{{ emp.meta }}</span>
         <ul>
             {% for pt in emp.points %}
