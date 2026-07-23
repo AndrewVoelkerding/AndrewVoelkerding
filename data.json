@@ -10,28 +10,37 @@
         "school": "Purdue University (West Lafayette)",
         "degree": "In Progress - Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
-        "gpa": "3.90/4.00",
-        "courses": "Statics, Geometric and Annotation Modeling (CAD), Electrical Engineering Fundamentals, Programming in C, Data Science",
-        "badges": ["Baja SAE Suspension Member", "ASME Member", "GD&T Milestones Certification", "Undue Ultimate"]
+        "gpa": "3.9/4.0",
+        "courses": "Statics, Dynamics, Electrical Engineering Fundamentals with Lab, Controls, Geometric and Annotation Modeling (CAD with NX), Mechanics of Materials",
+        "badges": ["Baja SAE Suspension Member", "GD&T Milestones Certification", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
+        {
+            "id": "baja-laa",
+            "title": "Baja SAE Lower A-Arm",
+            "subtitle": "Purdue Baja SAE Suspension Component",
+            "tags": ["Solidworks"],
+            "image": "baja-laa.jpg",
+            "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system",
+            "details": [
+                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
+            ]
+        }, 
         {
             "id": "fsae-rockers",
             "title": "Formula SAE Welded Front Rockers",
             "subtitle": "Purdue Formula SAE Suspension Component",
-            "tags": ["Siemens NX", "ANSYS FEA", "GD&T", "CNC Machining"],
-            "image": "rockers.jpg",
+            "tags": ["Siemens NX", "ANSYS FEA"],
+            "image": "fsae-rockers.jpg",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
-                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.",
-                "Generated CAM toolpaths and technical drawings with strict GD&T tolerances to streamline CNC manufacturing.",
-                "Manufactured multi-operation wheel hubs and custom soft-jaw fixtures using 3-axis CNC milling and hand-tapping."
+                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
             ]
         },
         {
+            "id": "car-audio"
             "title": "Automotive Electronics & Speedometer Retrofit",
             "subtitle": "Custom Harnessing & Dashboard Integration",
-            "id": "car-audio",
             "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
             "image": "radio_install.jpg",
             "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
@@ -57,8 +66,17 @@
     ],
     "engineering_experience": [
         {
+            "title": "Baja SAE Suspension Team Member",
+            "meta": "West Lafayette | June 2026 – Current",
+            "points": [
+                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight.", 
+                "Iterated initial suspension-to-lower structure using FEA to find weaknesses.",
+                "Contributed in discussion about major infrastructure of car structure."
+            ]
+        },
+        {
             "title": "Formula SAE Suspension Team Member",
-            "meta": "West Lafayette | Aug 2025 – Present",
+            "meta": "West Lafayette | Aug 2025 – May 2026",
             "points": [
                 "Modeled parts in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor.",
                 "Designed welded front rockers, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
@@ -100,8 +118,8 @@
     ],
     "skills": {
         "design": "Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T",
-        "programming": "Python, C, MATLAB, Excel, Data Science",
-        "manufacturing": "3D Printing, Laser Cutting, CNC, Basic Tooling",
+        "programming": "Bambu Slicer, Python, C, MATLAB, Excel, Data Science",
+        "manufacturing": "3D Printing (Bambu A1 Mini), Laser Cutting, CNC, Basic Tooling",
         "electrical": "Soldering, Arduino, Wiring Harnesses"
     }
 }
