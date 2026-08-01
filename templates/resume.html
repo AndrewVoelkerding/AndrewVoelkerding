@@ -10,7 +10,7 @@
             margin: 0.35in 0.4in;
         }
 
-        /* Screen view: Scaled up, expansive document viewer layout */
+        /* Screen view layout */
         body { 
             font-family: 'Inter', Arial, sans-serif; 
             background-color: #0F172A; 
@@ -57,7 +57,6 @@
             background-color: #475569;
         }
 
-        /* Scaled up paper sheet container for the web view */
         .resume-sheet {
             background: #FFFFFF;
             width: 100%;
@@ -84,15 +83,11 @@
             color: #334155;
         }
 
-        /* Clickable link styling for web and PDF */
+        /* Explicit link styling for both web view and interactive PDF annotations */
         .contact a {
             color: #1d4ed8;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact a:hover {
             text-decoration: underline;
+            font-weight: 500;
         }
 
         h2 { 
@@ -107,7 +102,6 @@
             font-weight: 700;
         }
 
-        /* Bulletproof Table Layout for Headers */
         .job-header { 
             display: table;
             width: 100%;
@@ -138,11 +132,17 @@
             font-weight: 700; 
         }
 
+        /* Dedicated education block to enforce strict spacing */
+        .education-block {
+            margin-bottom: 8px;
+        }
+
         .subtitle { 
             font-size: 9.5pt; 
             font-weight: 600; 
             color: #475569;
-            margin-bottom: 10px; /* Increased gap before coursework */
+            margin-bottom: 10px; /* Forces a clear physical gap before coursework */
+            display: block;
         }
         
         ul { 
@@ -195,20 +195,22 @@
         <h1>{{ data.name }}</h1>
         <div class="contact">
             {{ data.location }} | {{ data.phone }} | {{ data.email }}<br>
-            Portfolio: <a href="https://andrew.voelkerding.xyz" target="_blank">andrew.voelkerding.xyz</a> | 
-            LinkedIn: <a href="https://linkedin.com/in/andrew-voe" target="_blank">linkedin.com/in/andrew-voe</a> | 
-            GitHub: <a href="https://github.com/AndrewVoelkerding" target="_blank">github.com/AndrewVoelkerding</a>
+            Portfolio: <a href="https://{{ data.website }}">andrew.voelkerding.xyz</a> | 
+            LinkedIn: <a href="https://{{ data.linkedin }}">linkedin.com/in/andrew-voe</a> | 
+            GitHub: <a href="https://{{ data.github }}">github.com/AndrewVoelkerding</a>
         </div>
 
         <h2>Education</h2>
-        <div class="job-header">
-            <div class="job-title-cell"><h3>{{ data.education.school }}</h3></div>
-            <div class="meta-cell">{{ data.education.graduation }}</div>
+        <div class="education-block">
+            <div class="job-header">
+                <div class="job-title-cell"><h3>{{ data.education.school }}</h3></div>
+                <div class="meta-cell">{{ data.education.graduation }}</div>
+            </div>
+            <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
+            
+            <p class="coursework-p"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+            <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
         </div>
-        <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
-        
-        <p class="coursework-p"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
-        <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
 
         <h2>Engineering Experience</h2>
         {% for exp in data.engineering_experience %}
