@@ -32,7 +32,7 @@
             "title": "Formula SAE Welded Front Rockers",
             "subtitle": "Purdue Formula SAE Suspension Component",
             "tags": ["Siemens NX", "ANSYS FEA"],
-            "image": "fsae-rockers.jpg",
+            "image": "fsae-rocker.jpg",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
