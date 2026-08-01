@@ -75,6 +75,13 @@ def build_site():
     else:
         print("⚠️  No static/ folder found to copy.")
 
+    cname_file = 'CNAME'
+    if os.path.exists(cname_file):
+        shutil.copy(cname_file, os.path.join(OUTPUT_DIR, 'CNAME'))
+        print("📄 Copied CNAME file to dist/")
+    else:
+        print("⚠️ No CNAME file found.")
+
     print("\n🎉 Build complete! Your static site is ready inside the '/dist' folder.")
 
 if __name__ == '__main__':
