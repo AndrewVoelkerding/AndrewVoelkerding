@@ -33,7 +33,7 @@ def build_site():
     # Mock Flask's url_for() so image paths work seamlessly in static HTML
     def static_url_for(endpoint, filename=None):
         if endpoint == 'static' and filename:
-            return f"static/{filename}"
+            return f"/static/{filename}"
         return filename
 
     env.globals['url_for'] = static_url_for
