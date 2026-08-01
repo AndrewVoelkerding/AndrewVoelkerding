@@ -67,10 +67,10 @@
     "engineering_experience": [
         {
             "title": "Baja SAE Suspension Team Member",
-            "meta": "West Lafayette | June 2026 – August 2026",
+            "meta": "West Lafayette | June 2026 – Present",
             "points": [
                 "Designed and modeled a welded tubular lower A-arm in Solidworks for increased ground clearance while minimizing weight and ensuring manufacturability.", 
-                "Iterated initial suspension-to-lower structure using FEA to find weaknesses.",
+                "Analyzed initial suspension-to-lower structure using FEA to identify and resolve high-stress areas.",
                 "Created front shock-to-upper A-arm assembly using team and supplier models with accurate motion.", 
                 "Managing the fabrication of replacement A-arms for Ohio's Baja SAE competition to ensure rules compliance."
             ]
@@ -89,7 +89,7 @@
         {
             "title": "Manufacturing Engineering Intern",
             "company": "General Tool Company",
-            "meta": "Cincinnati | May 2026 – Present",
+            "meta": "Cincinnati | May 2026 – August 2026",
             "points": [
                 "Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
                 "Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
@@ -103,7 +103,7 @@
             "meta": "Cincinnati | Nov 2023 – Dec 2023",
             "points": [
                 "Developed a Python package-tracking prototype to manage inventory for 50+ concurrent deliveries.",
-                "Implemented feedback from users on usability and implementation."
+                "Refined user experience based on direct user feedback to improve software usability and adoption."
             ]
         }
     ],
