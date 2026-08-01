@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 from jinja2 import Environment, FileSystemLoader
+from weasyprint import HTML  # Added for static PDF compilation
 
 # 1. Define folder paths
 OUTPUT_DIR = 'dist'
@@ -53,6 +54,16 @@ def build_site():
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(rendered_html)
             print(f"✅ Generated: {output_path}")
+
+            # 📄 Automatically generate resume.pdf during static compilation
+            if template_name == 'resume.html':
+                pdf_output_path = os.path.join(OUTPUT_DIR, 'resume.pdf')
+                try:
+                    HTML(string=rendered_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(pdf_output_path)
+                    print(f"📄 Generated static PDF: {pdf_output_path}")
+                except Exception as pdf_err:
+                    print(f"⚠️ PDF generation skipped (WeasyPrint system dependencies missing?): {pdf_err}")
+
         except Exception as e:
             print(f"❌ Failed to generate {template_name}: {e}")
 
