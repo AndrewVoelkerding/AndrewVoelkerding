@@ -91,9 +91,10 @@
             "company": "General Tool Company",
             "meta": "Cincinnati | May 2026 – Present",
             "points": [
-                "Completed a cross-functional rotation across machining and fabrication departments for high-precision defense components.",
-                "Analyzed technical drawings and sales orders to generate quotes for complex assemblies.",
-                "Engineered custom 3D-printed instructional models to demonstrate GD&T principles."
+                "Designed a custom waterproof enclosure assembly utilizing Siemens NX CAD and integrated off-the-shelf (COTS) components to withstand harsh, high-pressure washing environments.",
+                "Communicated with a team to develop testing proceudres and design custom adapter hardware to ensure part compliance.",
+                "Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5 standards to create fully constrained production drawings.", 
+                "Completed a hands-on machinist rotation across machining and fabrication departments for high-precision defense components, and utilized this knowledge to update Engineering Change Order (ECO) standard operating procedures."
             ]
         },
         {
