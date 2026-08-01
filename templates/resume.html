@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ data.name }} - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; color: #000; line-height: 1.4; max-width: 800px; margin: 0 auto; padding: 0.5in; }
+        body { 
+            font-family: 'Inter', Arial, sans-serif; 
+            color: #1e293b; 
+            line-height: 1.45; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 0.5in; 
+        }
         h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
         .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
-        h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
-        h3 { font-size: 11pt; margin: 0; }
-        .meta { font-size: 10pt; text-align: right; }
+        h2 { 
+            font-size: 12pt; 
+            text-transform: uppercase; 
+            color: #0F172A; /* Very dark blue/black */
+            border-bottom: 2px solid #C59B27; /* Muted Gold Accent */
+            padding-bottom: 4px; 
+            margin-top: 18px; 
+            margin-bottom: 10px; 
+            letter-spacing: 0.5px; /* Adds breathing room to uppercase text */
+        }
+        h3 { 
+            font-size: 11pt; 
+            margin: 0; 
+            color: #0F172A;
+            font-weight: 700; /* Extra bold for titles */
+        }
+        .meta { 
+            font-size: 10pt; 
+            text-align: right; 
+            color: #64748b; /* Lighter slate gray for dates/locations */
+            font-weight: 600;
+        }
         .job-header { 
             display: flex; 
             justify-content: space-between; 
