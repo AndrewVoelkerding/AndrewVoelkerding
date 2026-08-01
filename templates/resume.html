@@ -8,8 +8,13 @@
         h1 { font-size: 20pt; text-align: center; margin-bottom: 5px; text-transform: uppercase; }
         .contact { text-align: center; font-size: 10pt; margin-bottom: 20px; }
         h2 { font-size: 12pt; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; margin-top: 15px; margin-bottom: 8px; }
-        h3 { font-size: 11pt; margin: 0; display: inline; }
-        .meta { float: right; font-size: 10pt; }
+        h3 { font-size: 11pt; margin: 0; }
+        .meta { font-size: 10pt; text-align: right; }
+        .job-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: baseline; 
+        }
         .subtitle { font-size: 10pt; font-style: italic; margin-bottom: 5px; }
         ul { margin: 5px 0 15px 20px; padding: 0; font-size: 10pt; }
         li { margin-bottom: 4px; }
@@ -67,7 +72,7 @@
     </div>
 
     <h2>Education</h2>
-    <div>
+    <div class="job-header">
         <h3>{{ data.education.school }}</h3>
         <span class="meta">{{ data.education.graduation }}</span>
     </div>
@@ -78,8 +83,10 @@
     <h2>Engineering Experience</h2>
     {% for exp in data.engineering_experience %}
     <div style="margin-top: 10px;">
-        <h3>{{ exp.title }}</h3>
-        <span class="meta">{{ exp.meta }}</span>
+        <div class="job-header">
+            <h3>{{ exp.title }}</h3>
+            <span class="meta">{{ exp.meta }}</span>
+        </div>
         <ul>
             {% for pt in exp.points %}
             <li>{{ pt }}</li>
@@ -91,8 +98,10 @@
     <h2>Employment History</h2>
     {% for emp in data.employment %}
     <div style="margin-top: 10px;">
-        <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
-        <span class="meta">{{ emp.meta }}</span>
+        <div class="job-header">
+            <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
+            <span class="meta">{{ emp.meta }}</span>
+        </div>
         <ul>
             {% for pt in emp.points %}
             <li>{{ pt }}</li>
