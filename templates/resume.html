@@ -10,7 +10,7 @@
             margin: 0.35in 0.4in;
         }
 
-        /* Screen view: Large, professional document viewer layout */
+        /* Screen view: Scaled up, expansive document viewer layout */
         body { 
             font-family: 'Inter', Arial, sans-serif; 
             background-color: #0F172A; 
@@ -57,20 +57,20 @@
             background-color: #475569;
         }
 
-        /* Expansive, full-sized paper sheet container for the web */
+        /* Scaled up paper sheet container for the web view */
         .resume-sheet {
             background: #FFFFFF;
             width: 100%;
-            max-width: 900px;
-            padding: 45px 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            max-width: 980px; /* Scaled larger to fill the screen */
+            padding: 50px 55px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
             border-radius: 8px;
             box-sizing: border-box;
             line-height: 1.4;
         }
 
         h1 { 
-            font-size: 21pt; 
+            font-size: 22pt; 
             text-align: center; 
             margin-bottom: 4px; 
             text-transform: uppercase; 
@@ -80,8 +80,19 @@
         .contact { 
             text-align: center; 
             font-size: 9.5pt; 
-            margin-bottom: 14px; 
+            margin-bottom: 16px; 
             color: #334155;
+        }
+
+        /* Clickable link styling */
+        .contact a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         h2 { 
@@ -96,7 +107,7 @@
             font-weight: 700;
         }
 
-        /* Bulletproof Table Layout for Headers (prevents WeasyPrint overlapping) */
+        /* Bulletproof Table Layout for Headers */
         .job-header { 
             display: table;
             width: 100%;
@@ -131,7 +142,7 @@
             font-size: 9.5pt; 
             font-weight: 600; 
             color: #475569;
-            margin-bottom: 4px; 
+            margin-bottom: 8px; /* Added clean spacing before coursework */
         }
         
         ul { 
@@ -142,7 +153,17 @@
         }
 
         li { margin-bottom: 3px; }
-        p { font-size: 9.5pt; margin: 3px 0; }
+        
+        p { 
+            font-size: 9.5pt; 
+            margin: 4px 0; 
+        }
+
+        /* Added specific clean separation for coursework line */
+        .coursework-p {
+            margin-top: 6px;
+            margin-bottom: 4px;
+        }
 
         /* Print & WeasyPrint Overrides */
         @media print {
@@ -175,7 +196,9 @@
         <h1>{{ data.name }}</h1>
         <div class="contact">
             {{ data.location }} | {{ data.phone }} | {{ data.email }}<br>
-            Portfolio: andrew.voelkerding.xyz | LinkedIn: linkedin.com/in/andrew-voe | GitHub: github.com/AndrewVoelkerding
+            Portfolio: <a href="https://andrew.voelkerding.xyz" target="_blank">andrew.voelkerding.xyz</a> | 
+            LinkedIn: <a href="https://linkedin.com/in/andrew-voe" target="_blank">linkedin.com/in/andrew-voe</a> | 
+            GitHub: <a href="https://github.com/AndrewVoelkerding" target="_blank">github.com/AndrewVoelkerding</a>
         </div>
 
         <h2>Education</h2>
@@ -184,7 +207,8 @@
             <div class="meta-cell">{{ data.education.graduation }}</div>
         </div>
         <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
-        <p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+        
+        <p class="coursework-p"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
         <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
 
         <h2>Engineering Experience</h2>
