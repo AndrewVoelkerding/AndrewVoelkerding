@@ -10,19 +10,18 @@
             margin: 0.35in 0.4in;
         }
 
-        /* Screen view styling: fills the screen with a professional dark background and a centered paper card */
+        /* Screen view: Large, professional document viewer layout */
         body { 
             font-family: 'Inter', Arial, sans-serif; 
             background-color: #0F172A; 
             color: #1e293b; 
             margin: 0; 
-            padding: 30px 20px; 
+            padding: 40px 20px; 
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Action bar */
         .actions-bar {
             display: flex;
             justify-content: center;
@@ -33,7 +32,7 @@
 
         .btn { 
             display: inline-block; 
-            padding: 10px 20px; 
+            padding: 10px 22px; 
             font-weight: bold; 
             cursor: pointer; 
             background-color: #C59B27;
@@ -58,30 +57,30 @@
             background-color: #475569;
         }
 
-        /* The Resume Paper Sheet Container */
+        /* Expansive, full-sized paper sheet container for the web */
         .resume-sheet {
             background: #FFFFFF;
             width: 100%;
-            max-width: 850px;
-            padding: 40px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            max-width: 900px;
+            padding: 45px 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             border-radius: 8px;
             box-sizing: border-box;
-            line-height: 1.35;
+            line-height: 1.4;
         }
 
         h1 { 
-            font-size: 19pt; 
+            font-size: 21pt; 
             text-align: center; 
-            margin-bottom: 3px; 
+            margin-bottom: 4px; 
             text-transform: uppercase; 
             font-weight: 700; 
         }
         
         .contact { 
             text-align: center; 
-            font-size: 9pt; 
-            margin-bottom: 12px; 
+            font-size: 9.5pt; 
+            margin-bottom: 14px; 
             color: #334155;
         }
 
@@ -90,52 +89,60 @@
             text-transform: uppercase; 
             color: #0F172A; 
             border-bottom: 2px solid #C59B27; 
-            padding-bottom: 2px; 
-            margin-top: 10px; 
-            margin-bottom: 5px; 
+            padding-bottom: 3px; 
+            margin-top: 14px; 
+            margin-bottom: 6px; 
             letter-spacing: 0.5px; 
             font-weight: 700;
         }
 
-        /* Fixed: Using Flexbox for clean side-by-side layout without text wrapping/overlapping errors */
+        /* Bulletproof Table Layout for Headers (prevents WeasyPrint overlapping) */
         .job-header { 
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            display: table;
+            width: 100%;
+            margin-top: 6px;
             margin-bottom: 2px;
         }
 
-        h3 { 
-            font-size: 10pt; 
-            margin: 0; 
-            color: #0F172A;
-            font-weight: 700; 
+        .job-title-cell {
+            display: table-cell;
+            text-align: left;
+            vertical-align: baseline;
         }
 
-        .meta { 
+        .meta-cell { 
+            display: table-cell;
+            text-align: right;
+            vertical-align: baseline;
             font-size: 9.5pt; 
-            text-align: right; 
             color: #64748b; 
             font-weight: 600;
             white-space: nowrap;
+        }
+
+        h3 { 
+            font-size: 10.5pt; 
+            margin: 0; 
+            color: #0F172A;
+            font-weight: 700; 
         }
 
         .subtitle { 
             font-size: 9.5pt; 
             font-weight: 600; 
             color: #475569;
-            margin-bottom: 3px; 
+            margin-bottom: 4px; 
         }
         
         ul { 
-            margin: 2px 0 6px 0; 
-            padding-left: 16px; 
-            font-size: 9pt; 
+            margin: 3px 0 8px 0; 
+            padding-left: 18px; 
+            font-size: 9.5pt; 
             list-style-type: none; 
         }
 
-        li { margin-bottom: 2px; }
-        p { font-size: 9pt; margin: 2px 0; }
+        li { margin-bottom: 3px; }
+        p { font-size: 9.5pt; margin: 3px 0; }
 
         /* Print & WeasyPrint Overrides */
         @media print {
@@ -173,8 +180,8 @@
 
         <h2>Education</h2>
         <div class="job-header">
-            <h3>{{ data.education.school }}</h3>
-            <span class="meta">{{ data.education.graduation }}</span>
+            <div class="job-title-cell"><h3>{{ data.education.school }}</h3></div>
+            <div class="meta-cell">{{ data.education.graduation }}</div>
         </div>
         <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
         <p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
@@ -182,10 +189,10 @@
 
         <h2>Engineering Experience</h2>
         {% for exp in data.engineering_experience %}
-        <div style="margin-top: 4px;">
+        <div>
             <div class="job-header">
-                <h3>{{ exp.title }}</h3>
-                <span class="meta">{{ exp.meta }}</span>
+                <div class="job-title-cell"><h3>{{ exp.title }}</h3></div>
+                <div class="meta-cell">{{ exp.meta }}</div>
             </div>
             <ul>
                 {% for pt in exp.points %}
@@ -197,10 +204,10 @@
 
         <h2>Employment History</h2>
         {% for emp in data.employment %}
-        <div style="margin-top: 4px;">
+        <div>
             <div class="job-header">
-                <h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3>
-                <span class="meta">{{ emp.meta }}</span>
+                <div class="job-title-cell"><h3>{{ emp.title }}{% if emp.company %} - {{ emp.company }}{% endif %}</h3></div>
+                <div class="meta-cell">{{ emp.meta }}</div>
             </div>
             <ul>
                 {% for pt in emp.points %}
