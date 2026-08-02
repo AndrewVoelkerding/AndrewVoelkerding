@@ -16,7 +16,9 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+        
+        /* INCREASED GLOBAL BASE FONT SIZE slightly for better readability */
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; }
 
         nav {
             background-color: #0F172A;
@@ -27,13 +29,16 @@
             border-bottom: 3px solid var(--purdue-gold);
         }
 
-        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+        /* INCREASED: Navbar Logo and Links */
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.3rem; }
         nav .nav-links { display: flex; gap: 1rem; }
-        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
         nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
 
         .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        h1.page-title { font-size: 1.8rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+        
+        /* INCREASED: Main Page Title */
+        h1.page-title { font-size: 2.2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
 
         /* Project Tabs Layout */
         .projects-wrapper { display: flex; gap: 2rem; flex-wrap: wrap; }
@@ -51,8 +56,10 @@
 
         .tab-btn:hover { border-color: var(--purdue-gold); }
         .tab-btn.active { border-left: 4px solid var(--purdue-gold); background: #F1F5F9; font-weight: 600; }
-        .tab-btn h3 { font-size: 1rem; color: var(--text-dark); }
-        .tab-btn p { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+        
+        /* INCREASED: Tab Titles and Subtitles */
+        .tab-btn h3 { font-size: 1.15rem; color: var(--text-dark); }
+        .tab-btn p { font-size: 0.95rem; color: var(--text-muted); margin-top: 0.2rem; }
 
         .project-display { flex: 2; min-width: 320px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
@@ -73,11 +80,12 @@
             font-size: 0.9rem;
         }
 
-        .tag { display: inline-block; background: #F1F5F9; color: #334155; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; margin-right: 0.3rem; margin-bottom: 0.5rem; }
-        .project-content h2 { font-size: 1.4rem; margin-bottom: 0.25rem; }
-        .project-content .subtitle { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
-        .project-content ul { list-style-type: none; padding-left: 0; margin-top: 0.75rem; color: var(--text-muted); font-size: 0.95rem; }
-        .project-content ul li { margin-bottom: 0.5rem; }
+        /* INCREASED: Project content formatting */
+        .tag { display: inline-block; background: #F1F5F9; color: #334155; font-size: 0.85rem; font-weight: 600; padding: 0.35rem 0.6rem; border-radius: 4px; margin-right: 0.4rem; margin-bottom: 0.5rem; }
+        .project-content h2 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+        .project-content .subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
+        .project-content ul { list-style-type: none; padding-left: 0; margin-top: 0.75rem; color: var(--text-muted); font-size: 1.1rem; }
+        .project-content ul li { margin-bottom: 0.6rem; }
     </style>
 </head>
 <body>
