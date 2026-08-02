@@ -123,7 +123,7 @@
         }
     ],
     "skills": {
-        "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)"
+        "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
         "programming": "Bambu Slicer, Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
         "manufacturing": "3D Printing (Bambu A1 Mini), CNC/Lathes, Laser Cutting, Basic Tooling",
         "electrical": "Soldering, Arduino, Wiring Harnesses"
