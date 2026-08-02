@@ -21,7 +21,7 @@
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
             "tags": ["Solidworks"],
-            "image": "baja-laa.jpg",
+            "image": "baja-laa.png",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system",
             "details": [
                 "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
@@ -32,7 +32,7 @@
             "title": "Formula SAE Welded Front Rockers",
             "subtitle": "Purdue Formula SAE Suspension Component",
             "tags": ["Siemens NX", "ANSYS FEA"],
-            "image": "fsae-rocker.jpg",
+            "image": "fsae-rocker.png",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
@@ -43,7 +43,7 @@
             "title": "Automotive Electronics & Speedometer Retrofit",
             "subtitle": "Custom Harnessing & Dashboard Integration",
             "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
-            "image": "radio_install.jpg",
+            "image": "radio_install.png",
             "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
             "details": [
                 "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
@@ -56,7 +56,7 @@
             "subtitle": "General Tool Company Onboarding Project",
             "id": "gdt-models",
             "tags": ["3D Printing", "GD&T", "Additive Manufacturing"],
-            "image": "gdt_model.jpg",
+            "image": "gdt_model.png",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
                 "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
