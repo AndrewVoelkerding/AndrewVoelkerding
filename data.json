@@ -95,7 +95,7 @@
             "meta": "West Lafayette | Aug 2025 – May 2026",
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
-                "• Generated CAM toolpaths and technical drawings using GD&T (ASME Y14.5-2009) to streamline the CNC process.",
+                "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
                 "• Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
             ]
         }
