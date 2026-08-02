@@ -22,7 +22,7 @@
             "subtitle": "Purdue Baja SAE Suspension Component",
             "tags": ["Solidworks", "ANSYS FEA"],
             "image": "baja-laa.png",
-            "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system",
+            "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
                 "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
             ]
@@ -53,9 +53,9 @@
             ]
         },
         {
+            "id": "gdt-models",
             "title": "GD&T 3D-Printed Instructional Models",
             "subtitle": "General Tool Company Onboarding Project",
-            "id": "gdt-models",
             "tags": ["3D Printing", "GD&T", "Additive Manufacturing"],
             "image": "gdt_model.png",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
@@ -71,7 +71,7 @@
             "subtitle": "Custom Harnessing & Dashboard Integration",
             "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
             "image": "radio_install.png",
-            "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
+            "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
             "details": [
                 "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
                 "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
