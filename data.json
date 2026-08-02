@@ -17,6 +17,20 @@
     },
     "projects": [
         {
+            "id": "four-bar-linkage",
+            "title": "Four Bar Linkage Controller System",
+            "subtitle": "3D-Printed Arduino-Integrated Mechanism",
+            "tags": ["Autodesk Fusion 360", "Arduino MEGA", "3D Printing", "Mechatronics"],
+            "image": "four_bar_linkage.png",
+            "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
+            "details": [
+                "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
+                "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
+                "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
+                "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
+            ]
+        },
+        {
             "id": "baja-laa",
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
