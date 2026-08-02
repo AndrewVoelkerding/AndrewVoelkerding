@@ -20,7 +20,7 @@
             "id": "baja-laa",
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
-            "tags": ["Solidworks"],
+            "tags": ["Solidworks", "ANSYS FEA"],
             "image": "baja-laa.png",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system",
             "details": [
