@@ -17,20 +17,6 @@
     },
     "projects": [
         {
-            "id": "four-bar-linkage",
-            "title": "Four Bar Linkage Controller System",
-            "subtitle": "3D-Printed Arduino-Integrated Mechanism",
-            "tags": ["Autodesk Fusion 360", "Arduino MEGA", "3D Printing", "Mechatronics"],
-            "image": "four_bar_linkage.png",
-            "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
-            "details": [
-                "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
-                "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
-                "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
-                "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
-            ]
-        },
-        {
             "id": "baja-laa",
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
@@ -53,16 +39,17 @@
             ]
         },
         {
-            "id": "car-audio",
-            "title": "Automotive Electronics & Speedometer Retrofit",
-            "subtitle": "Custom Harnessing & Dashboard Integration",
-            "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
-            "image": "radio_install.png",
-            "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
+            "id": "four-bar-linkage",
+            "title": "Four Bar Linkage Controller System",
+            "subtitle": "3D-Printed Arduino-Integrated Mechanism",
+            "tags": ["Autodesk Fusion 360", "Arduino MEGA", "3D Printing", "Mechatronics"],
+            "image": "four_bar_linkage.png",
+            "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
             "details": [
-                "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
-                "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
-                "Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement."
+                "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
+                "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
+                "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
+                "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
             ]
         },
         {
@@ -76,6 +63,19 @@
                 "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
                 "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
                 "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
+            ]
+        },
+        {
+            "id": "car-audio",
+            "title": "Automotive Electronics & Speedometer Retrofit",
+            "subtitle": "Custom Harnessing & Dashboard Integration",
+            "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
+            "image": "radio_install.png",
+            "summary": "Custom automotive head unit, backup camera, and aftermarket dash cluster integrations.",
+            "details": [
+                "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
+                "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
+                "Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement."
             ]
         }
     ],
