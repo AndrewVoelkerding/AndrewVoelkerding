@@ -13,7 +13,7 @@
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
         "courses": "Statics, Dynamics, Electrical Engineering Fundamentals with Lab, Controls, Geometric and Annotation Modeling (CAD with NX), Mechanics of Materials",
-        "badges": ["Baja SAE Suspension Member", "GD&T Milestones Certification", "ASME Member", "Undue Ultimate"]
+        "badges": ["Baja SAE Suspension Member", "GD&T Milestones Certification (ASME Y14.5-2009)", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
         {
@@ -56,7 +56,7 @@
             "id": "gdt-models",
             "title": "GD&T 3D-Printed Instructional Models",
             "subtitle": "General Tool Company Onboarding Project",
-            "tags": ["3D Printing", "GD&T", "Additive Manufacturing"],
+            "tags": ["3D Printing", "GD&T (ASME Y14.5-2009)", "Additive Manufacturing"],
             "image": "gdt_model.png",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
@@ -95,7 +95,7 @@
             "meta": "West Lafayette | Aug 2025 – May 2026",
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
-                "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
+                "• Generated CAM toolpaths and technical drawings using GD&T (ASME Y14.5-2009) to streamline the CNC process.",
                 "• Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
             ]
         }
@@ -108,7 +108,7 @@
             "points": [
                 "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
-                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5 standards to create fully constrained production drawings.", 
+                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
                 "• Completed a hands-on machinist rotation across machining and fabrication departments for high-precision defense components, and utilized this knowledge to update Engineering Change Order (ECO) standard operating procedures."
             ]
         },
@@ -123,7 +123,7 @@
         }
     ],
     "skills": {
-        "design": "Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T",
+        "design": "Siemens NX, Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009",
         "programming": "Bambu Slicer, Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
         "manufacturing": "3D Printing (Bambu A1 Mini), Laser Cutting, CNC, Basic Tooling",
         "electrical": "Soldering, Arduino, Wiring Harnesses"
