@@ -87,7 +87,7 @@
                 "• Designed and modeled a welded tubular lower A-arm in Solidworks for increased ground clearance and load pathing while minimizing weight and ensuring manufacturability.", 
                 "• Analyzed initial suspension-to-lower structure using FEA to identify and resolve high-stress areas.",
                 "• Created front shock-to-upper A-arm assembly using team and supplier models with accurate motion.", 
-                "• Manage the fabrication of replacement A-arms for Ohio's Baja SAE competition to ensure rules compliance."
+                "• Coordinate the fabrication of replacement A-arms for Ohio's Baja SAE competition to ensure rules compliance."
             ]
         },
         {
@@ -96,7 +96,7 @@
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
-                "• Supported the manufacturing of multi-operation wheel hubs using 3-axis CNC milling, hand-tapping, and custom soft-jaw fixtures."
+                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
             ]
         }
     ],
@@ -109,7 +109,7 @@
                 "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
                 "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Completed a hands-on machinist rotation across machining and fabrication departments for high-precision defense components, and utilized this knowledge to update Engineering Change Order (ECO) standard operating procedures."
+                "• Completed a hands-on machinist rotation in high-precision defense manufacturing while concurrently updating Engineering Change Order (ECO) standard operating procedures."
             ]
         },
         {
