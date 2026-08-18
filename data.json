@@ -1,145 +1,123 @@
 {
-  "name": "ANDREW VOELKERDING",
-  "location": "Cincinnati, Ohio",
-  "tagline": "Mechanical Engineering | Purdue University '28",
-  "email": "voelkerd@purdue.edu",
-  "phone": "513-910-4107",
-  "website": "andrew.voelkerding.xyz",
-  "linkedin": "linkedin.com/in/andrew-voe",
-  "github": "github.com/AndrewVoelkerding",
-  "education": {
-    "school": "Purdue University (West Lafayette)",
-    "degree": "Bachelor of Science in Mechanical Engineering",
-    "graduation": "Expected Graduation: May 2028",
-    "gpa": "3.9/4.0",
-    "courses": "Statics, Dynamics, Electrical Engineering Fundamentals with Lab, Controls, Geometric and Annotation Modeling (CAD with NX), Mechanics of Materials",
-    "badges": [
-      "Baja SAE Suspension Member",
-      "ASME Member",
-      "Undue Ultimate"
-    ]
-  },
-  "projects": [
-    {
-      "id": "baja-laa",
-      "title": "Baja SAE Lower A-Arm",
-      "subtitle": "Purdue Baja SAE Suspension Component",
-      "tags": [
-        "Solidworks",
-        "ANSYS FEA"
-      ],
-      "image": "baja-laa.png",
-      "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
-      "details": [
-        "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
-      ]
+    "name": "ANDREW VOELKERDING",
+    "location": "Cincinnati, Ohio",
+    "tagline": "Mechanical Engineering | Purdue University '28",
+    "email": "voelkerd@purdue.edu",
+    "phone": "513-910-4107",
+    "website": "andrew.voelkerding.xyz",
+    "linkedin": "linkedin.com/in/andrew-voe",
+    "github": "github.com/AndrewVoelkerding",
+    "education": {
+        "school": "Purdue University (West Lafayette)",
+        "degree": "Bachelor of Science in Mechanical Engineering",
+        "graduation": "Expected Graduation: May 2028",
+        "gpa": "3.9/4.0",
+        "courses": "Statics, Dynamics, Electrical Engineering Fundamentals with Lab, Controls, Geometric and Annotation Modeling (CAD with NX), Mechanics of Materials",
+        "badges": ["Baja SAE Suspension Member", "ASME Member", "Undue Ultimate"]
     },
-    {
-      "id": "fsae-rockers",
-      "title": "Formula SAE Welded Front Rockers",
-      "subtitle": "Purdue Formula SAE Suspension Component",
-      "tags": [
-        "Siemens NX",
-        "ANSYS FEA"
-      ],
-      "image": "fsae-rocker.png",
-      "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
-      "details": [
-        "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
-      ]
-    },
-    {
-      "id": "four-bar-linkage",
-      "title": "Four Bar Linkage Controller System",
-      "subtitle": "3D-Printed Arduino-Integrated Mechanism",
-      "tags": [
-        "Autodesk Fusion 360",
-        "Arduino MEGA",
-        "3D Printing",
-        "Mechatronics"
-      ],
-      "image": "four_bar_linkage.png",
-      "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
-      "details": [
-        "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
-        "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
-        "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
-        "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
-      ]
-    },
-    {
-      "id": "gdt-models",
-      "title": "GD&T 3D-Printed Instructional Models",
-      "subtitle": "General Tool Company Onboarding Project",
-      "tags": [
-        "3D Printing",
-        "GD&T (ASME Y14.5-2009)",
-        "Additive Manufacturing"
-      ],
-      "image": "gdt_model.png",
-      "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
-      "details": [
-        "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
-        "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
-        "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
-      ]
-    },
-    {
-      "id": "car-audio",
-      "title": "Automotive Electronics & Speedometer Retrofit",
-      "subtitle": "Custom Harnessing & Dashboard Integration",
-      "tags": [
-        "Soldering",
-        "Wiring Harnesses",
-        "Automotive Systems"
-      ],
-      "image": "radio_install.png",
-      "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
-      "details": [
-        "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
-        "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
-        "Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement."
-      ]
+    "projects": [
+        {
+            "id": "baja-laa",
+            "title": "Baja SAE Lower A-Arm",
+            "subtitle": "Purdue Baja SAE Suspension Component",
+            "tags": ["Solidworks", "ANSYS FEA"],
+            "image": "baja-laa.png",
+            "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
+            "details": [
+                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
+            ]
+        }, 
+        {
+            "id": "fsae-rockers",
+            "title": "Formula SAE Welded Front Rockers",
+            "subtitle": "Purdue Formula SAE Suspension Component",
+            "tags": ["Siemens NX", "ANSYS FEA"],
+            "image": "fsae-rocker.png",
+            "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
+            "details": [
+                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
+            ]
+        },
+        {
+            "id": "four-bar-linkage",
+            "title": "Four Bar Linkage Controller System",
+            "subtitle": "3D-Printed Arduino-Integrated Mechanism",
+            "tags": ["Autodesk Fusion 360", "Arduino MEGA", "3D Printing", "Mechatronics"],
+            "image": "four_bar_linkage.png",
+            "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
+            "details": [
+                "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
+                "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
+                "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
+                "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
+            ]
+        },
+        {
+            "id": "gdt-models",
+            "title": "GD&T 3D-Printed Instructional Models",
+            "subtitle": "General Tool Company Onboarding Project",
+            "tags": ["3D Printing", "GD&T (ASME Y14.5-2009)", "Additive Manufacturing"],
+            "image": "gdt_model.png",
+            "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
+            "details": [
+                "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
+                "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
+                "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
+            ]
+        },
+        {
+            "id": "car-audio",
+            "title": "Automotive Electronics & Speedometer Retrofit",
+            "subtitle": "Custom Harnessing & Dashboard Integration",
+            "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
+            "image": "radio_install.png",
+            "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
+            "details": [
+                "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
+                "Wired aftermarket interfaces for backup cameras and steering wheel control retention systems.",
+                "Retrofitted a modern digital speedometer cluster to preserve vehicle driver info displays post-radio replacement."
+            ]
+        }
+    ],
+    "engineering_experience": [
+        {
+            "title": "Baja SAE Suspension Team Member",
+            "meta": "West Lafayette | June 2026 – Present",
+            "points": [
+                "• Designed and modeled a welded tubular lower A-arm in Solidworks for increased ground clearance and load pathing while minimizing weight and ensuring manufacturability.", 
+                "• Analyzed initial suspension-to-lower structure using FEA to identify and resolve high-stress areas.",
+                "• Created front shock-to-upper A-arm assembly using team and supplier models with accurate motion.", 
+                "• Coordinate the fabrication of replacement A-arms for Ohio's Baja SAE competition to ensure rules compliance."
+            ]
+        },
+        {
+            "title": "Formula SAE Suspension Team Member",
+            "meta": "West Lafayette | Aug 2025 – May 2026",
+            "points": [
+                "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
+                "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
+                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
+            ]
+        }
+    ],
+    "employment": [
+        {
+            "title": "Manufacturing Engineering Intern",
+            "company": "General Tool Company",
+            "meta": "Cincinnati | May 2026 – August 2026",
+            "points": [
+                "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
+                "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
+                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
+                "• Completed a hands-on machinist rotation in high-precision defense manufacturing while concurrently updating Engineering Change Order (ECO) standard operating procedures."
+            ]
+        },
+
+    ],
+    "skills": {
+        "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
+        "programming": "Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
+        "manufacturing": "Rapid Prototyping (3D Printing), CNC/Lathes, Laser Cutting, Basic Tooling",
+        "electrical": "Soldering, Arduino, Wiring Harnesses"
     }
-  ],
-  "engineering_experience": [
-    {
-      "title": "Baja SAE Suspension Team Member",
-      "meta": "West Lafayette | June 2026 – Present",
-      "points": [
-        "• Designed and modeled a welded tubular lower A-arm in Solidworks for increased ground clearance and load pathing while minimizing weight and ensuring manufacturability.",
-        "• Analyzed initial suspension-to-lower structure using FEA to identify and resolve high-stress areas.",
-        "• Created front shock-to-upper A-arm assembly using team and supplier models with accurate motion.",
-        "• Coordinate the fabrication of replacement A-arms for Ohio's Baja SAE competition to ensure rules compliance."
-      ]
-    },
-    {
-      "title": "Formula SAE Suspension Team Member",
-      "meta": "West Lafayette | Aug 2025 – May 2026",
-      "points": [
-        "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
-        "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
-        "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
-      ]
-    }
-  ],
-  "employment": [
-    {
-      "title": "Manufacturing Engineering Intern",
-      "company": "General Tool Company",
-      "meta": "Cincinnati | May 2026 – August 2026",
-      "points": [
-        "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
-        "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
-        "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.",
-        "• Completed a hands-on machinist rotation in high-precision defense manufacturing while concurrently updating Engineering Change Order (ECO) standard operating procedures."
-      ]
-    }
-  ],
-  "skills": {
-    "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
-    "programming": "Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
-    "manufacturing": "Rapid Prototyping (3D Printing), CNC/Lathes, Laser Cutting, Basic Tooling",
-    "electrical": "Soldering, Arduino, Wiring Harnesses"
-  }
 }
