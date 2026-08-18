@@ -17,184 +17,70 @@
             --purdue-gold: #C59B27;
         }
 
-        * { 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
-            font-family: 'Inter', sans-serif; 
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         
-        /* INCREASED GLOBAL BASE FONT SIZE for consistency with projects page */
-        body { 
-            background-color: var(--bg-main); 
-            color: var(--text-dark); 
-            line-height: 1.7; 
-            font-size: 1.05rem; 
-        }
+        body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; }
 
         nav {
-            background-color: #0F172A;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--purdue-gold);
+            background-color: #0F172A; padding: 1rem 2rem; display: flex; 
+            justify-content: space-between; align-items: center; border-bottom: 3px solid var(--purdue-gold);
         }
 
-        nav .logo { 
-            color: white; 
-            font-weight: 700; 
-            text-decoration: none; 
-            font-size: 1.3rem; 
-        }
-        nav .nav-links { 
-            display: flex; 
-            gap: 1rem; 
-        }
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.3rem; }
+        nav .nav-links { display: flex; gap: 1rem; }
         nav .nav-links a { 
-            color: #94A3B8; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1rem; 
-            padding: 0.3rem 0.75rem; 
-            border-radius: 4px; 
-            transition: all 0.2s; 
+            color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 1rem; 
+            padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; 
         }
-        nav .nav-links a:hover, nav .nav-links a.active { 
-            color: white; 
-            background: #1E293B; 
-        }
+        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
 
-        header {
-            background-color: #0F172A;
-            color: white;
-            padding: 3.5rem 2rem;
-            text-align: center;
-        }
+        header { background-color: #0F172A; color: white; padding: 3.5rem 2rem; text-align: center; }
+        header h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; }
+        header p.subtitle { font-size: 1.25rem; color: #94A3B8; margin-top: 0.5rem; }
 
-        header h1 { 
-            font-size: 2.6rem; 
-            font-weight: 700; 
-            letter-spacing: -0.02em; 
-        }
-        header p.subtitle { 
-            font-size: 1.25rem; 
-            color: #94A3B8; 
-            margin-top: 0.5rem; 
-        }
-
-        .contact-links {
-            margin-top: 1.25rem;
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
+        .contact-links { margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
         .btn {
-            display: inline-block;
-            padding: 0.5rem 1.1rem;
-            background: #1E293B;
-            color: #E2E8F0;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-            transition: all 0.2s ease;
+            display: inline-block; padding: 0.5rem 1.1rem; background: #1E293B; color: #E2E8F0;
+            text-decoration: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600;
+            border: 1px solid #334155; transition: all 0.2s ease;
         }
+        .btn:hover { background: var(--purdue-gold); color: #0F172A; border-color: var(--purdue-gold); }
 
-        .btn:hover { 
-            background: var(--purdue-gold); 
-            color: #0F172A; 
-            border-color: var(--purdue-gold); 
-        }
-
-        .container { 
-            max-width: 1250px; /* Matching the wider widescreen layout */
-            margin: 0 auto; 
-            padding: 2.5rem 1.5rem; 
-        }
-        
+        .container { max-width: 1250px; margin: 0 auto; padding: 2.5rem 1.5rem; }
         section { margin-bottom: 3rem; }
 
         h2.section-title {
-            font-size: 1.5rem;
-            color: var(--accent-grey);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 1.5rem; color: var(--accent-grey); border-bottom: 2px solid var(--border);
+            padding-bottom: 0.4rem; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em;
         }
 
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 1.5rem; 
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
         .card { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border); 
-            border-radius: 8px; 
-            padding: 1.5rem; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; 
+            padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
         }
         .card h3 { font-size: 1.25rem; color: var(--text-dark); }
         .card .meta { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
-        .card ul { list-style-type: none; padding-left: 0; color: var(--text-muted); font-size: 1rem; }
+        .card ul { list-style-type: disc; padding-left: 1.2rem; color: var(--text-muted); font-size: 1rem; }
         .card ul li { margin-bottom: 0.5rem; }
 
-        .skills-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-            gap: 1.25rem; 
-        }
-        .skill-box { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border); 
-            padding: 1.25rem; 
-            border-radius: 8px; 
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+        .skill-box { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px; }
         .skill-box h4 { font-size: 1.05rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
         .skill-box p { font-size: 0.95rem; color: var(--text-muted); }
 
         .badge { 
-            display: inline-block; 
-            background: var(--accent-light); 
-            color: var(--accent-grey); 
-            padding: 0.25rem 0.6rem; 
-            border-radius: 4px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            margin-top: 0.5rem; 
-            margin-right: 0.25rem; 
+            display: inline-block; background: var(--accent-light); color: var(--accent-grey); 
+            padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; 
+            margin-top: 0.5rem; margin-right: 0.25rem; 
         }
 
-        footer { 
-            text-align: center; 
-            padding: 1.75rem; 
-            background: #0F172A; 
-            color: #64748B; 
-            font-size: 0.9rem; 
-            border-top: 1px solid #1E293B; 
-        }
+        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.9rem; border-top: 1px solid #1E293B; }
 
-        /* =========================================
-           📱 MOBILE & VERTICAL SCREEN RULES
-           ========================================= */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 1.5rem 1rem;
-            }
+            nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+            header h1 { font-size: 2rem; }
+            .container { padding: 1.5rem 1rem; }
         }
     </style>
 </head>
@@ -241,7 +127,7 @@
             <div class="grid">
                 {% for exp in data.engineering_experience %}
                 <div class="card">
-                    <h3>{{ exp.title }}</h3>
+                    <h3>{{ exp.title }}{% if exp.company %} — {{ exp.company }}{% endif %}</h3>
                     <p class="meta">{{ exp.meta }}</p>
                     <ul>
                         {% for pt in exp.points %}
@@ -254,7 +140,30 @@
         </section>
 
         <section>
-            <h2 class="section-title">Industry Employment</h2>
+            <h2 class="section-title">Showcase Projects</h2>
+            <div class="grid">
+                {% for proj in data.showcase_projects %}
+                <div class="card">
+                    <h3>{{ proj.title }}</h3>
+                    <p class="meta">{{ proj.subtitle }}</p>
+                    <p style="margin-bottom: 0.75rem; font-size: 0.95rem;">{{ proj.summary }}</p>
+                    <ul>
+                        {% for detail in proj.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
+                    </ul>
+                    <div style="margin-top: 0.8rem;">
+                        {% for tag in proj.tags %}
+                        <span class="badge">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Employment</h2>
             <div class="grid">
                 {% for emp in data.employment %}
                 <div class="card">
