@@ -112,15 +112,7 @@
                 "• Completed a hands-on machinist rotation in high-precision defense manufacturing while concurrently updating Engineering Change Order (ECO) standard operating procedures."
             ]
         },
-        {
-            "title": "Intern / Assistant",
-            "company": "Urban Sites",
-            "meta": "Cincinnati | Nov 2023 – Dec 2023",
-            "points": [
-                "• Developed a Python package-tracking prototype to manage inventory for 50+ concurrent deliveries.",
-                "• Refined user experience based on direct user feedback to improve software usability and adoption."
-            ]
-        }
+
     ],
     "skills": {
         "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
