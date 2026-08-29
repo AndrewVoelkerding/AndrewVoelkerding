@@ -115,7 +115,7 @@
     "resume_projects": [
         {
             "title": "Four-Bar Linkage Controller",
-            "meta": "Personal Project",
+            "meta": "October 2025 - February 2026",
             "points": [
                 "• Analytically designed a four-bar linkage and custom snap-fit pivot joints in Fusion 360 to resist torsional loads, validating tolerances with a test print before committing to the full assembly.",
                 "• Integrated an Arduino MEGA, motor controller, and limit switch into a closed-loop system, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
