@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Intern / Assistant",
+        "company": "Urban Sites",
+        "meta": "Cincinnati | Nov 2023 – Dec 2023",
+        "points": [
+            "Developed a Python package-tracking prototype to manage inventory for 50+ concurrent deliveries.",
+            "Refined user experience based on direct user feedback to improve software usability and adoption."
+        ]
+    },
+
+     {
+            "title": "Intern / Assistant",
+            "company": "Urban Sites",
+            "meta": "Cincinnati | Nov 2023 – Dec 2023",
+            "points": [
+               "• Engineered a Python package-tracking prototype based on direct user feedback to manage inventory for 50+ concurrent deliveries."
+            ]
+        }
+    
+    {
+        "title": "Installing Car Radios and Backup Cameras",
+        "meta": "Cincinnati | Jun 2023 – Present",
+        "points": [
+            "Soldered new custom wiring harnesses to cleanly install new upgraded radios.",
+            "Wired new radios to interfaces such as backup cameras and steering wheel control retention systems.",
+            "Retrofit a modern speedometer to relocate driver information functionality from radio after radio replacement."
+        ]
+    },
+    {
+        "title": "Automotive Electronics & Speedometer Retrofit",
+        "meta": "Personal Project",
+        "points": [
+            "Designed and fabricated custom wiring harnesses to integrate an electronic speedometer retrofit into a legacy vehicle dashboard.",
+            "Solved vehicle integration and signal compatibility constraints through custom pinout mapping, harness routing, and dashboard packaging."
+        ]
+    }
+]

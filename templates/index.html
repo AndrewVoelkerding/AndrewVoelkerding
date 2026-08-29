@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.name }} | Mechanical Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --accent-grey: #334155;
+            --accent-light: #F1F5F9;
+            --purdue-gold: #C59B27;
+        }
+
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Inter', sans-serif; 
+        }
+        
+        /* INCREASED GLOBAL BASE FONT SIZE for consistency with projects page */
+        body { 
+            background-color: var(--bg-main); 
+            color: var(--text-dark); 
+            line-height: 1.7; 
+            font-size: 1.05rem; 
+        }
+
+        nav {
+            background-color: #0F172A;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--purdue-gold);
+        }
+
+        nav .logo { 
+            color: white; 
+            font-weight: 700; 
+            text-decoration: none; 
+            font-size: 1.3rem; 
+        }
+        nav .nav-links { 
+            display: flex; 
+            gap: 1rem; 
+        }
+        nav .nav-links a { 
+            color: #94A3B8; 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1rem; 
+            padding: 0.3rem 0.75rem; 
+            border-radius: 4px; 
+            transition: all 0.2s; 
+        }
+        nav .nav-links a:hover, nav .nav-links a.active { 
+            color: white; 
+            background: #1E293B; 
+        }
+
+        header {
+            background-color: #0F172A;
+            color: white;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 { 
+            font-size: 2.6rem; 
+            font-weight: 700; 
+            letter-spacing: -0.02em; 
+        }
+        header p.subtitle { 
+            font-size: 1.25rem; 
+            color: #94A3B8; 
+            margin-top: 0.5rem; 
+        }
+
+        .contact-links {
+            margin-top: 1.25rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1.1rem;
+            background: #1E293B;
+            color: #E2E8F0;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid #334155;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover { 
+            background: var(--purdue-gold); 
+            color: #0F172A; 
+            border-color: var(--purdue-gold); 
+        }
+
+        .container { 
+            max-width: 900px; /* Narrower, document-width column so this reads like a resume, not a dashboard */
+            margin: 0 auto; 
+            padding: 2.5rem 1.5rem; 
+        }
+        
+        section { margin-bottom: 3rem; }
+
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        h2.section-title {
+            font-size: 1.5rem;
+            color: var(--accent-grey);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Vertical stack instead of a side-by-side grid: entries here are chronological
+           (a timeline, not a comparison), and lengths vary a lot from one role/project to
+           the next, so stacking is the layout that can't produce a mismatched-height card. */
+        .grid { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1.25rem; 
+        }
+        .card { 
+            background: var(--bg-card); 
+            border: 1px solid var(--border); 
+            border-radius: 8px; 
+            padding: 1.5rem; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(15,23,42,0.10);
+            border-color: var(--purdue-gold);
+        }
+        .card h3 { font-size: 1.25rem; color: var(--text-dark); }
+        .card .meta { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.75rem; font-weight: 600; }
+        .card ul { list-style-type: none; padding-left: 0; color: var(--text-muted); font-size: 1rem; }
+        .card ul li { margin-bottom: 0.5rem; }
+
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 1.25rem; 
+        }
+        .skill-box { 
+            background: var(--bg-card); 
+            border: 1px solid var(--border); 
+            padding: 1.25rem; 
+            border-radius: 8px; 
+        }
+        .skill-box h4 { font-size: 1.05rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
+        .skill-box p { font-size: 0.95rem; color: var(--text-muted); }
+
+        .badge { 
+            display: inline-block; 
+            background: var(--accent-light); 
+            color: var(--accent-grey); 
+            padding: 0.25rem 0.6rem; 
+            border-radius: 4px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            margin-top: 0.5rem; 
+            margin-right: 0.25rem; 
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 1.75rem; 
+            background: #0F172A; 
+            color: #64748B; 
+            font-size: 0.9rem; 
+            border-top: 1px solid #1E293B; 
+        }
+
+        html { scroll-behavior: smooth; }
+
+        a:focus-visible, .btn:focus-visible {
+            outline: 2px solid var(--purdue-gold);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal, .card { transition: none; }
+            .reveal { opacity: 1; transform: none; }
+        }
+
+        /* =========================================
+           📱 MOBILE & VERTICAL SCREEN RULES
+           ========================================= */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo">{{ data.name }}</a>
+        <div class="nav-links">
+            <a href="/" class="active">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/resume">Resume</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>{{ data.name }}</h1>
+        <p class="subtitle">{{ data.tagline }}</p>
+        <div class="contact-links">
+            <a class="btn" href="mailto:{{ data.email }}">Email</a>
+            <a class="btn" href="{{ data.linkedin }}" target="_blank">LinkedIn</a>
+            <a class="btn" href="{{ data.github }}" target="_blank">GitHub</a>
+            <a class="btn" href="tel:{{ data.phone }}">{{ data.phone }}</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <h3>{{ data.education.school }}</h3>
+                <p class="meta">{{ data.education.degree }} | {{ data.education.graduation }}</p>
+                <p><strong>GPA:</strong> {{ data.education.gpa }}</p>
+                <p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+                <div style="margin-top: 0.6rem;">
+                    {% for badge in data.education.badges %}
+                        <span class="badge">{{ badge }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Engineering Experience</h2>
+            <div class="grid">
+                {% for exp in data.engineering_experience %}
+                <div class="card">
+                    <h3>{{ exp.title }}</h3>
+                    <p class="meta">{{ exp.meta }}</p>
+                    <ul>
+                        {% for pt in exp.points %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Industry Employment</h2>
+            <div class="grid">
+                {% for emp in data.employment %}
+                <div class="card">
+                    <h3>{{ emp.title }}{% if emp.company %} — {{ emp.company }}{% endif %}</h3>
+                    <p class="meta">{{ emp.meta }}</p>
+                    <ul>
+                        {% for pt in emp.points %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="grid">
+                {% for proj in data.resume_projects %}
+                <div class="card">
+                    <h3>{{ proj.title }}</h3>
+                    <p class="meta">{{ proj.meta }}</p>
+                    <ul>
+                        {% for pt in proj.points %}
+                        <li>{{ pt }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Design & Simulation</h4>
+                    <p>{{ data.skills.design }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Programming & Data</h4>
+                    <p>{{ data.skills.programming }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Manufacturing</h4>
+                    <p>{{ data.skills.manufacturing }}</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Electrical</h4>
+                    <p>{{ data.skills.electrical }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 {{ data.name }} | andrew.voelkerding.xyz</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const sections = document.querySelectorAll('.container section');
+            if (prefersReduced || !('IntersectionObserver' in window)) return;
+
+            sections.forEach(s => s.classList.add('reveal'));
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(s => io.observe(s));
+        });
+    </script>
+
+</body>
+</html>
