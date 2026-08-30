@@ -115,10 +115,10 @@
             "company": "General Tool Company",
             "meta": "Cincinnati | May 2026 – August 2026",
             "points": [
+                "• Designed a waterproof enclosure assembly to withstand high-pressure washing environments in Siemens NX.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
                 "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Designed a waterproof enclosure assembly to withstand high-pressure washing environments in Siemens NX.",
-                "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) operating procedures."
+                "• Completed a machinist rotation in defense manufacturing, updated Engineering Change Order (ECO) procedures."
             ]
         }
     ],
@@ -135,7 +135,7 @@
             "title": "Four-Bar Linkage Controller",
             "meta": "October 2025 - February 2026",
             "points": [
-                "• Designed a 3D-printed four-bar linkage with an Arduino MEGA closed-loop control system, engineering custom snap-fit joints and homing firmware to execute a CNC-style zero-positioning sequence."
+                "• Rapidly prototyped a four-bar linkage with an Arduino MEGA closed-loop control system, engineering custom snap-fit joints and homing firmware to execute a CNC-style zero-positioning sequence."
             ]
         }
     ],
