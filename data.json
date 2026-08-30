@@ -12,7 +12,7 @@
         "degree": "Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
-        "courses": "Statics, Dynamics, Thermodynamics, Geometric and Annotation Modeling (CAD with NX), Structure and Properties of Materials",
+        "courses": "Geometric and Annotation Modeling (CAD with NX), GD&T (Milestones Certification), Structure and Properties of Materials",
         "badges": ["Baja SAE Suspension Member", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
@@ -66,7 +66,7 @@
             "id": "gdt-models",
             "title": "GD&T 3D-Printed Instructional Models",
             "subtitle": "General Tool Company Onboarding Project",
-            "tags": ["3D Printing", "GD&T (ASME Y14.5-2009)", "Additive Manufacturing"],
+            "tags": ["3D Printing", "GD&T (ASME Y14.5-2018)", "Additive Manufacturing"],
             "image": "gdt_model.png",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
@@ -100,25 +100,22 @@
             ]
         },
         {
+            "title": "Manufacturing Engineering Intern - General Tool Company",
+            "meta": "Cincinnati | May 2026 – August 2026",
+            "points": [
+                "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
+                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2018 standards to create fully constrained production drawings.", 
+                "• Packaged COTS components in Siemens NX to model a waterproof enclosure assembly.",
+                "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) procedures."
+            ]
+        },
+        {
             "title": "Formula SAE Suspension Team Member",
             "meta": "West Lafayette | August 2025 – May 2026",
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
                 "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
-            ]
-        }
-    ],
-    "employment": [
-        {
-            "title": "Manufacturing Engineering Intern",
-            "company": "General Tool Company",
-            "meta": "Cincinnati | May 2026 – August 2026",
-            "points": [
-                "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
-                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Packaged COTS components in Siemens NX to model a waterproof enclosure assembly.",
-                "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) procedures."
             ]
         }
     ],
@@ -140,7 +137,7 @@
         }
     ],
     "skills": {
-        "design": "Siemens NX (NX Design Associate Certification), SolidWorks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
+        "design": "Siemens NX (NX Design Associate Certification), SolidWorks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2018 (Milestones GD&T Certification)",
         "programming": "Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
         "manufacturing": "Rapid Prototyping (3D Printing), CNC/Lathes, Laser Cutting, Basic Tooling",
         "electrical": "Basic Circuit Building & Analysis, Soldering, Arduino, Wiring Harnesses"
