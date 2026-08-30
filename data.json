@@ -115,10 +115,10 @@
             "company": "General Tool Company",
             "meta": "Cincinnati | May 2026 – August 2026",
             "points": [
-                "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand high-pressure washing environments.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
                 "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Completed a hands-on machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) operating procedures."
+                "• Designed a waterproof enclosure assembly to withstand high-pressure washing environments in Siemens NX.",
+                "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) operating procedures."
             ]
         }
     ],
@@ -127,7 +127,7 @@
             "title": "Small Form Factor (SFF) PC Case",
             "meta": "May 2026 – Present",
             "points": [
-                "• Designed an initial V1 dual-chamber SFF PC chassis centered around a structural spine to organize core hardware components.",
+                "• Designed a dual-chamber SFF PC chassis centered around a structural spine to organize core hardware components.",
                 "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign."
             ]
         },
