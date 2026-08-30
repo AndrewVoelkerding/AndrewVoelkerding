@@ -5,15 +5,15 @@
     "email": "voelkerd@purdue.edu",
     "phone": "513-910-4107",
     "website": "andrew.voelkerding.xyz",
-    "linkedin": "https://linkedin.com/in/andrew-voe",
-    "github": "https://github.com/AndrewVoelkerding",
+    "linkedin": "linkedin.com/in/andrew-voe",
+    "github": "github.com/AndrewVoelkerding",
     "education": {
         "school": "Purdue University (West Lafayette)",
         "degree": "Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
         "courses": "Dynamics, Thermodynamics, CAD/PLM with NX & Teamcenter, Materials",
-        "badges": ["Baja SAE Suspension Member", "ASME Member", "Undue Ultimate"]
+        "badges": ["Baja SAE Suspension Team Member", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
         {
