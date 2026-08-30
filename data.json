@@ -17,7 +17,7 @@
     },
     "projects": [
         {
-            "id": "sff-pc"
+            "id": "sff-pc",
             "title": "Custom SFF PC Case",
             "subtitle": "V1 Complete — V2 In Progress",
             "tags": ["Siemens NX"],
