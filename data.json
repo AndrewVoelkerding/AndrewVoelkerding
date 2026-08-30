@@ -126,6 +126,14 @@
     ],
     "resume_projects": [
         {
+            "title": "Small Form Factor (SFF) PC Case",
+            "meta": "May 2026 – Present",
+            "points": [
+                "• Engineered a custom dual-chamber SFF chassis from three 1/4-inch panels, thermally isolating a Ryzen 9 9900X and 240mm AIO loop from an RTX 5070 and SFX PSU across a central spine.",
+                "• Designed a bottom-intake/top-exhaust airflow path and a rear-gapped GPU shelf to route exhaust, routing GPU power across the spine via a PCIe riser cable."
+            ]
+        },
+        {
             "title": "Four-Bar Linkage Controller",
             "meta": "October 2025 - February 2026",
             "points": [
