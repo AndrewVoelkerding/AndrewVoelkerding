@@ -115,10 +115,10 @@
             "company": "General Tool Company",
             "meta": "Cincinnati | May 2026 – August 2026",
             "points": [
-                "• Designed a waterproof enclosure assembly to withstand high-pressure washing environments in Siemens NX.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
                 "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Completed a machinist rotation in defense manufacturing, updated Engineering Change Order (ECO) procedures."
+                "• Packaged COTS components in Siemens NX to model a waterproof enclosure assembly.",
+                "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) procedures."
             ]
         }
     ],
@@ -140,7 +140,7 @@
         }
     ],
     "skills": {
-        "design": "Siemens NX (NX Design Associate Certification), Solidworks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
+        "design": "Siemens NX (NX Design Associate Certification), SolidWorks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2009 (Milestones GD&T Certification)",
         "programming": "Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
         "manufacturing": "Rapid Prototyping (3D Printing), CNC/Lathes, Laser Cutting, Basic Tooling",
         "electrical": "Basic Circuit Building & Analysis, Soldering, Arduino, Wiring Harnesses"
