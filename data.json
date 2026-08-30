@@ -12,7 +12,7 @@
         "degree": "Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
-        "courses": "Geometric and Annotation Modeling (CAD with NX), GD&T (Milestones Certification), Structure and Properties of Materials",
+        "courses": "Statics, Dynamics, Thermodynamics, Geometric and Annotation Modeling (CAD with NX), Structure and Properties of Materials",
         "badges": ["Baja SAE Suspension Member", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
@@ -105,7 +105,7 @@
             "points": [
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
                 "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2018 standards to create fully constrained production drawings.", 
-                "• Packaged COTS components in Siemens NX to model a waterproof enclosure assembly.",
+                "• Designed a waterproof enclosure assembly in Siemens NX, packaging COTS components to withstand harsh, high-pressure washing environments.",
                 "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) procedures."
             ]
         },
@@ -124,7 +124,7 @@
             "title": "Small Form Factor (SFF) PC Case",
             "meta": "May 2026 – Present",
             "points": [
-                "• Designed a dual-chamber SFF PC chassis centered around a structural spine to organize core hardware components.",
+                "• Designed a dual-chamber SFF PC chassis centered around a structural spine, organizing an AIO-cooled Ryzen 9 9900X and motherboard separately from an RTX 5070 and SFX PSU.",
                 "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign."
             ]
         },
@@ -132,7 +132,8 @@
             "title": "Four-Bar Linkage Controller",
             "meta": "October 2025 - February 2026",
             "points": [
-                "• Rapidly prototyped a four-bar linkage with an Arduino MEGA closed-loop control system, engineering custom snap-fit joints and homing firmware to execute a CNC-style zero-positioning sequence."
+                "• Analytically designed a four-bar linkage and custom snap-fit pivot joints in Fusion 360 to resist torsional loads, validating tolerances with a test print before committing to the full assembly.",
+                "• Integrated an Arduino MEGA, motor controller, and limit switch into a closed-loop system, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
             ]
         }
     ],
