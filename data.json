@@ -12,7 +12,7 @@
         "degree": "Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
-        "courses": "Statics, Dynamics, Thermodynamics, Geometric and Annotation Modeling (CAD with NX), Structure and Properties of Materials",
+        "courses": "Dynamics, Thermodynamics, CAD/PLM with NX & Teamcenter, Structure and Properties of Materials",
         "badges": ["Baja SAE Suspension Member", "ASME Member", "Undue Ultimate"]
     },
     "projects": [
@@ -138,7 +138,7 @@
         }
     ],
     "skills": {
-        "design": "Siemens NX (NX Design Associate Certification), SolidWorks, Fusion 360, ANSYS Mechanical, GD&T ASME Y14.5-2018 (Milestones GD&T Certification)",
+        "design": "Siemens NX (NX Design Associate Certification), Siemens Teamcenter, SolidWorks, ANSYS Mechanical, GD&T ASME Y14.5-2018 (Milestones GD&T Certification), Fusion 360",
         "programming": "Python, C, MATLAB, Excel, Data Analysis (NumPy, Pandas)",
         "manufacturing": "Rapid Prototyping (3D Printing), CNC/Lathes, Laser Cutting, Basic Tooling",
         "electrical": "Basic Circuit Building & Analysis, Soldering, Arduino, Wiring Harnesses"
