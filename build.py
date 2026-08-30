@@ -55,9 +55,9 @@ def build_site():
                 f.write(rendered_html)
             print(f"✅ Generated: {output_path}")
 
-            # 📄 Automatically generate resume.pdf during static compilation
+            # 📄 Automatically generate Andrew_Voelkerding_Resume.pdf during static compilation
             if template_name == 'resume.html':
-                pdf_output_path = os.path.join(OUTPUT_DIR, 'resume.pdf')
+                pdf_output_path = os.path.join(OUTPUT_DIR, 'Andrew_Voelkerding_Resume.pdf')
                 try:
                     HTML(string=rendered_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(pdf_output_path)
                     print(f"📄 Generated static PDF: {pdf_output_path}")
