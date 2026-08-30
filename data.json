@@ -95,7 +95,7 @@
             "meta": "West Lafayette | June 2026 – Present",
             "points": [
                 "• Designed welded tubular lower and upper A-arm components in SolidWorks to increase ground clearance and optimize load pathing; FEA analysis and refinement in progress.", 
-                "• Modeled initial front shock-to-upper assembly using team and supplier models; final motion limits and interference checks pending assembly completion.",
+                "• Modeled front shock-to-upper assembly using team and supplier models; motion limits and interference checks pending.",
                 "• Tore down and reassembled coil-over suspension to modify the system during testing sessions."
             ]
         },
@@ -117,8 +117,8 @@
             "points": [
                 "• Designed a waterproof enclosure assembly in Siemens NX, integrating COTS components to withstand harsh, high-pressure washing environments.",
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
-                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2009 standards to create fully constrained production drawings.", 
-                "• Completed a hands-on machinist rotation in high-precision defense manufacturing while concurrently updating Engineering Change Order (ECO) standard operating procedures."
+                "• Developed a GD&T training tool demonstrating datums, true position, and MMC to assist co-ops in applying ASME Y14.5-2009 standards.", 
+                "• Completed a machinist rotation in high-precision defense manufacturing and updated Engineering Change Order (ECO) operating procedures."
             ]
         }
     ],
