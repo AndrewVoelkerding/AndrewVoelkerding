@@ -17,6 +17,18 @@
     },
     "projects": [
         {
+            "id": "sff-pc"
+            "title": "Custom SFF PC Case",
+            "subtitle": "V1 Complete — V2 In Progress",
+            "tags": ["Siemens NX"],
+            "summary": "A dual-chamber small form factor PC case built from scratch, separating GPU/PSU from motherboard/CPU cooling across a central spine.",
+            "details": [
+                "Designed a three-panel, dual-chamber chassis from 1/4\" stock, isolating a 240mm AIO-cooled Ryzen 9 9900X from an RTX 5070 and SFX PSU across a central spine.",
+                "Engineered a bottom-intake, top-exhaust airflow path, with a rear-gapped GPU shelf to route hot exhaust and a PCIe riser cable bridging the GPU across the spine.",
+                "Identified a structural weak point in the spine-to-panel mounting and redesigned around a wrap-around sheet-metal shell for V2, trading some weight and cost for improved rigidity."
+            ]
+        },
+        {
             "id": "baja-laa",
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
