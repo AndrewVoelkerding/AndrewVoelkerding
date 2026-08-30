@@ -17,15 +17,13 @@
     },
     "projects": [
         {
-            "id": "sff-pc",
             "title": "Custom SFF PC Case",
-            "subtitle": "V1 Complete — V2 In Progress",
-            "tags": ["Siemens NX"],
-            "summary": "A dual-chamber small form factor PC case built from scratch, separating GPU/PSU from motherboard/CPU cooling across a central spine.",
+            "subtitle": "V1 Design Complete — Fabrication Pending",
+            "summary": "A dual-chamber small form factor PC case, designed to separate GPU/PSU from motherboard/CPU cooling across a central spine.",
             "details": [
-                "Designed a three-panel, dual-chamber chassis from 1/4\" stock, isolating a 240mm AIO-cooled Ryzen 9 9900X from an RTX 5070 and SFX PSU across a central spine.",
-                "Engineered a bottom-intake, top-exhaust airflow path, with a rear-gapped GPU shelf to route hot exhaust and a PCIe riser cable bridging the GPU across the spine.",
-                "Identified a structural weak point in the spine-to-panel mounting and redesigned around a wrap-around sheet-metal shell for V2, trading some weight and cost for improved rigidity."
+                "Designed a three-panel, dual-chamber chassis from 1/4\" stock, thermally isolating a Ryzen 9 9900X and 240mm AIO loop from an RTX 5070 and SFX PSU across a central spine.",
+                "Engineered a symmetric bottom-intake/top-exhaust airflow scheme split across both chambers, with a rear-gapped GPU shelf and PCIe riser routing across the spine.",
+                "Identified unresolved structural risk in the spine-to-panel mounting during design review and paused before fabrication — now redesigning around a wrap-around sheet-metal shell for V2."
             ]
         },
         {
@@ -96,7 +94,7 @@
             "title": "Baja SAE Suspension Team Member",
             "meta": "West Lafayette | June 2026 – Present",
             "points": [
-                "• Designing, analyzing, and refining welded tubular lower and upper A-arm components in Solidworks and ANSYS FEA to increase ground clearance, optimize load pathing, and resolve high-stress areas while minimizing weight.", 
+                "• Designed welded tubular lower and upper A-arm components in Solidworks and ANSYS FEA to increase ground clearance and optimize load pathing while minimizing weight; ANSYS FEA analysis and refinement in progress", 
                 "• Creating complete front shock-to-upper assembly using team and supplier models with accurate motion limits and steering cases, enabling interference checks and assembly adjustments.",
                 "• Tore down and reassembled coil-over suspension to modify the system during testing sessions."
             ]
@@ -129,16 +127,15 @@
             "title": "Small Form Factor (SFF) PC Case",
             "meta": "May 2026 – Present",
             "points": [
-                "• Engineered a custom dual-chamber SFF chassis from three 1/4-inch panels, thermally isolating a Ryzen 9 9900X and 240mm AIO loop from an RTX 5070 and SFX PSU across a central spine.",
-                "• Designed a bottom-intake/top-exhaust airflow path and a rear-gapped GPU shelf to route exhaust, routing GPU power across the spine via a PCIe riser cable."
+                "• Designed a custom dual-chamber SFF chassis from three 1/4-inch panels, thermally isolating a Ryzen 9 9900X and 240mm AIO loop from an RTX 5070 and SFX PSU across a central spine.",
+                "• Engineered a bottom-intake/top-exhaust airflow path and a rear-gapped GPU shelf to route exhaust, routing GPU power across the spine via a PCIe riser cable."
             ]
         },
         {
             "title": "Four-Bar Linkage Controller",
             "meta": "October 2025 - February 2026",
             "points": [
-                "• Analytically designed a four-bar linkage and custom snap-fit pivot joints in Fusion 360 to resist torsional loads, validating tolerances with a test print before committing to the full assembly.",
-                "• Integrated an Arduino MEGA, motor controller, and limit switch into a closed-loop system, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
+                "• Designed a 3D-printed four-bar linkage with an Arduino MEGA closed-loop control system, engineering custom snap-fit joints and homing firmware to execute a CNC-style zero-positioning sequence"
             ]
         }
     ],
