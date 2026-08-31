@@ -28,6 +28,7 @@
             gap: 15px;
             margin-bottom: 25px;
             width: 100%;
+            align-items: center;
         }
 
         .btn { 
@@ -57,6 +58,18 @@
             background-color: #475569;
         }
 
+        /* Small toggle styled like a button */
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F1F5F9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: #0F172A;
+            font-weight: 600;
+        }
+
         .resume-sheet {
             background: #FFFFFF;
             width: 100%;
@@ -83,10 +96,16 @@
             color: #334155;
         }
 
-        /* Explicit link styling for both web view and interactive PDF annotations */
-        .contact a {
+        /* Link style variants: annotated (blue + underline) vs plain (black/grey + no underline) */
+        .link-annotated .contact a {
             color: #1d4ed8;
             text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .link-plain .contact a {
+            color: #334155;
+            text-decoration: none;
             font-weight: 500;
         }
 
@@ -184,11 +203,18 @@
         }
     </style>
 </head>
-<body>
+<body class="{{ link_style_class or 'link-annotated' }}">
 
     <div class="actions-bar">
         <a href="/" class="btn btn-secondary">← Return to Home</a>
-        <a href="Andrew_Voelkerding_Resume.pdf" class="btn" download>Download PDF</a>
+
+        <!-- Toggle to switch link rendering for the on-screen preview and to select which PDF to download -->
+        <div class="toggle" role="group" aria-label="Link style toggle">
+            <label for="linkToggle">Active links</label>
+            <input id="linkToggle" type="checkbox" aria-checked="true">
+        </div>
+
+        <a id="downloadBtn" href="{{ pdf_annotated }}" class="btn" download>Download PDF</a>
     </div>
 
     <div class="resume-sheet">
@@ -263,6 +289,28 @@
         <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
         <p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>
     </div>
+
+    <script>
+        (function(){
+            const toggle = document.getElementById('linkToggle');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const ANNOTATED = '{{ pdf_annotated }}';
+            const PLAIN = '{{ pdf_plain }}';
+
+            // Initialize state: annotated = checked
+            toggle.checked = true;
+            document.body.classList.toggle('link-annotated', true);
+            document.body.classList.toggle('link-plain', false);
+            downloadBtn.href = ANNOTATED;
+
+            toggle.addEventListener('change', function(){
+                const on = toggle.checked;
+                document.body.classList.toggle('link-annotated', on);
+                document.body.classList.toggle('link-plain', !on);
+                downloadBtn.href = on ? ANNOTATED : PLAIN;
+            });
+        })();
+    </script>
 
 </body>
 </html>
