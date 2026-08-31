@@ -48,21 +48,52 @@ def build_site():
     for template_name, output_name in pages:
         try:
             template = env.get_template(template_name)
-            rendered_html = template.render(data=data)
-            
+            # For resume.html we will inject pdf filenames and link style class
+            if template_name == 'resume.html':
+                annotated_pdf_name = 'Andrew_Voelkerding_Resume_annotated.pdf'
+                plain_pdf_name = 'Andrew_Voelkerding_Resume_plain.pdf'
+
+                # Render the on-site HTML (default to annotated link style)
+                rendered_html = template.render(
+                    data=data,
+                    link_style_class='link-annotated',
+                    pdf_annotated=annotated_pdf_name,
+                    pdf_plain=plain_pdf_name
+                )
+            else:
+                rendered_html = template.render(data=data)
+
             output_path = os.path.join(OUTPUT_DIR, output_name)
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(rendered_html)
             print(f"✅ Generated: {output_path}")
 
-            # 📄 Automatically generate Andrew_Voelkerding_Resume.pdf during static compilation
+            # 📄 Generate both annotated and plain PDFs for resume.html
             if template_name == 'resume.html':
-                pdf_output_path = os.path.join(OUTPUT_DIR, 'Andrew_Voelkerding_Resume.pdf')
+                annotated_pdf_path = os.path.join(OUTPUT_DIR, annotated_pdf_name)
+                plain_pdf_path = os.path.join(OUTPUT_DIR, plain_pdf_name)
                 try:
-                    HTML(string=rendered_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(pdf_output_path)
-                    print(f"📄 Generated static PDF: {pdf_output_path}")
+                    # Annotated PDF (blue + underline)
+                    annotated_html = template.render(
+                        data=data,
+                        link_style_class='link-annotated',
+                        pdf_annotated=annotated_pdf_name,
+                        pdf_plain=plain_pdf_name
+                    )
+                    HTML(string=annotated_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(annotated_pdf_path)
+
+                    # Plain PDF (black/grey + no underline)
+                    plain_html = template.render(
+                        data=data,
+                        link_style_class='link-plain',
+                        pdf_annotated=annotated_pdf_name,
+                        pdf_plain=plain_pdf_name
+                    )
+                    HTML(string=plain_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(plain_pdf_path)
+
+                    print(f"📄 Generated static PDFs: {annotated_pdf_path}, {plain_pdf_path}")
                 except Exception as pdf_err:
-                    print(f"⚠️ PDF generation skipped (WeasyPrint system dependencies missing?): {pdf_err}")
+                    print(f"⚠️ PDF generation skipped (WeasyPrint dependencies?): {pdf_err}")
 
         except Exception as e:
             print(f"❌ Failed to generate {template_name}: {e}")
