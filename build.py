@@ -50,15 +50,15 @@ def build_site():
             template = env.get_template(template_name)
             # For resume.html we will inject pdf filenames and link style class
             if template_name == 'resume.html':
-                annotated_pdf_name = 'Andrew_Voelkerding_Resume_annotated.pdf'
-                plain_pdf_name = 'Andrew_Voelkerding_Resume_plain.pdf'
+                color_pdf_name = 'Andrew_Voelkerding_Resume_color.pdf'
+                bw_pdf_name = 'Andrew_Voelkerding_Resume_bw.pdf'
 
-                # Render the on-site HTML (default to annotated link style)
+                # Render the on-site HTML (default to color)
                 rendered_html = template.render(
                     data=data,
-                    link_style_class='link-annotated',
-                    pdf_annotated=annotated_pdf_name,
-                    pdf_plain=plain_pdf_name
+                    link_style_class='color',
+                    pdf_color=color_pdf_name,
+                    pdf_bw=bw_pdf_name
                 )
             else:
                 rendered_html = template.render(data=data)
@@ -68,30 +68,30 @@ def build_site():
                 f.write(rendered_html)
             print(f"✅ Generated: {output_path}")
 
-            # 📄 Generate both annotated and plain PDFs for resume.html
+            # 📄 Generate color and black & white PDFs for resume.html
             if template_name == 'resume.html':
-                annotated_pdf_path = os.path.join(OUTPUT_DIR, annotated_pdf_name)
-                plain_pdf_path = os.path.join(OUTPUT_DIR, plain_pdf_name)
+                color_pdf_path = os.path.join(OUTPUT_DIR, color_pdf_name)
+                bw_pdf_path = os.path.join(OUTPUT_DIR, bw_pdf_name)
                 try:
-                    # Annotated PDF (blue + underline)
-                    annotated_html = template.render(
+                    # Color PDF (blue links + gold section headers)
+                    color_html = template.render(
                         data=data,
-                        link_style_class='link-annotated',
-                        pdf_annotated=annotated_pdf_name,
-                        pdf_plain=plain_pdf_name
+                        link_style_class='color',
+                        pdf_color=color_pdf_name,
+                        pdf_bw=bw_pdf_name
                     )
-                    HTML(string=annotated_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(annotated_pdf_path)
+                    HTML(string=color_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(color_pdf_path)
 
-                    # Plain PDF (black/grey + no underline)
-                    plain_html = template.render(
+                    # Black & White PDF (all black text, no colors)
+                    bw_html = template.render(
                         data=data,
-                        link_style_class='link-plain',
-                        pdf_annotated=annotated_pdf_name,
-                        pdf_plain=plain_pdf_name
+                        link_style_class='bw',
+                        pdf_color=color_pdf_name,
+                        pdf_bw=bw_pdf_name
                     )
-                    HTML(string=plain_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(plain_pdf_path)
+                    HTML(string=bw_html, base_url=os.path.abspath(TEMPLATES_DIR)).write_pdf(bw_pdf_path)
 
-                    print(f"📄 Generated static PDFs: {annotated_pdf_path}, {plain_pdf_path}")
+                    print(f"📄 Generated static PDFs: {color_pdf_path}, {bw_pdf_path}")
                 except Exception as pdf_err:
                     print(f"⚠️ PDF generation skipped (WeasyPrint dependencies?): {pdf_err}")
 
