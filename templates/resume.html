@@ -96,24 +96,58 @@
             color: #334155;
         }
 
-        /* Link style variants: annotated (blue + underline) vs plain (black/grey + no underline) */
-        .link-annotated .contact a {
+        /* Color variant: blue links with underline and gold section headers */
+        .color .contact a {
             color: #1d4ed8;
             text-decoration: underline;
             font-weight: 500;
         }
 
-        .link-plain .contact a {
-            color: #334155;
+        .color h2 {
+            border-bottom-color: #C59B27;
+            color: #0F172A;
+        }
+
+        .color h3 {
+            color: #0F172A;
+        }
+
+        .color .meta-cell {
+            color: #64748b;
+        }
+
+        .color .subtitle {
+            color: #475569;
+        }
+
+        /* Black & White variant: black links, no underline, black section headers */
+        .bw .contact a {
+            color: #000000;
             text-decoration: none;
             font-weight: 500;
+        }
+
+        .bw h2 {
+            border-bottom-color: #000000;
+            color: #000000;
+        }
+
+        .bw h3 {
+            color: #000000;
+        }
+
+        .bw .meta-cell {
+            color: #000000;
+        }
+
+        .bw .subtitle {
+            color: #000000;
         }
 
         h2 { 
             font-size: 11.5pt; 
             text-transform: uppercase; 
-            color: #0F172A; 
-            border-bottom: 2px solid #C59B27; 
+            border-bottom: 1px solid #C59B27; 
             padding-bottom: 3px; 
             margin-top: 10px; 
             margin-bottom: 6px; 
@@ -160,7 +194,7 @@
             font-size: 9.5pt; 
             font-weight: 600; 
             color: #475569;
-            margin-bottom: 10px; /* Forces a clear physical gap before coursework */
+            margin-bottom: 10px;
             display: block;
         }
         
@@ -203,18 +237,19 @@
         }
     </style>
 </head>
-<body class="{{ link_style_class or 'link-annotated' }}">
+<body class="{{ link_style_class or 'color' }}">
 
     <div class="actions-bar">
         <a href="/" class="btn btn-secondary">← Return to Home</a>
 
-        <!-- Toggle to switch link rendering for the on-screen preview and to select which PDF to download -->
-        <div class="toggle" role="group" aria-label="Link style toggle">
-            <label for="linkToggle">Active links</label>
-            <input id="linkToggle" type="checkbox" aria-checked="true">
+        <!-- Toggle to switch between color and black & white -->
+        <div class="toggle" role="group" aria-label="Resume style toggle">
+            <label for="styleToggle">Style: </label>
+            <input id="styleToggle" type="checkbox">
+            <span id="styleLabel">Color</span>
         </div>
 
-        <a id="downloadBtn" href="{{ pdf_annotated }}" class="btn" download="Andrew_Voelkerding_Resume.pdf">Download PDF</a>
+        <a id="downloadBtn" href="{{ pdf_color }}" class="btn" download="Andrew_Voelkerding_Resume.pdf">Download PDF</a>
     </div>
 
     <div class="resume-sheet">
@@ -292,22 +327,28 @@
 
     <script>
         (function(){
-            const toggle = document.getElementById('linkToggle');
+            const toggle = document.getElementById('styleToggle');
+            const styleLabel = document.getElementById('styleLabel');
             const downloadBtn = document.getElementById('downloadBtn');
-            const ANNOTATED = '{{ pdf_annotated }}';
-            const PLAIN = '{{ pdf_plain }}';
+            const COLOR = '{{ pdf_color }}';
+            const BW = '{{ pdf_bw }}';
 
-            // Initialize state: annotated = checked
-            toggle.checked = true;
-            document.body.classList.toggle('link-annotated', true);
-            document.body.classList.toggle('link-plain', false);
-            downloadBtn.href = ANNOTATED;
+            // Initialize state: color by default (checkbox unchecked)
+            toggle.checked = false;
+            document.body.className = 'color';
+            styleLabel.textContent = 'Color';
+            downloadBtn.href = COLOR;
 
             toggle.addEventListener('change', function(){
-                const on = toggle.checked;
-                document.body.classList.toggle('link-annotated', on);
-                document.body.classList.toggle('link-plain', !on);
-                downloadBtn.href = on ? ANNOTATED : PLAIN;
+                if (toggle.checked) {
+                    document.body.className = 'bw';
+                    styleLabel.textContent = 'Black & White';
+                    downloadBtn.href = BW;
+                } else {
+                    document.body.className = 'color';
+                    styleLabel.textContent = 'Color';
+                    downloadBtn.href = COLOR;
+                }
             });
         })();
     </script>
