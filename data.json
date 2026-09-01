@@ -17,16 +17,6 @@
     },
     "projects": [
         {
-            "title": "Custom SFF PC Case",
-            "subtitle": "V1 Design Complete — Pivoting to V2",
-            "summary": "A dual-chamber small form factor PC case, engineered to thermally isolate the motherboard from the GPU and PSU across a central spine.",
-            "details": [
-                "Designed an initial V1 dual-chamber chassis centered around a structural spine to efficiently package and organize core hardware components.",
-                "Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, fully isolating the motherboard and heatsinks from an RTX 5070 and SFX PSU.",
-                "Identified unresolved structural risks in the spine-to-panel mounting during design review; paused V1 to develop a V2 redesign utilizing a wrap-around sheet-metal shell for improved rigidity."
-            ]
-        },
-        {
             "id": "baja-laa",
             "title": "Baja SAE Lower A-Arm",
             "subtitle": "Purdue Baja SAE Suspension Component",
@@ -34,7 +24,8 @@
             "image": "baja-laa.png",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
-                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight."
+                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight.", 
+                "Further refinement in progress."
             ]
         }, 
         {
@@ -45,7 +36,8 @@
             "image": "fsae-rocker.png",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
-                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations."
+                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.", 
+                "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which resulted in weight reduction."
             ]
         },
         {
@@ -60,6 +52,16 @@
                 "Troubleshot and refined real-world friction issues by post-processing and lubricating joints to prevent stepper motor stalling.",
                 "Integrated a closed-loop feedback system using an Arduino MEGA, motor controller, and limit switch.",
                 "Developed custom firmware for a calibration sequence that mimics CNC machine tool-length measurement and zero-positioning."
+            ]
+        },
+        {
+            "title": "Custom SFF PC Case",
+            "subtitle": "V1 Design Complete — Pivoting to V2",
+            "summary": "A dual-chamber small form factor PC case, engineered to thermally isolate the motherboard from the GPU and PSU across a central spine.",
+            "details": [
+                "Designed an initial V1 dual-chamber chassis centered around a structural spine to efficiently package and organize core hardware components.",
+                "Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, fully isolating the motherboard and heatsinks from an RTX 5070 and SFX PSU.",
+                "Identified unresolved structural risks in the spine-to-panel mounting during design review; paused V1 to develop a V2 redesign utilizing a wrap-around sheet-metal shell for improved rigidity."
             ]
         },
         {
