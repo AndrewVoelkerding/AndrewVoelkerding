@@ -37,7 +37,7 @@
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.", 
-                "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which resulted in weight reduction."
+                "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which assisted in reducing weight."
             ]
         },
         {
