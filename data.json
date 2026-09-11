@@ -96,9 +96,9 @@
             "title": "Baja SAE Suspension Team Member",
             "meta": "West Lafayette | June 2026 – Present",
             "points": [
-                "• Shock-to-Upper System Owner: integrating team and supplier models; motion and interference checks pending.",
-                "• Designing and optimizing improved lower and upper A-arm components for shock-to-upper system in SolidWorks to increase ground clearance and optimize load pathing; FEA analysis and refinement in progress.",
-                "• Tore down and reassembled coil-over suspension to modify the system during testing sessions."
+                "• Shock-to-Upper System Owner: integrating team and supplier models to check motion and interference.",
+                "• Design and optimize improved lower and upper A-arm components for shock-to-upper system in SolidWorks to increase ground clearance and optimize load pathing; currently conducting FEA analysis and structural refinement.",
+                "• Disassembled and rebuilt coil-over suspension to modify the system during testing sessions."
             ]
         },
         {
@@ -117,7 +117,7 @@
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
-                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
+                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while analyzing 3-axis CNC setups to inform future CAD modeling."
             ]
         }
     ],
@@ -127,7 +127,7 @@
             "meta": "May 2026 – Present",
             "points": [
                 "• Designed a dual-chamber SFF PC chassis centered around a structural spine, organizing an AIO-cooled Ryzen 9 9900X and motherboard separately from an RTX 5070 and SFX PSU.",
-                "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign."
+                "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign to address mounting constraints."
             ]
         },
         {
