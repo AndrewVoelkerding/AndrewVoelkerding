@@ -127,7 +127,7 @@
             "meta": "May 2026 – Present",
             "points": [
                 "• Designed a dual-chamber SFF PC chassis centered around a structural spine, organizing an AIO-cooled Ryzen 9 9900X and motherboard separately from an RTX 5070 and SFX PSU.",
-                "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign to address mounting constraints."
+                "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign."
             ]
         },
         {
