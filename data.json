@@ -25,7 +25,7 @@
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
                 "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.", 
-                "Refininement in progress: Analyzing stress and deflection in ANSYS Mechanical to find and resolve stress pockets and reduce weight.",
+                "Refinement in progress: Analyzing stress and deflection in ANSYS Mechanical to find and resolve stress pockets and reduce weight.",
                 "Integrated components into upper-level assembly of shock-to-upper suspension."
             ]
         }, 
