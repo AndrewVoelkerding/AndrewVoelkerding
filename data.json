@@ -117,7 +117,7 @@
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
-                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while analyzing 3-axis CNC setups to inform future CAD modeling."
+                "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
             ]
         }
     ],
