@@ -18,14 +18,15 @@
     "projects": [
         {
             "id": "baja-laa",
-            "title": "Baja SAE Lower A-Arm",
-            "subtitle": "Purdue Baja SAE Suspension Component",
+            "title": "Baja SAE A-Arms",
+            "subtitle": "Purdue Baja SAE Suspension Components",
             "tags": ["Solidworks", "ANSYS FEA"],
             "image": "baja-laa.png",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
-                "Modeled assembly components in Solidworks for manufacturability and ground clearance while minimizing weight.", 
-                "Further refinement in progress."
+                "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.", 
+                "Refininement in progress: Analyzing stress and deflection in ANSYS Mechanical to find and resolve stress pockets and reduce weight.",
+                "Integrated components into upper-level assembly of shock-to-upper suspension."
             ]
         }, 
         {
@@ -36,7 +37,8 @@
             "image": "fsae-rocker.png",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
-                "Modeled assembly components in Siemens NX and performed FEA simulations in ANSYS Mechanical to locate stress concentrations.", 
+                "Engineered a multi-piece fabricated suspension rocker in Siemens NX, replacing traditional billet stock with plate welded to a central structural sleeve",
+                "Conducted linear static FEA studies in ANSYS Mechanical under peak braking and cornering load cases, reducing component mass by 18.8% while maintaining a 1.6 Factor of Safety.", 
                 "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which assisted in reducing weight."
             ]
         },
