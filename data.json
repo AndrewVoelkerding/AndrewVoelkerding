@@ -8,37 +8,48 @@
     "linkedin": "linkedin.com/in/andrew-voe",
     "github": "github.com/AndrewVoelkerding",
     "education": {
-        "school": "Purdue University (West Lafayette)",
+        "school": "Purdue University",
         "degree": "Bachelor of Science in Mechanical Engineering",
         "graduation": "Expected Graduation: May 2028",
         "gpa": "3.9/4.0",
         "courses": "Dynamics, Thermodynamics, CAD/PLM with NX & Teamcenter, Materials",
-        "badges": ["Baja SAE Suspension Team Member", "ASME Member", "Undue Ultimate"]
+        "badges": [
+            "Baja SAE Suspension Team Member",
+            "ASME Member",
+            "Undue Ultimate"
+        ],
+        "location": "West Lafayette, IN"
     },
     "projects": [
         {
             "id": "baja-laa",
             "title": "Baja SAE A-Arms",
             "subtitle": "Purdue Baja SAE Suspension Components",
-            "tags": ["Solidworks", "ANSYS FEA"],
+            "tags": [
+                "Solidworks",
+                "ANSYS FEA"
+            ],
             "image": "baja-laa.png",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
-                "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.", 
+                "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.",
                 "Refinement in progress: Analyzing stress and deflection in ANSYS Mechanical to find and resolve stress pockets and reduce weight.",
                 "Integrated components into upper-level assembly of shock-to-upper suspension."
             ]
-        }, 
+        },
         {
             "id": "fsae-rockers",
             "title": "Formula SAE Welded Front Rockers",
             "subtitle": "Purdue Formula SAE Suspension Component",
-            "tags": ["Siemens NX", "ANSYS FEA"],
+            "tags": [
+                "Siemens NX",
+                "ANSYS FEA"
+            ],
             "image": "fsae-rocker.png",
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Engineered a multi-piece fabricated suspension rocker in Siemens NX, replacing traditional billet stock with plate welded to a central structural sleeve",
-                "Conducted linear static FEA studies in ANSYS Mechanical under peak braking and cornering load cases, reducing component mass by 18.8% while maintaining a 1.6 Factor of Safety.", 
+                "Conducted linear static FEA studies in ANSYS Mechanical under peak braking and cornering load cases, reducing component mass by 18.8% while maintaining a 1.6 Factor of Safety.",
                 "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which assisted in reducing weight."
             ]
         },
@@ -46,7 +57,12 @@
             "id": "four-bar-linkage",
             "title": "Four Bar Linkage Controller System",
             "subtitle": "3D-Printed Arduino-Integrated Mechanism",
-            "tags": ["Autodesk Fusion 360", "Arduino MEGA", "3D Printing", "Mechatronics"],
+            "tags": [
+                "Autodesk Fusion 360",
+                "Arduino MEGA",
+                "3D Printing",
+                "Mechatronics"
+            ],
             "image": "four_bar_linkage.png",
             "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
             "details": [
@@ -70,7 +86,11 @@
             "id": "gdt-models",
             "title": "GD&T 3D-Printed Instructional Models",
             "subtitle": "General Tool Company Onboarding Project",
-            "tags": ["3D Printing", "GD&T (ASME Y14.5-2018)", "Additive Manufacturing"],
+            "tags": [
+                "3D Printing",
+                "GD&T (ASME Y14.5-2018)",
+                "Additive Manufacturing"
+            ],
             "image": "gdt_model.png",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
@@ -83,7 +103,11 @@
             "id": "car-audio",
             "title": "Automotive Electronics & Speedometer Retrofit",
             "subtitle": "Custom Harnessing & Dashboard Integration",
-            "tags": ["Soldering", "Wiring Harnesses", "Automotive Systems"],
+            "tags": [
+                "Soldering",
+                "Wiring Harnesses",
+                "Automotive Systems"
+            ],
             "image": "radio_install.png",
             "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
             "details": [
@@ -95,50 +119,58 @@
     ],
     "engineering_experience": [
         {
-            "title": "Purdue Baja Racing - Suspension Team Member",
-            "meta": "West Lafayette | June 2026 – Present",
             "points": [
                 "• Shock-to-Upper System Owner: integrate team and supplier models to analyze motion and interferences.",
                 "• Design and optimize improved lower and upper A-arm components for shock-to-upper system in SolidWorks to increase ground clearance and optimize load pathing; currently conducting FEA analysis and structural refinement.",
                 "• Disassembled and rebuilt coil-over suspension to modify the system during testing sessions."
-            ]
+            ],
+            "role": "Suspension Team Member",
+            "company": "Purdue Baja Racing",
+            "location": "West Lafayette, IN",
+            "dates": "June 2026 – Present"
         },
         {
-            "title": "General Tool Company - Manufacturing Engineering Intern",
-            "meta": "Cincinnati | May 2026 – August 2026",
             "points": [
                 "• Collaborated with engineers to develop testing procedures and custom adapter hardware to verify part compliance.",
-                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2018 standards to create fully constrained production drawings.", 
+                "• Developed a GD&T training tool to assist co-ops in understanding datums, true position, and MMC while applying ASME Y14.5-2018 standards to create fully constrained production drawings.",
                 "• Designed a waterproof enclosure assembly in Siemens NX, packaging COTS components to withstand harsh, high-pressure washing environments.",
                 "• Completed a machinist rotation in defense manufacturing and updated Engineering Change Order (ECO) procedures."
-            ]
+            ],
+            "role": "Manufacturing Engineering Intern",
+            "company": "General Tool Company",
+            "location": "Cincinnati, OH",
+            "dates": "May 2026 – August 2026"
         },
         {
-            "title": "Purdue Formula SAE - Suspension Team Member",
-            "meta": "West Lafayette | August 2025 – May 2026",
             "points": [
                 "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
                 "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
-            ]
+            ],
+            "role": "Suspension Team Member",
+            "company": "Purdue Formula SAE",
+            "location": "West Lafayette, IN",
+            "dates": "August 2025 – May 2026"
         }
     ],
     "resume_projects": [
         {
-            "title": "Small Form Factor (SFF) PC Case",
-            "meta": "May 2026 – Present",
             "points": [
                 "• Designed a dual-chamber SFF PC chassis centered around a structural spine, organizing an AIO-cooled Ryzen 9 9900X and motherboard separately from an RTX 5070 and SFX PSU.",
                 "• Engineered a symmetric bottom-intake/top-exhaust airflow scheme with a top-mounted 240mm AIO, thermally isolating the motherboard from the GPU/PSU compartment; currently iterating a sheet-metal V2 redesign."
-            ]
+            ],
+            "role": "Small Form Factor (SFF) PC Case",
+            "company": "Personal Project",
+            "dates": "May 2026 – Present"
         },
         {
-            "title": "Four-Bar Linkage Controller",
-            "meta": "October 2025 - February 2026",
             "points": [
                 "• Analytically designed a 3D-printed four-bar linkage and custom snap-fit pivot joints in Fusion 360 to resist torsional loads, validating tolerances with a test print before committing to the full assembly.",
                 "• Integrated an Arduino MEGA, motor controller, and limit switch into a closed-loop system, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
-            ]
+            ],
+            "role": "Four-Bar Linkage Controller",
+            "company": "Personal Project",
+            "dates": "October 2025 – February 2026"
         }
     ],
     "skills": {
