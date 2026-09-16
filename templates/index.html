@@ -267,8 +267,8 @@
             <div class="grid">
                 {% for exp in data.engineering_experience %}
                 <div class="card">
-                    <h3>{{ exp.title }}</h3>
-                    <p class="meta">{{ exp.meta }}</p>
+                    <h3>{{ exp.company }} - {{ exp.role }}</h3>
+                    <p class="meta">{{ exp.location }} | {{ exp.dates }}</p>
                     <ul>
                         {% for pt in exp.points %}
                         <li>{{ pt }}</li>
@@ -303,8 +303,8 @@
             <div class="grid">
                 {% for proj in data.resume_projects %}
                 <div class="card">
-                    <h3>{{ proj.title }}</h3>
-                    <p class="meta">{{ proj.meta }}</p>
+                    <h3>{{ proj.role }}</h3>
+                    <p class="meta">{{ proj.company }} | {{ proj.dates }}</p>
                     <ul>
                         {% for pt in proj.points %}
                         <li>{{ pt }}</li>
