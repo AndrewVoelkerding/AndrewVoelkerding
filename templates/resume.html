@@ -176,7 +176,7 @@
             display: table-cell;
             text-align: right;
             vertical-align: baseline;
-            font-size: 9.5pt; 
+            font-size: 10.5pt; 
             color: #64748b; 
             font-weight: 600;
             white-space: nowrap;
@@ -187,6 +187,16 @@
             margin: 0; 
             color: #0F172A;
             font-weight: 700; 
+        }
+
+        /* Same visual treatment as .meta-cell, but sits inside the title cell so
+           the PDF text stream keeps a "|" delimiter between title / company /
+           location. The column break then lands immediately before the date,
+           which is self-delimiting. */
+        .inline-meta {
+            font-size: 10.5pt;
+            color: #64748b;
+            font-weight: 600;
         }
 
         /* Dedicated education block to enforce strict spacing */
@@ -268,7 +278,7 @@
         <h2>Education</h2>
         <div class="education-block">
             <div class="job-header">
-                <div class="job-title-cell"><h3>{{ data.education.school }}</h3></div>
+                <div class="job-title-cell"><h3>{{ data.education.school }} <span class="inline-meta">| {{ data.education.location }}</span></h3></div>
                 <div class="meta-cell">{{ data.education.graduation }}</div>
             </div>
             <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
@@ -281,8 +291,8 @@
         {% for exp in data.engineering_experience %}
         <div>
             <div class="job-header">
-                <div class="job-title-cell"><h3>{{ exp.title }}</h3></div>
-                <div class="meta-cell">{{ exp.meta }}</div>
+                <div class="job-title-cell"><h3>{{ exp.role }} <span class="inline-meta">| {{ exp.company }} | {{ exp.location }}</span></h3></div>
+                <div class="meta-cell">{{ exp.dates }}</div>
             </div>
             <ul>
                 {% for pt in exp.points %}
@@ -311,8 +321,8 @@
         {% for proj in data.resume_projects %}
         <div>
             <div class="job-header">
-                <div class="job-title-cell"><h3>{{ proj.title }}</h3></div>
-                <div class="meta-cell">{{ proj.meta }}</div>
+                <div class="job-title-cell"><h3>{{ proj.role }} <span class="inline-meta">| {{ proj.company }}</span></h3></div>
+                <div class="meta-cell">{{ proj.dates }}</div>
             </div>
             <ul>
                 {% for pt in proj.points %}
