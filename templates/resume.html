@@ -177,8 +177,8 @@
             text-align: right;
             vertical-align: baseline;
             font-size: 10.5pt; 
-            color: #64748b; 
-            font-weight: 600;
+            color: #000000; 
+            font-weight: 700;
             white-space: nowrap;
         }
 
@@ -189,18 +189,11 @@
             font-weight: 700; 
         }
 
-        /* Same visual treatment as .meta-cell, but sits inside the title cell so
-           the PDF text stream keeps a "|" delimiter between title / company /
-           location. The column break then lands immediately before the date,
-           which is self-delimiting. */
+        /* Role, company, and location are intentionally bold and black. */
         .inline-meta {
             font-size: 10.5pt;
-            color: #0F172A;
-            font-weight: 600;
-        }
-
-        .bw .inline-meta {
             color: #000000;
+            font-weight: 700;
         }
 
         /* Dedicated education block to enforce strict spacing */
@@ -291,7 +284,7 @@
             <p><strong>Honors & Activities:</strong> {{ data.education.badges | join(', ') }}</p>
         </div>
 
-        <h2>Engineering Experience</h2>
+        <h2>Experience</h2>
         {% for exp in data.engineering_experience %}
         <div>
             <div class="job-header">
@@ -321,7 +314,7 @@
         </div>
         {% endfor %}
 
-        <h2>Projects</h2>
+        <h2>Engineering Projects</h2>
         {% for proj in data.resume_projects %}
         <div>
             <div class="job-header">
