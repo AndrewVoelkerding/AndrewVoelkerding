@@ -151,6 +151,18 @@
             margin-right: 0.4rem; 
             margin-bottom: 0.5rem; 
         }
+        /* Photo carousel: one frame, same look as the old single image */
+        .carousel { position: relative; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem; background: #E2E8F0; }
+        .carousel-track { display: flex; transition: transform 0.35s ease; }
+        .carousel .project-img { flex: 0 0 100%; min-width: 0; margin-bottom: 0; border-radius: 0; }
+        .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 2.5rem; height: 2.5rem; border: none; border-radius: 50%; background: rgba(15, 23, 42, 0.6); color: #fff; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+        .carousel-btn:hover, .carousel-btn:focus-visible { background: var(--purdue-gold); }
+        .carousel-btn.prev { left: 0.75rem; }
+        .carousel-btn.next { right: 0.75rem; }
+        .carousel-dots { position: absolute; bottom: 0.6rem; left: 0; right: 0; display: flex; justify-content: center; gap: 0.4rem; }
+        .dot { width: 0.6rem; height: 0.6rem; padding: 0; border: none; border-radius: 50%; background: rgba(255, 255, 255, 0.6); cursor: pointer; }
+        .dot.active { background: var(--purdue-gold); }
+
         .project-content h2 { font-size: 1.8rem; margin-bottom: 0.25rem; }
         .project-content .subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; }
         
@@ -224,8 +236,22 @@
             <div class="project-display">
                 {% for proj in data.projects %}
                 <div id="proj-{{ loop.index }}" class="project-content {% if loop.first %}active{% endif %}">
-                    {% if proj.image %}
-                        <img src="{{ url_for('static', filename='images/' + proj.image) }}" alt="{{ proj.title }}" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                    {% set imgs = proj.images if proj.images else ([proj.image] if proj.image else []) %}
+                    {% if imgs %}
+                    <div class="carousel" data-index="0">
+                        <div class="carousel-track">
+                            {% for img in imgs %}
+                            <img src="{{ url_for('static', filename='images/' + img) }}" alt="{{ proj.title }} - photo {{ loop.index }} of {{ imgs|length }}" class="project-img" onerror="this.onerror=null; this.src='https://placehold.co/600x320?text=Project+Photo+Placeholder';">
+                            {% endfor %}
+                        </div>
+                        {% if imgs|length > 1 %}
+                        <button type="button" class="carousel-btn prev" aria-label="Previous photo" onclick="moveCarousel(this, -1)">&#10094;</button>
+                        <button type="button" class="carousel-btn next" aria-label="Next photo" onclick="moveCarousel(this, 1)">&#10095;</button>
+                        <div class="carousel-dots">
+                            {% for img in imgs %}<button type="button" class="dot{% if loop.first %} active{% endif %}" aria-label="Show photo {{ loop.index }}" onclick="goToSlide(this, {{ loop.index0 }})"></button>{% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
                     {% endif %}
 
                     <h2>{{ proj.title }}</h2>
@@ -266,6 +292,31 @@
             document.getElementById(projId).classList.add('active');
             btnElement.classList.add('active');
         }
+
+        function showSlide(carousel, i) {
+            const n = carousel.querySelectorAll('.project-img').length;
+            i = (i + n) % n;
+            carousel.dataset.index = i;
+            carousel.querySelector('.carousel-track').style.transform = 'translateX(' + (-100 * i) + '%)';
+            carousel.querySelectorAll('.dot').forEach((d, k) => d.classList.toggle('active', k === i));
+        }
+        function moveCarousel(btn, step) {
+            const c = btn.closest('.carousel');
+            showSlide(c, +c.dataset.index + step);
+        }
+        function goToSlide(btn, i) { showSlide(btn.closest('.carousel'), i); }
+
+        // Swipe left/right on touch screens
+        document.querySelectorAll('.carousel').forEach(c => {
+            let x0 = null;
+            c.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            c.addEventListener('touchend', e => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0;
+                x0 = null;
+                if (Math.abs(dx) > 40) showSlide(c, +c.dataset.index + (dx < 0 ? 1 : -1));
+            });
+        });
     </script>
 </body>
 </html>
