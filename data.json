@@ -45,7 +45,7 @@
                 "Siemens NX",
                 "ANSYS FEA"
             ],
-            "image": "fsae-rocker.png",
+            "image": ["fsae-rocker.png", "Rocker_FEA.png"],
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Engineered a multi-piece fabricated suspension rocker in Siemens NX, replacing traditional billet stock with plate welded to a central structural sleeve",
