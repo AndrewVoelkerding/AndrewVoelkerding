@@ -236,7 +236,9 @@
             <div class="project-display">
                 {% for proj in data.projects %}
                 <div id="proj-{{ loop.index }}" class="project-content {% if loop.first %}active{% endif %}">
-                    {% set imgs = proj.images if proj.images else ([proj.image] if proj.image else []) %}
+                    {# accepts a string or a list in either "image" or "images" #}
+                    {% set src = proj.images or proj.image or [] %}
+                    {% set imgs = [src] if src is string else src %}
                     {% if imgs %}
                     <div class="carousel" data-index="0">
                         <div class="carousel-track">
