@@ -93,6 +93,10 @@
         {
             "title": "Custom SFF PC Case",
             "subtitle": "V1 Design Complete — Pivoting to V2",
+            "tags" : [
+                "Siemens NX"
+            ],
+            "image": "case_1.png",
             "summary": "A dual-chamber small form factor PC case, engineered to thermally isolate the motherboard from the GPU and PSU across a central spine.",
             "details": [
                 "Designed an initial V1 dual-chamber chassis centered around a structural spine to efficiently package and organize core hardware components.",
