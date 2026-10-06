@@ -29,7 +29,7 @@
                 "Solidworks",
                 "ANSYS FEA"
             ],
-            "image": "baja_1.png",
+            "image": "baja_1.jpg",
             "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
             "details": [
                 "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.",
@@ -45,7 +45,7 @@
                 "Siemens NX",
                 "ANSYS FEA"
             ],
-            "image": ["fsae_1.png", "fsae_2.png"],
+            "image": ["fsae_1.jpg", "fsae_2.jpg"],
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Engineered a multi-piece fabricated suspension rocker in Siemens NX, replacing traditional billet stock with plate welded to a central structural sleeve",
@@ -63,7 +63,7 @@
                 "3D Printing",
                 "Mechatronics"
             ],
-            "image": "fbl_1.png",
+            "image": "fbl_1.jpg",
             "summary": "Designed and 3D-printed a four-bar linkage system integrated with an Arduino MEGA and stepper motor to execute a CNC-style homing sequence.",
             "details": [
                 "Analytically designed linkage paths and custom snap-fit pivot joints in Autodesk Fusion 360 to resist torsional forces.",
@@ -91,7 +91,7 @@
                 "GD&T (ASME Y14.5-2018)",
                 "Additive Manufacturing"
             ],
-            "image": "gdt_1.png",
+            "image": "gdt_1.jpg",
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
                 "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
@@ -108,7 +108,7 @@
                 "Wiring Harnesses",
                 "Automotive Systems"
             ],
-            "image": "radio_1.png",
+            "image": "radio_1.jpg",
             "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
             "details": [
                 "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
