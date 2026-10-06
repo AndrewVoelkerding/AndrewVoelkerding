@@ -85,9 +85,9 @@
             "summary": "Designed a custom 3D-printed electromechanical mechanism to automate a deadbolt while preserving manual key operation.",
             "details": [
                 "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
-                "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, driving 90 degrees of rotation in 2.5 seconds.",
+                "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, designed to drive 90 degrees in 2.5 seconds.",
                 "Designed an internal lost-motion 'butterfly' mechanism within the driven gear, enabling 90 degrees of free rotation for manual locking and unlocking without backdriving the high-reduction motor assembly.",
-                "Optimized system power budgeting to ensure a 100g 2000mAh Li-ion battery could independently sustain ~2,880 lock/unlock cycles while powering external wireless sensors."
+                "Optimized system power budgeting to ensure a 100g 2000mAh Li-ion battery could independently sustain a calculated ~2,880 lock/unlock cycles while powering external wireless sensors."
             ]
         },
         {
@@ -113,8 +113,8 @@
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
                 "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
-                "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
-                "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
+                "3D printed interactive inspection fixtures to be used during onboarding for future engineering interns.",
+                "Designed to help interns and new hires in visualizing tolerance zones during drawing analysis."
             ]
         },
         {
