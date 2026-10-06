@@ -126,7 +126,7 @@
                 "Wiring Harnesses",
                 "Automotive Systems"
             ],
-            "image": "radio_1.jpg",
+            "image": ["wiring_1.jpeg", "radio_1.jpg"],
             "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
             "details": [
                 "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
