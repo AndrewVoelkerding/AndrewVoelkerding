@@ -73,6 +73,24 @@
             ]
         },
         {
+            "id": "smart-lock-retrofit",
+            "title": "Retrofit IoT Smart Lock",
+            "subtitle": "Electromechanical Door Automation",
+            "tags": [
+                "Siemens NX",
+                "3D Printing",
+                "Mechatronics"
+            ],
+            "image": ["lock_1.jpg", "lock_2.jpg", "lock_3.jpg","lock_4.jpg","lock_5.jpg"],
+            "summary": "Designed a custom 3D-printed electromechanical mechanism to automate a deadbolt while preserving manual key operation.",
+            "details": [
+                "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
+                "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, driving 90 degrees of rotation in 2.5 seconds.",
+                "Designed an internal lost-motion 'butterfly' mechanism within the driven gear, enabling 90 degrees of free rotation for manual locking and unlocking without backdriving the high-reduction motor assembly.",
+                "Optimized system power budgeting to ensure a 100g 2000mAh Li-ion battery could independently sustain ~2,880 lock/unlock cycles while powering external wireless sensors."
+            ]
+        },
+        {
             "title": "Custom SFF PC Case",
             "subtitle": "V1 Design Complete — Pivoting to V2",
             "summary": "A dual-chamber small form factor PC case, engineered to thermally isolate the motherboard from the GPU and PSU across a central spine.",
