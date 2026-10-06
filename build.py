@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import shutil
@@ -31,8 +32,14 @@ def build_site():
     env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
 
     # Mock Flask's url_for() so image paths work seamlessly in static HTML
+    # A short content hash is appended (?v=...) so a changed image gets a brand-new URL
+    # automatically - browsers and Cloudflare can never serve a stale copy.
     def static_url_for(endpoint, filename=None):
         if endpoint == 'static' and filename:
+            path = os.path.join(STATIC_DIR, filename)
+            if os.path.isfile(path):
+                with open(path, 'rb') as f:
+                    return f"/static/{filename}?v={hashlib.md5(f.read()).hexdigest()[:8]}"
             return f"/static/{filename}"
         return filename
 
