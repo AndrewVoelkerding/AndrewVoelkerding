@@ -87,7 +87,7 @@
                 "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
                 "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, designed to drive 90 degrees in 2.5 seconds.",
                 "Designed an internal lost-motion 'butterfly' mechanism within the driven gear, enabling 90 degrees of free rotation for manual locking and unlocking without backdriving the high-reduction motor assembly.",
-                "Optimized system power budgeting to ensure a 100g 2000mAh Li-ion battery could independently sustain a calculated ~2,880 lock/unlock cycles while powering external wireless sensors."
+                "Co-specified the 12V motor, 100g 7.4V 2000mAh Li-ion battery, and system power requirements to ensure the mechanism met the 25 kg-cm stall torque demand while achieving our shared target of a three-week battery life."
             ]
         },
         {
