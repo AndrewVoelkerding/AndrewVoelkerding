@@ -81,7 +81,7 @@
                 "3D Printing",
                 "Mechatronics"
             ],
-            "image": ["lock_1.jpg", "lock_2.jpg", "lock_3.jpg","lock_4.jpg","lock_5.jpg"],
+            "image": ["lock_1.jpg", "lock_2.png", "lock_3.png","lock_4.png","lock_5.jpg"],
             "summary": "Designed a custom 3D-printed electromechanical mechanism to automate a deadbolt while preserving manual key operation.",
             "details": [
                 "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
