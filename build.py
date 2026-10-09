@@ -61,11 +61,13 @@ def build_site():
                 bw_pdf_name = 'Andrew_Voelkerding_Resume_bw.pdf'
 
                 # Render the on-site HTML (default to color)
+                # web=True switches on the phone-friendly markup (the PDFs below deliberately don't get it)
                 rendered_html = template.render(
                     data=data,
                     link_style_class='color',
                     pdf_color=color_pdf_name,
-                    pdf_bw=bw_pdf_name
+                    pdf_bw=bw_pdf_name,
+                    web=True
                 )
             else:
                 rendered_html = template.render(data=data)
