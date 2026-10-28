@@ -23,17 +23,18 @@
     "projects": [
         {
             "id": "baja-laa",
-            "title": "Baja SAE A-Arms",
+            "title": "Baja SAE A-Arms & Upright",
             "subtitle": "Purdue Baja SAE Suspension Components",
             "tags": [
                 "Solidworks",
                 "ANSYS FEA"
             ],
             "image": "baja_1.jpg",
-            "summary": "Researched, designed, and parametrically modeled lower a-arms for a shock-to-upper suspension system.",
+            "summary": "Designed shock-to-upper A-arms, redesigned the billet aluminum upright, and set up bump FEA for the full shock-to-lower suspension.",
             "details": [
-                "Parametrically modeled lower A-arms in SolidWorks for a shock-to-upper suspension architecture, optimizing geometry for maximum ground clearance while ensuring clean load paths.",
-                "Refinement in progress: Analyzing stress and deflection in ANSYS Mechanical to find and resolve stress pockets and reduce weight.",
+                "Parametrically modeled front A-arms in SolidWorks for the shock-to-upper suspension architecture, the team's risk-mitigation backup to the shock-to-lower system, optimizing geometry for maximum ground clearance while ensuring clean load paths.",
+                "Set up and iterated bump-case FEA for the full shock-to-lower suspension assembly planned for the car.",
+                "Redesigned the billet aluminum upright geometry using FEA results and DFM input, reaching 1.13 lb at a 1.3 Factor of Safety from a 1.35 lb initial model.",
                 "Integrated components into upper-level assembly of shock-to-upper suspension."
             ]
         },
@@ -85,14 +86,18 @@
             "summary": "Designed a custom 3D-printed electromechanical mechanism to automate a deadbolt while preserving manual key operation.",
             "details": [
                 "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
-                "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, driving 90 degrees of rotation in 2.5 seconds.",
+                "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, designed to drive 90 degrees in 2.5 seconds.",
                 "Designed an internal lost-motion 'butterfly' mechanism within the driven gear, enabling 90 degrees of free rotation for manual locking and unlocking without backdriving the high-reduction motor assembly.",
-                "Optimized system power budgeting to ensure a 100g 2000mAh Li-ion battery could independently sustain ~2,880 lock/unlock cycles while powering external wireless sensors."
+                "Co-specified the 12V motor, 100g 7.4V 2000mAh Li-ion battery, and system power requirements to ensure the mechanism met the 25 kg-cm stall torque demand while achieving our shared target of a three-week battery life."
             ]
         },
         {
             "title": "Custom SFF PC Case",
             "subtitle": "V1 Design Complete — Pivoting to V2",
+            "tags" : [
+                "Siemens NX"
+            ],
+            "image": "case_1.png",
             "summary": "A dual-chamber small form factor PC case, engineered to thermally isolate the motherboard from the GPU and PSU across a central spine.",
             "details": [
                 "Designed an initial V1 dual-chamber chassis centered around a structural spine to efficiently package and organize core hardware components.",
@@ -113,8 +118,8 @@
             "summary": "Engineered custom physical models demonstrating True Position and MMC principles for intern training.",
             "details": [
                 "Designed physical hands-on models in CAD to demonstrate complex geometric dimensioning concepts.",
-                "3D printed interactive inspection fixtures used during onboarding for future engineering interns.",
-                "Assisted interns and new hires in visualizing tolerance zones during drawing analysis."
+                "3D printed interactive inspection fixtures to be used during onboarding for future engineering interns.",
+                "Designed to help interns and new hires in visualizing tolerance zones during drawing analysis."
             ]
         },
         {
@@ -126,7 +131,7 @@
                 "Wiring Harnesses",
                 "Automotive Systems"
             ],
-            "image": "radio_1.jpg",
+            "image": ["wiring_1.jpeg", "radio_1.jpg"],
             "summary": "Integrated custom automotive head units, backup cameras, and aftermarket dash clusters.",
             "details": [
                 "Soldered custom wiring harnesses to integrate upgraded radios with factory wiring seamlessly.",
