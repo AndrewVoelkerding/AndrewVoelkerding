@@ -1,6 +1,6 @@
 {
     "name": "Andrew Voelkerding",
-    "location": "Cincinnati, Ohio",
+    "location": "Cincinnati, OH",
     "tagline": "Mechanical Engineering | Purdue University '28",
     "email": "voelkerd@purdue.edu",
     "phone": "513-910-4107",
@@ -10,9 +10,8 @@
     "education": {
         "school": "Purdue University",
         "degree": "Bachelor of Science in Mechanical Engineering",
-        "graduation": "Expected Graduation: May 2028",
+        "graduation": "Expected Graduation: May 2028 (Accelerated 3-Year Timeline)",
         "gpa": "3.9/4.0",
-        "courses": "Dynamics, Thermodynamics, CAD/PLM with NX & Teamcenter, Materials",
         "badges": [
             "Baja SAE Suspension Team Member",
             "ASME Member",
@@ -143,9 +142,9 @@
     "engineering_experience": [
         {
             "points": [
+                 "• Redesigned billet aluminum upright using FEA and DFM input; final 1.13 lb at 1.3 FoS (initial model: 1.35 lb).",
                 "• Shock-to-Upper System Owner: designed A-arms in SolidWorks, analyzed motion and interferences.",
                 "• Set up and iterated bump-case FEA for the full shock-to-lower suspension assembly planned for the car.",
-                "• Redesigned billet aluminum upright using FEA and DFM input; final 1.13 lb at 1.3 FoS (initial model: 1.35 lb).",
                 "• Disassembled and rebuilt coil-over suspension to modify the system during testing sessions."
             ],
             "role": "Suspension Team Member",
@@ -167,7 +166,7 @@
         },
         {
             "points": [
-                "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to ~18.8% weight reduction while maintaining a 1.6 FoS.",
+                "• Modeled welded front rockers in Siemens NX and simulated in ANSYS Mechanical to find stress concentrations and safety factor, which led to 18.8% weight reduction while maintaining a 1.6 FoS.",
                 "• Generated CAM toolpaths and technical drawings using GD&T to streamline the CNC process.",
                 "• Applied Design for Manufacturability (DFM) principles by performing manual thread preparation and hole finishing on wheel hubs while observing 3-axis CNC setups to inform future CAD modeling."
             ],
@@ -190,7 +189,7 @@
         {
             "points": [
                 "• Analytically designed a 3D-printed four-bar linkage and custom snap-fit pivot joints in Fusion 360 to resist torsional loads, validating tolerances with a test print before committing to the full assembly.",
-                "• Integrated an Arduino MEGA, motor controller, and limit switch into a closed-loop system, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
+                "• Integrated an Arduino MEGA, motor controller, and limit switch, developing custom homing firmware and resolving real-world joint friction through targeted sanding and lubrication."
             ],
             "role": "Four-Bar Linkage Controller",
             "company": "Personal Project",
@@ -200,7 +199,7 @@
     "skills": {
         "design": "Siemens NX (NX Design Associate Certification), Siemens Teamcenter, SolidWorks, ANSYS Mechanical, GD&T ASME Y14.5-2018 (Milestones GD&T Certification), Fusion 360",
         "programming": "Data Analysis (NumPy, Pandas), Python, C, MATLAB, Excel",
-        "manufacturing": "Rapid Prototyping (Bambu A1 Mini and Bambu Studio), CNC/Lathes, Laser Cutting, Basic Tooling",
+        "manufacturing": "Rapid Prototyping (Bambu A1 Mini and Bambu Studio), Manual and CNC Mills/Lathes, Laser Cutting",
         "electrical": "Basic Circuit Building & Analysis, Soldering, Arduino, Automotive Wiring Harnesses"
     }
 }
