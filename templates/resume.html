@@ -307,7 +307,7 @@
         /* Print & WeasyPrint Overrides */
         @media print {
             /* r/EngineeringResumes: 10.5pt+ black text, line spacing 1.07+, bullets without extra indent */
-            .resume-sheet { line-height: 1.25 !important; }
+            .resume-sheet { line-height: 1.2 !important; }
             .contact, p, ul, .subtitle { font-size: 10.5pt !important; }
             .contact { color: #000000 !important; margin-bottom: 10px !important; }
             .contact a, .color .contact a { color: #000000 !important; text-decoration: none !important; font-weight: 400 !important; }
@@ -356,10 +356,9 @@
             {% if web %}
             {# On-site only: items in their own spans/rows so a phone can stack them. The PDFs use the plain markup below. #}
             <div class="c-row"><span class="c-item">{{ data.phone }}</span><span class="c-sep"> | </span><span class="c-item">{{ data.email }}</span></div>
-            <div class="c-row"><span class="c-item"><a href="https://{{ data.website }}">{{ data.website }}</a></span><span class="c-sep"> | </span>
-            <span class="c-item"><a href="https://{{ data.github }}">{{ data.github }}</a></span></div>
+            <div class="c-row"><span class="c-item"><a href="https://{{ data.website }}">{{ data.website }}</a></span></div>
             {% else %}
-            {{ data.phone }} | {{ data.email }} | <a href="https://{{ data.website }}">{{ data.website }}</a> | <a href="https://{{ data.github }}">{{ data.github }}</a>
+            {{ data.phone }} | {{ data.email }} | <a href="https://{{ data.website }}">{{ data.website }}</a>
             {% endif %}
         </div>
 
