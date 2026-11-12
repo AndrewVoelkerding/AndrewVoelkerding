@@ -20,256 +20,55 @@
             --purdue-gold: #C59B27;
         }
 
-        * { 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
-            font-family: 'Inter', sans-serif; 
-        }
-        
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-        /* INCREASED GLOBAL BASE FONT SIZE for consistency with projects page */
-        body { 
-            overflow-wrap: break-word; 
-            background-color: var(--bg-main); 
-            color: var(--text-dark); 
-            line-height: 1.7; 
-            font-size: 1.05rem; 
-        }
-
-        nav {
-            background-color: #0F172A;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid var(--purdue-gold);
-        }
-
-        nav .logo { 
-            color: white; 
-            font-weight: 700; 
-            text-decoration: none; 
-            font-size: 1.3rem; 
-        }
-        nav .nav-links { 
-            display: flex; 
-            gap: 1rem; 
-        }
-        nav .nav-links a { 
-            color: #94A3B8; 
-            text-decoration: none; 
-            font-weight: 600; 
-            font-size: 1rem; 
-            padding: 0.3rem 0.75rem; 
-            border-radius: 4px; 
-            transition: all 0.2s; 
-        }
-        nav .nav-links a:hover, nav .nav-links a.active { 
-            color: white; 
-            background: #1E293B; 
-        }
-
-        header {
-            background-color: #0F172A;
-            color: white;
-            padding: 3.5rem 2rem;
-            text-align: center;
-        }
-
-        header h1 { 
-            font-size: 2.6rem; 
-            font-weight: 700; 
-            letter-spacing: -0.02em; 
-        }
-        header p.subtitle { 
-            font-size: 1.25rem; 
-            color: #94A3B8; 
-            margin-top: 0.5rem; 
-        }
-
-        .contact-links {
-            margin-top: 1.25rem;
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.5rem 1.1rem;
-            background: #1E293B;
-            color: #E2E8F0;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-            transition: all 0.2s ease;
-        }
-
-        .btn:hover { 
-            background: var(--purdue-gold); 
-            color: #0F172A; 
-            border-color: var(--purdue-gold); 
-        }
-
-        .container { 
-            max-width: 900px; /* Narrower, document-width column so this reads like a resume, not a dashboard */
-            margin: 0 auto; 
-            padding: 2.5rem 1.5rem; 
-        }
-        
+        body { overflow-wrap: break-word; background-color: var(--bg-main); color: var(--text-dark); line-height: 1.7; font-size: 1.05rem; }
+        nav { background-color: #0F172A; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--purdue-gold); }
+        nav .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.3rem; }
+        nav .nav-links { display: flex; gap: 1rem; }
+        nav .nav-links a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.3rem 0.75rem; border-radius: 4px; transition: all 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: white; background: #1E293B; }
+        header { background-color: #0F172A; color: white; padding: 3.5rem 2rem; text-align: center; }
+        header h1 { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; }
+        header p.subtitle { font-size: 1.25rem; color: #94A3B8; margin-top: 0.5rem; }
+        .contact-links { margin-top: 1.25rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 0.5rem 1.1rem; background: #1E293B; color: #E2E8F0; text-decoration: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; border: 1px solid #334155; transition: all 0.2s ease; }
+        .btn:hover { background: var(--purdue-gold); color: #0F172A; border-color: var(--purdue-gold); }
+        .container { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; }
         section { margin-bottom: 3rem; }
-
         .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
-
-        h2.section-title {
-            font-size: 1.5rem;
-            color: var(--accent-grey);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Vertical stack instead of a side-by-side grid: entries here are chronological
-           (a timeline, not a comparison), and lengths vary a lot from one role/project to
-           the next, so stacking is the layout that can't produce a mismatched-height card. */
-        .grid { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 1.25rem; 
-        }
-        .card { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border); 
-            border-radius: 8px; 
-            padding: 1.5rem; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04); 
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-        @media (hover: hover) and (pointer: fine) {
-            .card:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 10px 24px rgba(15,23,42,0.10);
-                border-color: var(--purdue-gold);
-            }
-        }
-        /* Bullet glyph is its own span so it can hang outside the text on narrow screens */
+        h2.section-title { font-size: 1.5rem; color: var(--accent-grey); border-bottom: 2px solid var(--border); padding-bottom: 0.4rem; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .grid { display: flex; flex-direction: column; gap: 1.25rem; }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+        @media (hover: hover) and (pointer: fine) { .card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.10); border-color: var(--purdue-gold); } }
         .bullet { display: inline; }
-        .card h3 { 
-            font-size: 1.25rem; 
-            color: var(--text-dark); 
-            font-weight: 700;
-        }
-        .card .meta { 
-            font-size: 0.95rem; 
-            color: var(--text-dark); 
-            margin-bottom: 0.75rem; 
-            font-weight: 700; 
-        }
+        .card h3 { font-size: 1.25rem; color: var(--text-dark); font-weight: 700; }
+        .card .meta { font-size: 0.95rem; color: var(--text-dark); margin-bottom: 0.75rem; font-weight: 700; }
         .card ul { list-style-type: none; padding-left: 0; color: var(--text-muted); font-size: 1rem; }
         .card ul li { margin-bottom: 0.5rem; }
-
-        .skills-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-            gap: 1.25rem; 
-        }
-        .skill-box { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border); 
-            padding: 1.25rem; 
-            border-radius: 8px; 
-        }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+        .skill-box { background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem; border-radius: 8px; }
         .skill-box h4 { font-size: 1.05rem; color: var(--accent-grey); margin-bottom: 0.4rem; }
         .skill-box p { font-size: 0.95rem; color: var(--text-muted); }
-
-        .badge { 
-            display: inline-block; 
-            background: var(--accent-light); 
-            color: var(--accent-grey); 
-            padding: 0.25rem 0.6rem; 
-            border-radius: 4px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            margin-top: 0.5rem; 
-            margin-right: 0.25rem; 
-        }
-
-        footer { 
-            text-align: center; 
-            padding: 1.75rem; 
-            background: #0F172A; 
-            color: #64748B; 
-            font-size: 0.9rem; 
-            border-top: 1px solid #1E293B; 
-        }
-
+        .badge { display: inline-block; background: var(--accent-light); color: var(--accent-grey); padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-top: 0.5rem; margin-right: 0.25rem; }
+        footer { text-align: center; padding: 1.75rem; background: #0F172A; color: #64748B; font-size: 0.9rem; border-top: 1px solid #1E293B; }
         html { scroll-behavior: smooth; }
-
-        a:focus-visible, .btn:focus-visible {
-            outline: 2px solid var(--purdue-gold);
-            outline-offset: 2px;
-            border-radius: 4px;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            .reveal, .card { transition: none; }
-            .reveal { opacity: 1; transform: none; }
-        }
-
-        /* =========================================
-           📱 MOBILE & VERTICAL SCREEN RULES
-           ========================================= */
+        a:focus-visible, .btn:focus-visible { outline: 2px solid var(--purdue-gold); outline-offset: 2px; border-radius: 4px; }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal, .card { transition: none; } .reveal { opacity: 1; transform: none; } }
         @media (max-width: 768px) {
-            /* Nav: logo on top, three equal full-height tap targets below */
-            nav {
-                flex-direction: column;
-                gap: 0.5rem;
-                padding: 0.75rem 1rem 0.6rem;
-            }
+            nav { flex-direction: column; gap: 0.5rem; padding: 0.75rem 1rem 0.6rem; }
             nav .logo { font-size: 1.2rem; }
             nav .nav-links { width: 100%; gap: 0.35rem; }
-            nav .nav-links a {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 44px;
-                padding: 0.3rem 0.5rem;
-            }
-
+            nav .nav-links a { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.3rem 0.5rem; }
             header { padding: 2.25rem 1rem 2rem; }
             header h1 { font-size: 2rem; line-height: 1.2; }
             header p.subtitle { font-size: 1.05rem; line-height: 1.4; }
-
-            /* 2 x 2 grid of contact buttons instead of a ragged 3 + 1 wrap */
-            .contact-links {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 0.6rem;
-                max-width: 420px;
-                margin: 1.25rem auto 0;
-            }
-            .btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 44px;
-                padding: 0.5rem 0.75rem;
-            }
-
+            .contact-links { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; max-width: 420px; margin: 1.25rem auto 0; }
+            .btn { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0.5rem 0.75rem; }
             .container { padding: 1.5rem 1rem; }
             section { margin-bottom: 2.25rem; }
             h2.section-title { font-size: 1.2rem; }
-
             .grid { gap: 1rem; }
             .card { padding: 1.1rem; }
             .card h3 { font-size: 1.1rem; line-height: 1.35; }
@@ -277,16 +76,13 @@
             .card ul { font-size: 0.95rem; line-height: 1.6; }
             .card ul li { display: flex; gap: 0.5em; margin-bottom: 0.6rem; }
             .bullet { flex: none; }
-
             .skills-grid { grid-template-columns: 1fr; gap: 0.9rem; }
             .badge { margin-top: 0.4rem; }
-
             footer { padding: 1.5rem 1rem; }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <a href="/" class="logo">{{ data.name }}</a>
         <div class="nav-links">
@@ -315,9 +111,7 @@
                 <p><strong>GPA:</strong> {{ data.education.gpa }}</p>
                 {% if data.education.courses %}<p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>{% endif %}
                 <div style="margin-top: 0.6rem;">
-                    {% for badge in data.education.badges %}
-                        <span class="badge">{{ badge }}</span>
-                    {% endfor %}
+                    {% for badge in data.education.badges %}<span class="badge">{{ badge }}</span>{% endfor %}
                 </div>
             </div>
         </section>
@@ -329,11 +123,7 @@
                 <div class="card">
                     <h3>{{ exp.company }} - {{ exp.role }}</h3>
                     <p class="meta">{{ exp.location }} | {{ exp.dates }}</p>
-                    <ul>
-                        {% for pt in exp.points %}
-                        <li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
-                        {% endfor %}
-                    </ul>
+                    <ul>{% for pt in exp.points %}<li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>{% endfor %}</ul>
                 </div>
                 {% endfor %}
             </div>
@@ -347,11 +137,7 @@
                 <div class="card">
                     <h3>{{ emp.title }}{% if emp.company %} — {{ emp.company }}{% endif %}</h3>
                     <p class="meta">{{ emp.meta }}</p>
-                    <ul>
-                        {% for pt in emp.points %}
-                        <li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
-                        {% endfor %}
-                    </ul>
+                    <ul>{% for pt in emp.points %}<li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>{% endfor %}</ul>
                 </div>
                 {% endfor %}
             </div>
@@ -362,16 +148,20 @@
             <h2 class="section-title">Engineering Projects</h2>
             <div class="grid">
                 {% for proj in data.resume_projects %}
+                {% set project_meta = {
+                    'Purdue Baja SAE Suspension': {'role': 'Suspension Team Member', 'company': 'Purdue Baja Racing', 'dates': 'June 2026 – Present'},
+                    'Purdue Formula SAE Suspension': {'role': 'Suspension Team Member', 'company': 'Purdue Formula SAE', 'dates': 'August 2025 – May 2026'},
+                    'Small Form Factor (SFF) PC Case': {'company': 'Personal Project', 'dates': 'May 2026 – Present'}
+                } %}
+                {% set meta = project_meta.get(proj.role, {}) %}
                 <div class="card">
-                    <h3>{{ proj.role }}</h3>
-                    {% if proj.company or proj.dates %}
-                    <p class="meta">{% if proj.company %}{{ proj.company }}{% endif %}{% if proj.company and proj.dates %} | {% endif %}{% if proj.dates %}{{ proj.dates }}{% endif %}</p>
+                    <h3>{{ meta.get('role', proj.role) }}</h3>
+                    {% set company = meta.get('company', proj.company|default('', true)) %}
+                    {% set dates = meta.get('dates', proj.dates|default('', true)) %}
+                    {% if company or dates %}
+                    <p class="meta">{% if company %}{{ company }}{% endif %}{% if company and dates %} | {% endif %}{% if dates %}{{ dates }}{% endif %}</p>
                     {% endif %}
-                    <ul>
-                        {% for pt in proj.points %}
-                        <li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
-                        {% endfor %}
-                    </ul>
+                    <ul>{% for pt in proj.points %}<li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>{% endfor %}</ul>
                 </div>
                 {% endfor %}
             </div>
@@ -380,29 +170,15 @@
         <section>
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-box">
-                    <h4>Design & Simulation</h4>
-                    <p>{{ data.skills.design }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Programming & Data</h4>
-                    <p>{{ data.skills.programming }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Manufacturing</h4>
-                    <p>{{ data.skills.manufacturing }}</p>
-                </div>
-                <div class="skill-box">
-                    <h4>Electrical</h4>
-                    <p>{{ data.skills.electrical }}</p>
-                </div>
+                <div class="skill-box"><h4>Design & Simulation</h4><p>{{ data.skills.design }}</p></div>
+                <div class="skill-box"><h4>Programming & Data</h4><p>{{ data.skills.programming }}</p></div>
+                <div class="skill-box"><h4>Manufacturing</h4><p>{{ data.skills.manufacturing }}</p></div>
+                <div class="skill-box"><h4>Electrical</h4><p>{{ data.skills.electrical }}</p></div>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2026 {{ data.name }} | andrew.voelkerding.xyz</p>
-    </footer>
+    <footer><p>&copy; 2026 {{ data.name }} | andrew.voelkerding.xyz</p></footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -422,6 +198,5 @@
             sections.forEach(s => io.observe(s));
         });
     </script>
-
 </body>
 </html>
