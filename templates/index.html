@@ -364,7 +364,9 @@
                 {% for proj in data.resume_projects %}
                 <div class="card">
                     <h3>{{ proj.role }}</h3>
-                    <p class="meta">{{ proj.company }} | {{ proj.dates }}</p>
+                    {% if proj.company or proj.dates %}
+                    <p class="meta">{% if proj.company %}{{ proj.company }}{% endif %}{% if proj.company and proj.dates %} | {% endif %}{% if proj.dates %}{{ proj.dates }}{% endif %}</p>
+                    {% endif %}
                     <ul>
                         {% for pt in proj.points %}
                         <li>{% if pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
