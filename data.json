@@ -161,9 +161,9 @@
         {
             "points": [
                 "• Reduced upright mass 16% (1.35 → 1.13 lb) at a 1.3 Factor of Safety (FoS) by redesigning the billet aluminum geometry with FEA and DFM input",
-                "• Designed backup front A-arms in SolidWorks for the 2026 layout (shock on upper arm), analyzing motion and interferences to mitigate risk in the new lower-arm shock design",
-                "• Iterated bump-case FEA on the full suspension assembly for the 2027 competition car",
-                "• Rebuilt coil-overs with 3 spring setups during test sessions to tune jump performance"
+                "• Designed backup front A-arms in SolidWorks for the 2027 car, checking motion and interference for an upper-arm shock layout as an alternative to the new lower-arm design",
+                "• Reinforced three suspension mounts and added two A-arm supports, achieving a 1.3 FoS outside unmodeled weld regions under bump loading while maintaining component clearance",
+                "• Developed lower A-arm fabrication jigging to locate bent tubes, shock tabs, and fins in one setup using aluminum blocks, MDF cutouts, locating pins, and 3D-printed supports"
             ],
             "role": "Purdue Baja SAE Suspension"
         },
