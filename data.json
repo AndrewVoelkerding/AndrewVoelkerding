@@ -180,14 +180,6 @@
                 "• Identified structural risk in the spine-to-panel mounting at design review, paused V1, and began a V2 with a wrap-around sheet-metal shell for added rigidity"
             ],
             "role": "Small Form Factor (SFF) PC Case"
-        },
-        {
-            "points": [
-                "• Designed a 21-tooth 1:1 spur gear train coupling a 12V, 6 RPM worm gear motor to a standard deadbolt, sized to turn it 90 degrees in 2.5 seconds",
-                "• Designed a lost-motion mechanism in the driven gear giving 90 degrees of free rotation for manual key operation without backdriving the motor",
-                "• Specified the motor and 7.4V 2000mAh battery with a Computer Engineering partner to meet a 25 kg-cm stall torque demand and a 3-week battery life target"
-            ],
-            "role": "Retrofit IoT Smart Lock"
         }
     ],
     "skills": {
