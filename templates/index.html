@@ -314,7 +314,7 @@
                 <h3>{{ data.education.school }}</h3>
                 <p class="meta">{{ data.education.degree }} | {{ data.education.graduation }}</p>
                 <p><strong>GPA:</strong> {{ data.education.gpa }}</p>
-                <p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>
+                {% if data.education.courses %}<p style="margin-top: 0.4rem;"><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>{% endif %}
                 <div style="margin-top: 0.6rem;">
                     {% for badge in data.education.badges %}
                         <span class="badge">{{ badge }}</span>
