@@ -56,8 +56,8 @@
             "summary": "Redesigned the billet aluminum upright to cut mass 16% (1.35 → 1.13 lb) while holding a 1.3 Factor of Safety.",
             "details": [
                 "Redesigned the billet aluminum upright geometry from a 1.35 lb initial model, using FEA results to drive the changes.",
-                "Reached 1.13 lb, a 16% mass reduction, at a 1.3 Factor of Safety.",
-                "Incorporated DFM input alongside the FEA results so the lighter geometry remains practical to machine from billet stock."
+                "Incorporated DFM input alongside the FEA results so the lighter geometry remains practical to machine from billet stock.",
+                "Reached 1.13 lb, a 16% mass reduction, at a 1.3 Factor of Safety."
             ]
         },
         {
@@ -72,8 +72,8 @@
             "summary": "Designed welded front suspension rockers achieving ~18.8% weight reduction while maintaining a 1.6 Factor of Safety.",
             "details": [
                 "Engineered a multi-piece fabricated suspension rocker in Siemens NX, replacing traditional billet stock with plate welded to a central structural sleeve",
-                "Conducted linear static FEA studies in ANSYS Mechanical under peak braking and cornering load cases, reducing component mass by 18.8% while maintaining a 1.6 Factor of Safety.",
-                "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which assisted in reducing weight."
+                "Designed to be manufactured with two cut pieces of sheet metal welded to a tube instead of using normal stock, which assisted in reducing weight.",
+                "Conducted linear static FEA studies in ANSYS Mechanical under peak braking and cornering load cases, reducing component mass by 18.8% while maintaining a 1.6 Factor of Safety."
             ]
         },
         {
@@ -107,9 +107,9 @@
             "image": ["lock_1.jpg", "lock_2.png", "lock_3.png","lock_4.png","lock_5.jpg"],
             "summary": "Designed a custom 3D-printed electromechanical mechanism to automate a deadbolt while preserving manual key operation.",
             "details": [
-                "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
                 "Engineered a custom 1:1 spur gear train (21 teeth) using Machinery's Handbook standards to interface a 12V 6-RPM worm gear motor with a standard door deadbolt, designed to drive 90 degrees in 2.5 seconds.",
                 "Designed an internal lost-motion 'butterfly' mechanism within the driven gear, enabling 90 degrees of free rotation for manual locking and unlocking without backdriving the high-reduction motor assembly.",
+                "Collaborated cross-functionally with a Computer Engineering student to define system packaging and power architecture for an IoT smart lock triggered by a piezo-knock sensor and proximity connection.",
                 "Co-specified the 12V motor, 100g 7.4V 2000mAh Li-ion battery, and system power requirements to ensure the mechanism met the 25 kg-cm stall torque demand while achieving our shared target of a three-week battery life."
             ]
         },
@@ -189,9 +189,17 @@
         {
             "points": [
                 "• Cut front rocker weight 18.8% at a 1.6 FoS by replacing billet with welded sheet-metal plates in Siemens NX and optimizing cutouts in ANSYS under peak loads",
-                "• Generated Fusion 360 CAM toolpaths and GD&T drawings for 3 parts, hand-finished wheel hub threads and holes, and observed 3-axis CNC setups to inform future CAD designs"
+                "• Generated Fusion 360 CAM toolpaths and GD&T drawings for 3 parts, tapped soft jaws for a wheel hub and deburred the hub, and observed 3-axis CNC setups to inform future CAD designs"
             ],
             "role": "Purdue Formula SAE Suspension"
+        },
+        {
+            "points": [
+                "• Designed a 21-tooth 1:1 spur gear train coupling a 12V, 6 RPM worm gear motor to a standard deadbolt, sized to turn it 90 degrees in 2.5 seconds",
+                "• Designed a lost-motion mechanism in the driven gear giving 90 degrees of free rotation for manual key operation without backdriving the motor",
+                "• Specified the motor and 7.4V 2000mAh battery with a Computer Engineering partner to meet a 25 kg-cm stall torque demand and a 3-week battery life target"
+            ],
+            "role": "Retrofit IoT Smart Lock"
         },
         {
             "points": [
