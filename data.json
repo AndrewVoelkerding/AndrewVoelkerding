@@ -169,7 +169,7 @@
         },
         {
             "points": [
-                "• Cut front rocker weight 18.8% at a 1.6 FoS by replacing billet with welded sheet-metal plates in Siemens NX and optimizing cutouts in ANSYS under peak braking and cornering loads",
+                "• Cut front rocker weight 18.8% at a 1.6 FoS by replacing billet with welded sheet-metal plates in Siemens NX and optimizing cutouts in ANSYS under peak loads",
                 "• Generated Fusion 360 CAM toolpaths and GD&T drawings for 3 parts, hand-finished wheel hub threads and holes, and observed 3-axis CNC setups to inform future CAD designs"
             ],
             "role": "Purdue Formula SAE Suspension"
