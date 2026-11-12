@@ -6,6 +6,7 @@
     "phone": "513-910-4107",
     "website": "andrew.voelkerding.xyz",
     "linkedin": "https://www.linkedin.com/in/andrew-voe",
+    "github": "github.com/AndrewVoelkerding",
     "education": {
         "school": "Purdue University",
         "degree": "Bachelor of Science in Mechanical Engineering",
@@ -182,10 +183,11 @@
         },
         {
             "points": [
-                "• Designed a 3D-printed four-bar linkage with snap-fit pivot joints in Fusion 360, validating tolerances with a test print before printing the full assembly",
-                "• Integrated an Arduino MEGA, motor controller, and limit switch with AI-generated firmware for a CNC-style homing sequence, and fixed stepper stalling by sanding and lubricating joints"
+                "• Designed a 21-tooth 1:1 spur gear train coupling a 12V, 6 RPM worm gear motor to a standard deadbolt, sized to turn it 90 degrees in 2.5 seconds",
+                "• Designed a lost-motion mechanism in the driven gear giving 90 degrees of free rotation for manual key operation without backdriving the motor",
+                "• Specified the motor and 7.4V 2000mAh battery with a Computer Engineering partner to meet a 25 kg-cm stall torque demand and a 3-week battery life target"
             ],
-            "role": "Four-Bar Linkage Controller"
+            "role": "Retrofit IoT Smart Lock"
         }
     ],
     "skills": {
