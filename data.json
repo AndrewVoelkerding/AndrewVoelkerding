@@ -21,7 +21,9 @@
             "ASME Member",
             "Undue Ultimate"
         ],
-        "location": "West Lafayette, IN"
+        "location": "West Lafayette, IN" 
+        "courses": "",
+        "courses_next": "Mechanics of Materials, Fluid Mechanics, Systematic Engineering Design"
     },
     "projects": [
         {
@@ -162,57 +164,50 @@
             ]
         }
     ],
-    "engineering_experience": [
-        {
-            "points": [
-                "• Designed an adapter coupling a drill or impact driver to a friction torque limiter and specified a dial torque wrench for constant-torque and breakaway-torque testing of defense parts",
-                "• Renovated onboarding documentation and designed hands-on 3D-printed GD&T models (datums, true position, MMC) to train future engineering interns",
-                "• Fixed milling, lathe, and welding quoting calculators and modeled an initial enclosure concept in Siemens NX for high-pressure washdown environments to support an internal quote",
-                "• Wrote the first Engineering Change Order SOP during a defense-manufacturing machinist rotation"
-            ],
-            "role": "Manufacturing Engineering Intern",
-            "company": "General Tool Company",
-            "location": "Cincinnati, OH",
-            "dates": "May 2026 – August 2026"
-        }
-    ],
-    "resume_projects": [
-        {
-            "points": [
-                "• Reduced upright mass 16% (1.35 → 1.13 lb) at a 1.3 Factor of Safety (FoS) by redesigning the billet aluminum geometry with FEA and DFM input",
-                "• Designed backup front A-arms in SolidWorks for the 2027 car, checking motion and interference for an upper-arm shock layout as an alternative to the new lower-arm design",
-                "• Reinforced three suspension mounts and added two A-arm supports, achieving a 1.3 FoS outside unmodeled weld regions under bump loading while maintaining component clearance",
-                "• Developed lower A-arm fabrication jigging to locate bent tubes, shock tabs, and fins in one setup using aluminum blocks, MDF cutouts, locating pins, and 3D-printed supports"
-            ],
-            "role": "Purdue Baja SAE Suspension"
-        },
-        {
-            "points": [
-                "• Cut front rocker weight 18.8% at a 1.6 FoS by replacing billet with welded sheet-metal plates in Siemens NX and optimizing cutouts in ANSYS under peak loads",
-                "• Generated Fusion 360 CAM toolpaths and GD&T drawings for 3 parts, tapped soft jaws for a wheel hub and deburred the hub, and observed 3-axis CNC setups to inform future CAD designs"
-            ],
-            "role": "Purdue Formula SAE Suspension"
-        },
-        {
-            "points": [
-                "• Designed a 21-tooth 1:1 spur gear train coupling a 12V, 6 RPM worm gear motor to a standard deadbolt, sized to turn it 90 degrees in 2.5 seconds",
-                "• Designed a lost-motion mechanism in the driven gear giving 90 degrees of free rotation for manual key operation without backdriving the motor",
-                "• Specified the motor and 7.4V 2000mAh battery with a Computer Engineering partner to meet a 25 kg-cm stall torque demand and a 3-week battery life target"
-            ],
-            "role": "Retrofit IoT Smart Lock"
-        },
-        {
-            "points": [
-                "• Designed a dual-chamber chassis in Siemens NX around a structural spine, thermally isolating the motherboard from the GPU and power supply with bottom-intake, top-exhaust airflow",
-                "• Identified structural risk in the spine-to-panel mounting at design review, paused V1, and began a V2 with a wrap-around sheet-metal shell for added rigidity"
-            ],
-            "role": "Small Form Factor (SFF) PC Case"
-        }
-    ],
-    "skills": {
-        "design": "Siemens NX, SolidWorks, Fusion 360, ANSYS Mechanical, Siemens Teamcenter, GD&T",
-        "programming": "Python, NumPy, Pandas, MATLAB, C, Arduino, Soldering",
-        "manufacturing": "CNC CAM, FDM 3D Printing, Manual Machining, Laser Cutting",
-        "electrical": ""
+     "engineering_experience": [
+    {
+      "points": [
+        "• Modeled an initial Siemens NX enclosure concept for high-pressure washdown environments to support a quote.",
+        "• Renovated onboarding documentation and designed hands-on 3D-printed GD&T models (datums, true position, MMC) to teach tolerancing fundamentals to future engineering interns.",
+        "• Rebuilt milling and turning calculators to estimate passes and cycle time by operation type, and generalized a welding calculator built for one application.",
+        "• Wrote the first Engineering Change Order SOP, documenting a process that had no written procedure."
+      ],
+      "role": "Manufacturing Engineering Intern",
+      "company": "General Tool Company",
+      "location": "Cincinnati, OH",
+      "dates": "May 2026 – August 2026"
     }
+  ],
+  "resume_projects": [
+    {
+      "points": [
+        "• Redesigned the billet aluminum upright with FEA and DFM input, cutting mass 16% (1.35 → 1.13 lb) for a power-limited car at a 1.3 Factor of Safety (FoS) across 6 wheel force transducer load cases plus max braking at the caliper mount.",
+        "• Reinforced 3 suspension mounts and added 2 A-arm supports, achieving a 1.3 FoS outside unmodeled weld regions across all load cases while minimizing weight and maintaining component clearance.",
+        "• Designed backup front A-arms in SolidWorks for an upper-arm shock layout on the 2027 car, keeping the load path horizontal out of the spherical cups with a far-outboard bend for ground clearance, and checking motion and interference.",
+        "• Developed lower A-arm fabrication jigging to locate bent tubes, shock tabs, and fins in a single setup using aluminum blocks, MDF cutouts, locating pins, and 3D-printed supports."
+      ],
+      "role": "Purdue Baja SAE Suspension"
+    },
+    {
+      "points": [
+        "• Designed a welded sheet-metal front rocker in Siemens NX to replace the billet part, optimizing cutout geometry in ANSYS for a projected 18.8% weight reduction while meeting the 1.6 FoS target.",
+        "• Generated Fusion 360 CAM toolpaths and GD&T drawings for 3 parts, hand-finished wheel hub threads and holes, and observed 3-axis CNC setups to inform future CAD designs."
+      ],
+      "role": "Purdue Formula SAE Suspension"
+    },
+    {
+      "points": [
+        "• Designed a 21-tooth 1:1 spur gearset linking a 12V, 6 RPM worm gear motor to a deadbolt, turning it 90° in 2.5 seconds.",
+        "• Designed a lost-motion mechanism giving 90° of free rotation for key operation without backdriving the motor.",
+        "• Specified the motor and 7.4V 2000mAh battery with a Computer Engineering partner to meet a 25 kg-cm stall torque demand and a 3-week battery life target."
+      ],
+      "role": "Retrofit IoT Smart Lock"
+    }
+  ],
+  "skills": {
+    "design": "Siemens NX, SolidWorks, Fusion 360, ANSYS Mechanical, Siemens Teamcenter, GD&T",
+    "programming": "Python, NumPy, Pandas, MATLAB, C, Arduino, Soldering",
+    "manufacturing": "CNC CAM, FDM 3D Printing, Manual Machining, Laser Cutting",
+    "electrical": ""
+  }
 }
