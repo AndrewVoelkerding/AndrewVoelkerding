@@ -184,7 +184,7 @@
       "points": [
         "• Redesigned the billet aluminum upright with FEA and DFM input, cutting mass 16% (1.35 → 1.13 lb) for a power-limited car at a 1.3 Factor of Safety (FoS) across 6 wheel force transducer load cases plus max braking at the caliper mount.",
         "• Reinforced 3 suspension mounts and added 2 A-arm supports, achieving a 1.3 FoS outside unmodeled weld regions across all load cases while minimizing weight and maintaining component clearance.",
-        "• Designed backup front A-arms in SolidWorks for an upper-arm shock layout on the 2027 car, keeping the load path horizontal out of the spherical cups with a far-outboard bend for ground clearance.",
+        "• Designed backup front A-arms in SolidWorks for an upper-arm shock layout on the 2027 car, keeping the load path horizontal out of the spherical cups with a far-outboard bend for ground clearance, and checking motion and interference.",
         "• Developed lower A-arm fabrication jigging to locate bent tubes, shock tabs, and fins in a single setup using aluminum blocks, MDF cutouts, locating pins, and 3D-printed supports."
       ],
       "role": "Purdue Baja SAE Suspension"
