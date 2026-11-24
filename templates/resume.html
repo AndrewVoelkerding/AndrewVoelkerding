@@ -306,15 +306,21 @@
 
         /* Print & WeasyPrint Overrides */
         @media print {
-            /* r/EngineeringResumes: 10.5pt+ black text, line spacing 1.07+, bullets without extra indent */
-            .resume-sheet { line-height: 1.2 !important; }
-            .contact, p, ul, .subtitle { font-size: 10.5pt !important; }
-            .contact { color: #000000 !important; margin-bottom: 10px !important; }
-            .contact a, .color .contact a { color: #000000 !important; text-decoration: none !important; font-weight: 400 !important; }
-            .color .meta-cell, .color .subtitle, .color h3 { color: #000000 !important; }
-            .subtitle { margin-bottom: 4px !important; }
-            ul { padding-left: 0 !important; margin: 2px 0 6px 0 !important; }
-            li { margin-bottom: 2px !important; padding-left: 0.9em; text-indent: -0.9em; }
+            /* Rivian recruiter guidance (11pt Times New Roman, skills near the top for internships) on top of the wiki basics:
+               black text, 0.4in margins, line spacing 1.07+, bullets with no extra indent */
+            .resume-sheet { line-height: 1.22 !important; }
+            .resume-sheet, .resume-sheet * { color: #000000 !important; font-family: 'Times New Roman', 'Liberation Serif', Tinos, Times, serif !important; }
+            h1 { font-size: 24pt !important; margin-bottom: 2px !important; }
+            .contact, p, ul, .subtitle, h3, .inline-meta, .meta-cell { font-size: 11pt !important; }
+            .contact { margin-bottom: 12px !important; }
+            .contact a, .color .contact a { text-decoration: none !important; font-weight: 400 !important; }
+            h2 { font-size: 12pt !important; margin-top: 14px !important; margin-bottom: 6px !important; padding-bottom: 2px !important; }
+            .job-header { margin-top: 10px !important; margin-bottom: 3px !important; }
+            .education-block .job-header { margin-top: 0 !important; }
+            .subtitle { margin-bottom: 3px !important; font-weight: 700 !important; }
+            .coursework-p { margin-top: 4px !important; }
+            ul { padding-left: 0 !important; margin: 2px 0 4px 0 !important; }
+            li { margin-bottom: 3px !important; padding-left: 0.9em; text-indent: -0.9em; }
             body { 
                 background: transparent !important; 
                 padding: 0 !important; 
@@ -371,22 +377,14 @@
             <div class="subtitle">{{ data.education.degree }} | GPA: {{ data.education.gpa }}</div>
             {% if data.education.certifications %}<p class="coursework-p"><strong>Certifications:</strong> {{ data.education.certifications | join(', ') }}</p>{% endif %}
             {% if data.education.courses %}<p><strong>Relevant Coursework:</strong> {{ data.education.courses }}</p>{% endif %}
+            {% if data.education.courses_next %}<p><strong>Planned Spring 2027:</strong> {{ data.education.courses_next }}</p>{% endif %}
         </div>
 
-        <h2>Work Experience</h2>
-        {% for exp in data.engineering_experience %}
-        <div>
-            <div class="job-header">
-                <div class="job-title-cell"><h3>{{ exp.role }} <span class="inline-meta">{{ lead|safe }}{{ exp.company }} | {{ exp.location }}</span></h3></div>
-                <div class="meta-cell">{{ exp.dates }}</div>
-            </div>
-            <ul>
-                {% for pt in exp.points %}
-                <li>{% if web and pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
+        <h2>Skills</h2>
+        <p><strong>Design and Simulation:</strong> {{ data.skills.design }}</p>
+        <p><strong>Programming and Electronics:</strong> {{ data.skills.programming }}</p>
+        <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
+        {% if data.skills.electrical %}<p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>{% endif %}
 
         <h2>Projects</h2>
         {% for proj in data.resume_projects %}
@@ -403,11 +401,22 @@
         </div>
         {% endfor %}
 
-        <h2>Skills</h2>
-        <p><strong>Design and Simulation:</strong> {{ data.skills.design }}</p>
-        <p><strong>Manufacturing:</strong> {{ data.skills.manufacturing }}</p>
-        <p><strong>Programming and Electronics:</strong> {{ data.skills.programming }}</p>
-        {% if data.skills.electrical %}<p><strong>Electrical:</strong> {{ data.skills.electrical }}</p>{% endif %}
+        <h2>Work Experience</h2>
+        {% for exp in data.engineering_experience %}
+        <div>
+            <div class="job-header">
+                <div class="job-title-cell"><h3>{{ exp.role }} <span class="inline-meta">{{ lead|safe }}{{ exp.company }} | {{ exp.location }}</span></h3></div>
+                <div class="meta-cell">{{ exp.dates }}</div>
+            </div>
+            <ul>
+                {% for pt in exp.points %}
+                <li>{% if web and pt.startswith('• ') %}<span class="bullet">•</span> <span>{{ pt[2:] }}</span>{% else %}{{ pt }}{% endif %}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+
+
     </div>
 
     <script>
